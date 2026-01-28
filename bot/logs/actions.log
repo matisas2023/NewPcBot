@@ -1,0 +1,14 @@
+2026-01-28 13:41:26,549 | INFO | Start polling
+2026-01-28 13:41:29,735 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:41:29,795 | INFO | User 496420361 | Сесія запущена через Старт
+2026-01-28 13:41:29,950 | INFO | Update id=88209027 is handled. Duration 171 ms by bot id=7553405091
+2026-01-28 13:41:32,072 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 13:41:32,791 | INFO | Update id=88209028 is handled. Duration 718 ms by bot id=7553405091
+2026-01-28 13:41:43,709 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769600503.png
+2026-01-28 13:41:44,144 | INFO | Update id=88209029 is handled. Duration 577 ms by bot id=7553405091
+2026-01-28 13:41:48,758 | INFO | User 496420361 | Завершено сесію
+2026-01-28 13:41:48,821 | INFO | Update id=88209030 is handled. Duration 63 ms by bot id=7553405091
+2026-01-28 13:41:55,150 | INFO | Polling stopped
+2026-01-28 13:41:55,150 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 13:41:55,150 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 13:41:55,400 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'

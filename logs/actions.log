@@ -1,0 +1,1976 @@
+2026-01-28 12:32:47,466 | INFO | Start polling
+2026-01-28 12:32:50,662 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 12:32:53,513 | INFO | Update id=88208992 is handled. Duration 202 ms by bot id=7553405091
+2026-01-28 12:32:55,075 | INFO | Update id=88208993 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 12:33:03,946 | INFO | Update id=88208994 is handled. Duration 109 ms by bot id=7553405091
+2026-01-28 12:33:06,214 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 12:33:06,299 | INFO | Update id=88208995 is handled. Duration 93 ms by bot id=7553405091
+2026-01-28 12:33:07,194 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769596387.png
+2026-01-28 12:33:07,793 | INFO | Update id=88208996 is handled. Duration 688 ms by bot id=7553405091
+2026-01-28 12:33:08,861 | INFO | User 496420361 | Скриншот оновлений | Файл: screenshot_1769596388.png
+2026-01-28 12:33:09,363 | INFO | Update id=88208997 is handled. Duration 578 ms by bot id=7553405091
+2026-01-28 12:33:10,656 | INFO | Update id=88208998 is handled. Duration 140 ms by bot id=7553405091
+2026-01-28 12:33:12,782 | INFO | User 496420361 | Дію скасовано
+2026-01-28 12:33:12,783 | INFO | Update id=88208999 is handled. Duration 188 ms by bot id=7553405091
+2026-01-28 12:33:13,547 | INFO | Update id=88209000 is handled. Duration 188 ms by bot id=7553405091
+2026-01-28 12:33:14,874 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 12:33:14,945 | INFO | Update id=88209001 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 12:33:52,001 | INFO | Polling stopped
+2026-01-28 12:33:52,003 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 12:33:52,003 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 12:33:52,269 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:22:28,058 | INFO | Start polling
+2026-01-28 13:22:31,308 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:22:52,915 | INFO | Update id=88209002 is handled. Duration 156 ms by bot id=7553405091
+2026-01-28 13:22:59,852 | INFO | User 496420361 | Невідома команда: /start | Показано головне меню
+2026-01-28 13:22:59,954 | INFO | Update id=88209003 is handled. Duration 110 ms by bot id=7553405091
+2026-01-28 13:23:01,527 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 13:23:01,667 | INFO | Update id=88209004 is handled. Duration 140 ms by bot id=7553405091
+2026-01-28 13:23:02,890 | INFO | Update id=88209005 is handled. Duration 109 ms by bot id=7553405091
+2026-01-28 13:23:04,490 | INFO | User 496420361 | Дію скасовано
+2026-01-28 13:23:04,490 | INFO | Update id=88209006 is handled. Duration 109 ms by bot id=7553405091
+2026-01-28 13:23:06,129 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769599385.png
+2026-01-28 13:23:06,627 | INFO | Update id=88209007 is handled. Duration 671 ms by bot id=7553405091
+2026-01-28 13:23:12,302 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 13:23:12,379 | INFO | Update id=88209008 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 13:23:14,108 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769599394.png
+2026-01-28 13:23:14,556 | INFO | Update id=88209009 is handled. Duration 547 ms by bot id=7553405091
+2026-01-28 13:23:32,693 | INFO | Polling stopped
+2026-01-28 13:23:32,693 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 13:23:32,693 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 13:23:32,955 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:25:43,245 | INFO | Start polling
+2026-01-28 13:25:46,472 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:25:49,203 | INFO | Update id=88209010 is handled. Duration 156 ms by bot id=7553405091
+2026-01-28 13:25:54,954 | INFO | User 496420361 | Невідома команда: /start | Показано головне меню
+2026-01-28 13:25:55,084 | INFO | Update id=88209011 is handled. Duration 125 ms by bot id=7553405091
+2026-01-28 13:25:57,863 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 13:25:57,946 | INFO | Update id=88209012 is handled. Duration 94 ms by bot id=7553405091
+2026-01-28 13:25:58,966 | INFO | Update id=88209013 is handled. Duration 171 ms by bot id=7553405091
+2026-01-28 13:26:00,754 | INFO | User 496420361 | Дію скасовано
+2026-01-28 13:26:00,754 | INFO | Update id=88209014 is handled. Duration 109 ms by bot id=7553405091
+2026-01-28 13:26:01,709 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769599561.png
+2026-01-28 13:26:02,115 | INFO | Update id=88209015 is handled. Duration 530 ms by bot id=7553405091
+2026-01-28 13:26:07,142 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 13:26:07,220 | INFO | Update id=88209016 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 13:26:08,544 | INFO | User 496420361 | Завершено сесію
+2026-01-28 13:26:08,605 | INFO | Update id=88209017 is handled. Duration 61 ms by bot id=7553405091
+2026-01-28 13:26:09,729 | INFO | User 496420361 | Невідома команда: 🚀 Старт | Показано головне меню
+2026-01-28 13:26:09,846 | INFO | Update id=88209018 is handled. Duration 109 ms by bot id=7553405091
+2026-01-28 13:26:14,873 | INFO | User 496420361 | Завершено сесію
+2026-01-28 13:26:14,936 | INFO | Update id=88209019 is handled. Duration 61 ms by bot id=7553405091
+2026-01-28 13:26:16,719 | INFO | Polling stopped
+2026-01-28 13:26:16,719 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 13:26:16,719 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 13:26:16,985 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:39:32,172 | INFO | Start polling
+2026-01-28 13:39:35,651 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:39:37,346 | INFO | User 496420361 | Невідома команда: 🚀 Старт | Показано головне меню
+2026-01-28 13:39:37,528 | INFO | Update id=88209020 is handled. Duration 172 ms by bot id=7553405091
+2026-01-28 13:39:42,175 | INFO | User 496420361 | Невідома команда: 🧠 Процеси | Показано головне меню
+2026-01-28 13:39:42,292 | INFO | Update id=88209021 is handled. Duration 110 ms by bot id=7553405091
+2026-01-28 13:39:44,328 | INFO | User 496420361 | Невідома команда: 🧠 Процеси | Показано головне меню
+2026-01-28 13:39:44,405 | INFO | Update id=88209022 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 13:39:48,540 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 13:39:48,618 | INFO | Update id=88209023 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 13:39:49,669 | INFO | User 496420361 | Невідома команда: 🧠 Процеси | Показано головне меню
+2026-01-28 13:39:49,752 | INFO | Update id=88209024 is handled. Duration 93 ms by bot id=7553405091
+2026-01-28 13:39:52,858 | INFO | User 496420361 | Невідома команда: 🧠 Процеси | Показано головне меню
+2026-01-28 13:39:52,923 | INFO | Update id=88209025 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 13:39:53,549 | INFO | User 496420361 | Невідома команда: 🧠 Процеси | Показано головне меню
+2026-01-28 13:39:53,627 | INFO | Update id=88209026 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 13:39:59,762 | INFO | Polling stopped
+2026-01-28 13:39:59,762 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 13:39:59,762 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 13:40:00,028 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:45:16,251 | INFO | Start polling
+2026-01-28 13:45:19,446 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:45:22,448 | INFO | User 496420361 | Сесія запущена через Старт
+2026-01-28 13:45:22,602 | INFO | Update id=88209031 is handled. Duration 155 ms by bot id=7553405091
+2026-01-28 13:45:27,124 | INFO | Update id=88209032 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 13:45:27,124 | ERROR | Cause exception while process update id=88209032 by bot id=7553405091
+TypeError: take_screenshot() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\screenshot.py", line 20, in screenshot_handler
+    path = take_screenshot()
+           ^^^^^^^^^^^^^^^^^
+TypeError: take_screenshot() missing 1 required positional argument: 'message'
+2026-01-28 13:45:39,958 | INFO | Update id=88209033 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 13:45:39,958 | ERROR | Cause exception while process update id=88209033 by bot id=7553405091
+TypeError: take_screenshot() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\screenshot.py", line 20, in screenshot_handler
+    path = take_screenshot()
+           ^^^^^^^^^^^^^^^^^
+TypeError: take_screenshot() missing 1 required positional argument: 'message'
+2026-01-28 13:45:42,435 | INFO | Update id=88209034 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 13:45:42,435 | ERROR | Cause exception while process update id=88209034 by bot id=7553405091
+TypeError: take_screenshot() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\screenshot.py", line 20, in screenshot_handler
+    path = take_screenshot()
+           ^^^^^^^^^^^^^^^^^
+TypeError: take_screenshot() missing 1 required positional argument: 'message'
+2026-01-28 13:48:14,713 | INFO | Polling stopped
+2026-01-28 13:48:14,713 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 13:48:14,713 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 13:48:14,965 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:48:20,273 | INFO | Start polling
+2026-01-28 13:48:23,483 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 13:48:23,527 | INFO | User 496420361 | Сесія запущена через Старт
+2026-01-28 13:48:23,711 | INFO | Update id=88209035 is handled. Duration 186 ms by bot id=7553405091
+2026-01-28 13:48:27,002 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769600906.png
+2026-01-28 13:48:27,389 | INFO | Update id=88209036 is handled. Duration 515 ms by bot id=7553405091
+2026-01-28 13:48:29,837 | INFO | User 496420361 | Скриншот оновлений | Файл: screenshot_1769600909.png
+2026-01-28 13:48:30,503 | INFO | Update id=88209037 is handled. Duration 734 ms by bot id=7553405091
+2026-01-28 13:48:38,659 | INFO | User 496420361 | Скриншот оновлений | Файл: screenshot_1769600918.png
+2026-01-28 13:48:39,086 | INFO | Update id=88209038 is handled. Duration 547 ms by bot id=7553405091
+2026-01-28 13:51:18,752 | INFO | Polling stopped
+2026-01-28 13:51:18,752 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 13:51:18,752 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 13:51:19,018 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:01:50,943 | INFO | Start polling
+2026-01-28 14:01:54,182 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:01:58,759 | INFO | Update id=88209039 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:01:58,759 | ERROR | Cause exception while process update id=88209039 by bot id=7553405091
+NameError: name 'is_allowed' is not defined
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\start.py", line 11, in start_command
+    if not is_allowed(message.from_user.id):
+           ^^^^^^^^^^
+NameError: name 'is_allowed' is not defined
+2026-01-28 14:02:09,556 | INFO | Update id=88209040 is handled. Duration 172 ms by bot id=7553405091
+2026-01-28 14:02:10,968 | INFO | Update id=88209041 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:02:10,968 | ERROR | Cause exception while process update id=88209041 by bot id=7553405091
+NameError: name 'is_allowed' is not defined
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\start.py", line 11, in start_command
+    if not is_allowed(message.from_user.id):
+           ^^^^^^^^^^
+NameError: name 'is_allowed' is not defined
+2026-01-28 14:02:20,227 | INFO | Update id=88209042 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 14:02:21,197 | INFO | Update id=88209043 is handled. Duration 61 ms by bot id=7553405091
+2026-01-28 14:02:21,791 | INFO | Update id=88209044 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:02:21,791 | ERROR | Cause exception while process update id=88209044 by bot id=7553405091
+NameError: name 'is_allowed' is not defined
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\start.py", line 11, in start_command
+    if not is_allowed(message.from_user.id):
+           ^^^^^^^^^^
+NameError: name 'is_allowed' is not defined
+2026-01-28 14:04:46,667 | INFO | Polling stopped
+2026-01-28 14:04:46,667 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:04:46,667 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:04:46,918 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:04:51,943 | INFO | Start polling
+2026-01-28 14:04:55,104 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:04:55,145 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:04:55,295 | INFO | Update id=88209045 is handled. Duration 156 ms by bot id=7553405091
+2026-01-28 14:04:58,757 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 14:04:59,497 | INFO | Update id=88209046 is handled. Duration 750 ms by bot id=7553405091
+2026-01-28 14:05:00,785 | INFO | Update id=88209047 is handled. Duration 125 ms by bot id=7553405091
+2026-01-28 14:05:02,175 | INFO | User 496420361 | Дію скасовано
+2026-01-28 14:05:02,175 | INFO | Update id=88209048 is handled. Duration 188 ms by bot id=7553405091
+2026-01-28 14:05:03,003 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 14:05:03,108 | INFO | Update id=88209049 is handled. Duration 109 ms by bot id=7553405091
+2026-01-28 14:05:04,738 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769601904.png
+2026-01-28 14:05:05,243 | INFO | Update id=88209050 is handled. Duration 688 ms by bot id=7553405091
+2026-01-28 14:05:06,755 | INFO | User 496420361 | Скриншот оновлений | Файл: screenshot_1769601906.png
+2026-01-28 14:05:07,350 | INFO | Update id=88209051 is handled. Duration 671 ms by bot id=7553405091
+2026-01-28 14:05:27,409 | INFO | User 496420361 | Завершено сесію
+2026-01-28 14:05:27,487 | INFO | Update id=88209052 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 14:05:30,669 | INFO | Polling stopped
+2026-01-28 14:05:30,669 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:05:30,669 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:05:30,935 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:14:47,843 | INFO | Start polling
+2026-01-28 14:14:51,037 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:14:53,572 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:14:53,720 | INFO | Update id=88209053 is handled. Duration 140 ms by bot id=7553405091
+2026-01-28 14:14:58,137 | INFO | Update id=88209054 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:14:58,137 | ERROR | Cause exception while process update id=88209054 by bot id=7553405091
+NameError: name 'ReplyKeyboardMarkup' is not defined
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 29, in system_menu
+    reply_markup=ReplyKeyboardMarkup(
+                 ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ReplyKeyboardMarkup' is not defined
+2026-01-28 14:15:03,633 | INFO | Update id=88209055 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:15:03,633 | ERROR | Cause exception while process update id=88209055 by bot id=7553405091
+NameError: name 'ReplyKeyboardMarkup' is not defined
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 29, in system_menu
+    reply_markup=ReplyKeyboardMarkup(
+                 ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ReplyKeyboardMarkup' is not defined
+2026-01-28 14:15:04,472 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 14:15:04,532 | INFO | Update id=88209056 is handled. Duration 61 ms by bot id=7553405091
+2026-01-28 14:15:05,641 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769602505.png
+2026-01-28 14:15:06,209 | INFO | Update id=88209057 is handled. Duration 688 ms by bot id=7553405091
+2026-01-28 14:15:07,291 | INFO | Update id=88209058 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:15:07,291 | ERROR | Cause exception while process update id=88209058 by bot id=7553405091
+NameError: name 'ReplyKeyboardMarkup' is not defined
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 29, in system_menu
+    reply_markup=ReplyKeyboardMarkup(
+                 ^^^^^^^^^^^^^^^^^^^
+NameError: name 'ReplyKeyboardMarkup' is not defined
+2026-01-28 14:17:28,883 | INFO | Polling stopped
+2026-01-28 14:17:28,884 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:17:28,884 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:17:29,144 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:17:34,598 | INFO | Start polling
+2026-01-28 14:17:37,779 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:17:37,823 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:17:37,970 | INFO | Update id=88209059 is handled. Duration 140 ms by bot id=7553405091
+2026-01-28 14:17:39,694 | INFO | Update id=88209060 is not handled. Duration 16 ms by bot id=7553405091
+2026-01-28 14:17:39,694 | ERROR | Cause exception while process update id=88209060 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:22:01,184 | INFO | Polling stopped
+2026-01-28 14:22:01,185 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:22:01,185 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:22:01,445 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:22:09,103 | INFO | Start polling
+2026-01-28 14:22:12,357 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:22:13,169 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:22:13,372 | INFO | Update id=88209061 is handled. Duration 203 ms by bot id=7553405091
+2026-01-28 14:22:18,750 | INFO | Update id=88209062 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:22:18,750 | ERROR | Cause exception while process update id=88209062 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 24, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:22:38,478 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 14:22:38,568 | INFO | Update id=88209063 is handled. Duration 94 ms by bot id=7553405091
+2026-01-28 14:22:39,935 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:22:39,998 | INFO | Update id=88209064 is handled. Duration 63 ms by bot id=7553405091
+2026-01-28 14:22:41,098 | INFO | Update id=88209065 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:22:41,099 | ERROR | Cause exception while process update id=88209065 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 24, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:24:30,582 | INFO | Polling stopped
+2026-01-28 14:24:30,583 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:24:30,583 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:24:30,849 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:24:51,729 | INFO | Start polling
+2026-01-28 14:24:54,888 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:24:54,932 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:24:55,258 | INFO | Update id=88209066 is handled. Duration 329 ms by bot id=7553405091
+2026-01-28 14:24:56,898 | INFO | Update id=88209067 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:24:56,898 | ERROR | Cause exception while process update id=88209067 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:25:04,743 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 14:25:04,882 | INFO | Update id=88209068 is handled. Duration 140 ms by bot id=7553405091
+2026-01-28 14:25:05,684 | INFO | Update id=88209069 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:25:05,685 | ERROR | Cause exception while process update id=88209069 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:27:09,348 | INFO | Polling stopped
+2026-01-28 14:27:09,350 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:27:09,350 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:27:09,616 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:27:14,778 | INFO | Start polling
+2026-01-28 14:27:17,963 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:27:18,011 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:27:18,203 | INFO | Update id=88209070 is handled. Duration 187 ms by bot id=7553405091
+2026-01-28 14:27:19,626 | INFO | Update id=88209071 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:27:19,626 | ERROR | Cause exception while process update id=88209071 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:27:33,674 | INFO | Update id=88209072 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:27:33,674 | ERROR | Cause exception while process update id=88209072 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:27:43,564 | INFO | User 496420361 | Невідома команда: Процеси | Показано головне меню
+2026-01-28 14:27:43,709 | INFO | Update id=88209073 is handled. Duration 157 ms by bot id=7553405091
+2026-01-28 14:27:45,864 | INFO | User 496420361 | Невідома команда: Процеси | Показано головне меню
+2026-01-28 14:27:45,948 | INFO | Update id=88209074 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 14:27:47,047 | INFO | Update id=88209075 is not handled. Duration 14 ms by bot id=7553405091
+2026-01-28 14:27:47,047 | ERROR | Cause exception while process update id=88209075 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:27:47,812 | INFO | User 496420361 | Невідома команда: Медіа | Показано головне меню
+2026-01-28 14:27:47,883 | INFO | Update id=88209076 is handled. Duration 79 ms by bot id=7553405091
+2026-01-28 14:27:48,697 | INFO | User 496420361 | Невідома команда: Скриншот | Показано головне меню
+2026-01-28 14:27:48,779 | INFO | Update id=88209077 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 14:27:49,440 | INFO | User 496420361 | Невідома команда: Статус ПК | Показано головне меню
+2026-01-28 14:27:49,524 | INFO | Update id=88209078 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 14:27:50,773 | INFO | User 496420361 | Невідома команда: Старт | Показано головне меню
+2026-01-28 14:27:50,838 | INFO | Update id=88209079 is handled. Duration 63 ms by bot id=7553405091
+2026-01-28 14:28:56,691 | INFO | Polling stopped
+2026-01-28 14:28:56,692 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:28:56,692 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:28:56,945 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:29:01,863 | INFO | Start polling
+2026-01-28 14:29:05,021 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:29:05,066 | INFO | User 496420361 | Невідома команда: Старт | Показано головне меню
+2026-01-28 14:29:05,306 | INFO | Update id=88209080 is handled. Duration 233 ms by bot id=7553405091
+2026-01-28 14:29:07,079 | INFO | Update id=88209081 is not handled. Duration 15 ms by bot id=7553405091
+2026-01-28 14:29:12,747 | INFO | Update id=88209082 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:29:12,747 | ERROR | Cause exception while process update id=88209082 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:29:13,854 | INFO | Update id=88209083 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:29:14,412 | INFO | Update id=88209084 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:31:09,601 | INFO | Polling stopped
+2026-01-28 14:31:09,603 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:31:09,603 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:31:09,862 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:31:15,220 | INFO | Start polling
+2026-01-28 14:31:18,443 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:31:18,491 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:31:18,651 | INFO | Update id=88209085 is handled. Duration 155 ms by bot id=7553405091
+2026-01-28 14:31:20,478 | INFO | Update id=88209086 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:31:20,479 | ERROR | Cause exception while process update id=88209086 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:31:24,531 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 14:31:24,608 | INFO | Update id=88209087 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 14:31:25,812 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769603485.png
+2026-01-28 14:31:26,351 | INFO | Update id=88209088 is handled. Duration 672 ms by bot id=7553405091
+2026-01-28 14:31:27,661 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 14:31:27,749 | INFO | Update id=88209089 is handled. Duration 94 ms by bot id=7553405091
+2026-01-28 14:31:29,138 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 14:31:29,886 | INFO | Update id=88209090 is handled. Duration 750 ms by bot id=7553405091
+2026-01-28 14:31:31,146 | INFO | Update id=88209091 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:31:31,146 | ERROR | Cause exception while process update id=88209091 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:32:51,727 | INFO | Polling stopped
+2026-01-28 14:32:51,728 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:32:51,728 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:32:51,986 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:32:56,705 | INFO | Start polling
+2026-01-28 14:32:59,890 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:32:59,937 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:33:00,090 | INFO | Update id=88209092 is handled. Duration 155 ms by bot id=7553405091
+2026-01-28 14:33:01,656 | INFO | Update id=88209093 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:33:01,657 | ERROR | Cause exception while process update id=88209093 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_kb
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:33:07,333 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 14:33:07,476 | INFO | Update id=88209094 is handled. Duration 139 ms by bot id=7553405091
+2026-01-28 14:33:08,785 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 14:33:08,920 | INFO | Update id=88209095 is handled. Duration 139 ms by bot id=7553405091
+2026-01-28 14:33:09,571 | INFO | Update id=88209096 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:33:09,571 | ERROR | Cause exception while process update id=88209096 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_kb
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:33:13,207 | INFO | Polling stopped
+2026-01-28 14:33:13,207 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:33:13,207 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:33:13,457 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:35:17,810 | INFO | Start polling
+2026-01-28 14:35:21,008 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:35:21,060 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:35:21,220 | INFO | Update id=88209097 is handled. Duration 155 ms by bot id=7553405091
+2026-01-28 14:35:22,246 | INFO | Update id=88209098 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:35:22,246 | ERROR | Cause exception while process update id=88209098 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:35:30,234 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 14:35:30,316 | INFO | Update id=88209099 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 14:35:32,159 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 14:35:32,258 | INFO | Update id=88209100 is handled. Duration 94 ms by bot id=7553405091
+2026-01-28 14:35:33,960 | INFO | Update id=88209101 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:35:33,960 | ERROR | Cause exception while process update id=88209101 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:35:50,409 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:35:50,481 | INFO | Update id=88209102 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 14:40:30,361 | INFO | Polling stopped
+2026-01-28 14:40:30,364 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:40:30,364 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:40:30,617 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:40:48,095 | INFO | Start polling
+2026-01-28 14:40:51,328 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 14:40:51,377 | INFO | User 496420361 | Сесія запущена
+2026-01-28 14:40:51,539 | INFO | Update id=88209103 is handled. Duration 170 ms by bot id=7553405091
+2026-01-28 14:40:52,862 | INFO | Update id=88209104 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 14:40:52,863 | ERROR | Cause exception while process update id=88209104 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 24, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:40:58,706 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 14:40:58,886 | INFO | Update id=88209105 is handled. Duration 186 ms by bot id=7553405091
+2026-01-28 14:40:59,567 | INFO | Update id=88209106 is not handled. Duration 15 ms by bot id=7553405091
+2026-01-28 14:40:59,567 | ERROR | Cause exception while process update id=88209106 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 24, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 14:41:08,327 | INFO | Polling stopped
+2026-01-28 14:41:08,329 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 14:41:08,329 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 14:41:08,590 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 15:03:53,053 | INFO | Start polling
+2026-01-28 15:03:56,242 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 15:03:59,191 | INFO | User 496420361 | Сесія запущена
+2026-01-28 15:03:59,359 | INFO | Update id=88209107 is handled. Duration 171 ms by bot id=7553405091
+2026-01-28 15:04:00,700 | INFO | Update id=88209108 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 15:04:00,700 | ERROR | Cause exception while process update id=88209108 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 15:04:08,199 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 15:04:08,277 | INFO | Update id=88209109 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 15:04:09,316 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 15:04:09,385 | INFO | Update id=88209110 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 15:04:10,307 | INFO | Update id=88209111 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 15:04:10,307 | ERROR | Cause exception while process update id=88209111 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 15:04:11,960 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769605451.png
+2026-01-28 15:04:12,453 | INFO | Update id=88209112 is handled. Duration 703 ms by bot id=7553405091
+2026-01-28 15:04:13,908 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 15:04:14,666 | INFO | Update id=88209113 is handled. Duration 766 ms by bot id=7553405091
+2026-01-28 15:04:16,190 | INFO | Update id=88209114 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 15:04:16,190 | ERROR | Cause exception while process update id=88209114 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 15:04:25,744 | INFO | Polling stopped
+2026-01-28 15:04:25,744 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 15:04:25,744 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 15:04:26,010 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 15:10:05,930 | INFO | Start polling
+2026-01-28 15:10:09,139 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 15:10:11,206 | INFO | Update id=88209115 is handled. Duration 219 ms by bot id=7553405091
+2026-01-28 15:10:12,850 | INFO | User 496420361 | Сесія запущена
+2026-01-28 15:10:12,917 | INFO | Update id=88209116 is handled. Duration 62 ms by bot id=7553405091
+2026-01-28 15:10:13,866 | INFO | Update id=88209117 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 15:10:13,866 | ERROR | Cause exception while process update id=88209117 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot\bot\handlers\system.py", line 26, in system_menu
+    [InlineKeyboardButton("Shutdown", callback_data="system_Shutdown"),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 15:18:30,588 | INFO | Polling stopped
+2026-01-28 15:18:30,588 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 15:18:30,588 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 15:18:30,853 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 15:18:37,573 | INFO | Start polling
+2026-01-28 15:18:40,793 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 15:18:53,416 | INFO | User 496420361 | Сесія запущена
+2026-01-28 15:18:53,585 | INFO | Update id=88209118 is handled. Duration 155 ms by bot id=7553405091
+2026-01-28 15:18:54,881 | INFO | Update id=88209119 is handled. Duration 110 ms by bot id=7553405091
+2026-01-28 15:18:57,257 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769606337.png
+2026-01-28 15:18:58,177 | INFO | Update id=88209120 is handled. Duration 1032 ms by bot id=7553405091
+2026-01-28 15:19:00,573 | INFO | Update id=88209121 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 15:19:06,074 | INFO | Update id=88209122 is not handled. Duration 0 ms by bot id=7553405091
