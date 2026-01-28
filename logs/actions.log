@@ -1974,3 +1974,1757 @@ TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
 2026-01-28 15:18:58,177 | INFO | Update id=88209120 is handled. Duration 1032 ms by bot id=7553405091
 2026-01-28 15:19:00,573 | INFO | Update id=88209121 is handled. Duration 78 ms by bot id=7553405091
 2026-01-28 15:19:06,074 | INFO | Update id=88209122 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-28 20:41:22,419 | INFO | Start polling
+2026-01-28 20:41:22,584 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 20:41:29,565 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:41:29,728 | INFO | Update id=88209123 is handled. Duration 165 ms by bot id=7553405091
+2026-01-28 20:41:32,577 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769625692.png
+2026-01-28 20:41:32,984 | INFO | Update id=88209124 is handled. Duration 535 ms by bot id=7553405091
+2026-01-28 20:41:35,011 | INFO | User 496420361 | Скриншот оновлений | Файл: screenshot_1769625694.png
+2026-01-28 20:41:35,258 | INFO | Update id=88209125 is handled. Duration 341 ms by bot id=7553405091
+2026-01-28 20:41:36,960 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 20:41:37,015 | INFO | Update id=88209126 is handled. Duration 56 ms by bot id=7553405091
+2026-01-28 20:41:39,485 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 20:41:39,628 | INFO | Update id=88209127 is handled. Duration 143 ms by bot id=7553405091
+2026-01-28 20:41:41,639 | INFO | Update id=88209128 is handled. Duration 58 ms by bot id=7553405091
+2026-01-28 20:41:43,701 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 20:41:43,793 | INFO | Update id=88209129 is handled. Duration 93 ms by bot id=7553405091
+2026-01-28 20:41:45,031 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 20:41:45,998 | INFO | Update id=88209130 is handled. Duration 970 ms by bot id=7553405091
+2026-01-28 20:41:51,369 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:41:51,445 | INFO | Update id=88209131 is handled. Duration 79 ms by bot id=7553405091
+2026-01-28 20:41:52,702 | INFO | User 496420361 | Завершено сесію
+2026-01-28 20:41:52,843 | INFO | Update id=88209132 is handled. Duration 143 ms by bot id=7553405091
+2026-01-28 20:43:32,895 | INFO | Polling stopped
+2026-01-28 20:43:32,897 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 20:43:32,897 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 20:43:33,158 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 20:43:54,839 | INFO | Start polling
+2026-01-28 20:43:55,000 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 20:43:57,019 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:43:57,192 | INFO | Update id=88209133 is handled. Duration 175 ms by bot id=7553405091
+2026-01-28 20:43:59,018 | INFO | Update id=88209134 is handled. Duration 170 ms by bot id=7553405091
+2026-01-28 20:44:06,731 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:44:06,813 | INFO | Update id=88209135 is handled. Duration 85 ms by bot id=7553405091
+2026-01-28 20:44:09,705 | INFO | User 496420361 | Завершено сесію
+2026-01-28 20:44:09,773 | INFO | Update id=88209136 is handled. Duration 70 ms by bot id=7553405091
+2026-01-28 20:52:48,042 | INFO | Polling stopped
+2026-01-28 20:52:48,044 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 20:52:48,044 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 20:52:48,300 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 20:52:54,157 | INFO | Start polling
+2026-01-28 20:52:54,294 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 20:52:57,083 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:52:57,283 | INFO | Update id=88209137 is handled. Duration 202 ms by bot id=7553405091
+2026-01-28 20:53:01,081 | INFO | Update id=88209138 is handled. Duration 103 ms by bot id=7553405091
+2026-01-28 20:53:04,551 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 20:53:05,472 | INFO | Update id=88209139 is handled. Duration 924 ms by bot id=7553405091
+2026-01-28 20:53:06,555 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 20:53:06,612 | INFO | Update id=88209140 is handled. Duration 58 ms by bot id=7553405091
+2026-01-28 20:53:08,196 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769626388.png
+2026-01-28 20:53:08,715 | INFO | Update id=88209141 is handled. Duration 656 ms by bot id=7553405091
+2026-01-28 20:53:11,797 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 20:53:11,884 | INFO | Update id=88209142 is handled. Duration 87 ms by bot id=7553405091
+2026-01-28 20:53:13,119 | INFO | Update id=88209143 is handled. Duration 87 ms by bot id=7553405091
+2026-01-28 20:53:15,979 | INFO | Update id=88209144 is handled. Duration 106 ms by bot id=7553405091
+2026-01-28 20:53:17,767 | INFO | Update id=88209145 is handled. Duration 116 ms by bot id=7553405091
+2026-01-28 20:53:20,455 | INFO | Update id=88209146 is handled. Duration 118 ms by bot id=7553405091
+2026-01-28 20:53:22,724 | INFO | Update id=88209147 is not handled. Duration 74 ms by bot id=7553405091
+2026-01-28 20:53:22,724 | ERROR | Cause exception while process update id=88209147 by bot id=7553405091
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\system.py", line 69, in system_select
+    await call.message.edit_text(
+    ...<2 lines>...
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-01-28 20:53:26,016 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:53:26,084 | INFO | Update id=88209148 is handled. Duration 70 ms by bot id=7553405091
+2026-01-28 20:53:35,075 | INFO | Update id=88209149 is handled. Duration 69 ms by bot id=7553405091
+2026-01-28 20:53:36,365 | INFO | Update id=88209150 is handled. Duration 102 ms by bot id=7553405091
+2026-01-28 20:53:37,817 | INFO | Update id=88209151 is handled. Duration 122 ms by bot id=7553405091
+2026-01-28 20:53:38,533 | INFO | Update id=88209152 is not handled. Duration 52 ms by bot id=7553405091
+2026-01-28 20:53:38,534 | ERROR | Cause exception while process update id=88209152 by bot id=7553405091
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\system.py", line 69, in system_select
+    await call.message.edit_text(
+    ...<2 lines>...
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-01-28 20:53:40,671 | INFO | Update id=88209153 is handled. Duration 118 ms by bot id=7553405091
+2026-01-28 20:53:42,044 | INFO | Update id=88209154 is handled. Duration 99 ms by bot id=7553405091
+2026-01-28 20:53:43,082 | INFO | Update id=88209155 is handled. Duration 172 ms by bot id=7553405091
+2026-01-28 20:53:43,522 | INFO | Update id=88209156 is not handled. Duration 50 ms by bot id=7553405091
+2026-01-28 20:53:43,522 | ERROR | Cause exception while process update id=88209156 by bot id=7553405091
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\system.py", line 69, in system_select
+    await call.message.edit_text(
+    ...<2 lines>...
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-01-28 20:53:46,682 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:53:46,751 | INFO | Update id=88209157 is handled. Duration 71 ms by bot id=7553405091
+2026-01-28 20:57:31,175 | INFO | Polling stopped
+2026-01-28 20:57:31,177 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 20:57:31,177 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 20:57:31,440 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 20:57:37,606 | INFO | Start polling
+2026-01-28 20:57:37,732 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 20:57:39,276 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:57:39,440 | INFO | Update id=88209158 is handled. Duration 165 ms by bot id=7553405091
+2026-01-28 20:57:40,598 | INFO | Update id=88209159 is handled. Duration 56 ms by bot id=7553405091
+2026-01-28 20:57:43,983 | INFO | Update id=88209160 is handled. Duration 138 ms by bot id=7553405091
+2026-01-28 20:57:46,371 | INFO | Update id=88209161 is handled. Duration 97 ms by bot id=7553405091
+2026-01-28 20:57:48,342 | INFO | Update id=88209162 is handled. Duration 122 ms by bot id=7553405091
+2026-01-28 20:57:49,869 | INFO | Update id=88209163 is handled. Duration 139 ms by bot id=7553405091
+2026-01-28 20:57:51,365 | INFO | Update id=88209164 is handled. Duration 124 ms by bot id=7553405091
+2026-01-28 20:57:52,189 | INFO | Update id=88209165 is handled. Duration 123 ms by bot id=7553405091
+2026-01-28 20:57:52,943 | INFO | Update id=88209166 is handled. Duration 125 ms by bot id=7553405091
+2026-01-28 20:57:53,821 | INFO | Update id=88209167 is handled. Duration 231 ms by bot id=7553405091
+2026-01-28 20:57:57,661 | INFO | Update id=88209168 is handled. Duration 156 ms by bot id=7553405091
+2026-01-28 20:58:02,468 | INFO | User 496420361 | Сесія запущена
+2026-01-28 20:58:02,562 | INFO | Update id=88209169 is handled. Duration 96 ms by bot id=7553405091
+2026-01-28 20:58:03,739 | INFO | Update id=88209170 is handled. Duration 68 ms by bot id=7553405091
+2026-01-28 20:58:06,042 | INFO | Update id=88209171 is handled. Duration 175 ms by bot id=7553405091
+2026-01-28 20:58:07,207 | INFO | Update id=88209172 is handled. Duration 252 ms by bot id=7553405091
+2026-01-28 20:58:08,633 | INFO | Update id=88209173 is handled. Duration 186 ms by bot id=7553405091
+2026-01-28 20:58:09,731 | INFO | Update id=88209174 is handled. Duration 208 ms by bot id=7553405091
+2026-01-28 21:00:28,319 | INFO | Polling stopped
+2026-01-28 21:00:28,321 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:00:28,321 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:00:28,574 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:00:43,036 | INFO | Start polling
+2026-01-28 21:00:43,201 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:00:45,149 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:00:45,408 | INFO | Update id=88209175 is handled. Duration 261 ms by bot id=7553405091
+2026-01-28 21:00:46,478 | INFO | Update id=88209176 is handled. Duration 100 ms by bot id=7553405091
+2026-01-28 21:00:48,122 | INFO | Update id=88209177 is handled. Duration 122 ms by bot id=7553405091
+2026-01-28 21:00:49,119 | INFO | User 496420361 | System action executed: Logoff
+2026-01-28 21:00:49,236 | INFO | Update id=88209178 is handled. Duration 187 ms by bot id=7553405091
+2026-01-28 21:02:43,113 | INFO | Start polling
+2026-01-28 21:02:43,284 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:02:43,346 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:02:43,532 | INFO | Update id=88209179 is handled. Duration 191 ms by bot id=7553405091
+2026-01-28 21:02:46,413 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 21:02:47,881 | INFO | Update id=88209180 is handled. Duration 1474 ms by bot id=7553405091
+2026-01-28 21:02:50,329 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:02:50,486 | INFO | Update id=88209181 is handled. Duration 165 ms by bot id=7553405091
+2026-01-28 21:04:51,695 | INFO | Polling stopped
+2026-01-28 21:04:51,697 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:04:51,697 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:04:51,952 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:04:58,692 | INFO | Start polling
+2026-01-28 21:04:58,834 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:04:59,937 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:05:00,100 | INFO | Update id=88209182 is handled. Duration 165 ms by bot id=7553405091
+2026-01-28 21:05:01,311 | INFO | Update id=88209183 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 21:05:01,311 | ERROR | Cause exception while process update id=88209183 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\system.py", line 38, in system_menu
+    InlineKeyboardButton("⏻ Shutdown", callback_data="sys_Shutdown"),
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 21:05:07,721 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 21:05:07,884 | INFO | Update id=88209184 is handled. Duration 163 ms by bot id=7553405091
+2026-01-28 21:05:09,426 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769627109.png
+2026-01-28 21:05:10,025 | INFO | Update id=88209185 is handled. Duration 724 ms by bot id=7553405091
+2026-01-28 21:05:11,497 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 21:05:11,561 | INFO | Update id=88209186 is handled. Duration 65 ms by bot id=7553405091
+2026-01-28 21:05:12,505 | INFO | Update id=88209187 is not handled. Duration 2 ms by bot id=7553405091
+2026-01-28 21:05:12,505 | ERROR | Cause exception while process update id=88209187 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\system.py", line 38, in system_menu
+    InlineKeyboardButton("⏻ Shutdown", callback_data="sys_Shutdown"),
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 21:05:14,390 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-28 21:05:15,496 | INFO | Update id=88209188 is handled. Duration 1109 ms by bot id=7553405091
+2026-01-28 21:05:16,195 | INFO | Update id=88209189 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 21:05:16,196 | ERROR | Cause exception while process update id=88209189 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\system.py", line 38, in system_menu
+    InlineKeyboardButton("⏻ Shutdown", callback_data="sys_Shutdown"),
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 21:08:12,518 | INFO | Polling stopped
+2026-01-28 21:08:12,520 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:08:12,520 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:08:12,780 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:08:18,253 | INFO | Start polling
+2026-01-28 21:08:18,397 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:08:20,942 | INFO | Update id=88209190 is handled. Duration 152 ms by bot id=7553405091
+2026-01-28 21:08:23,077 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:08:23,145 | INFO | Update id=88209191 is handled. Duration 70 ms by bot id=7553405091
+2026-01-28 21:08:24,378 | INFO | Update id=88209192 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 21:08:24,379 | ERROR | Cause exception while process update id=88209192 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\system.py", line 38, in system_menu
+    InlineKeyboardButton("⏻ Shutdown", callback_data="sys_Shutdown"),
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 21:10:24,249 | INFO | Polling stopped
+2026-01-28 21:10:24,250 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:10:24,251 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:10:24,508 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:10:30,482 | INFO | Start polling
+2026-01-28 21:10:30,596 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:10:32,637 | INFO | Update id=88209193 is handled. Duration 175 ms by bot id=7553405091
+2026-01-28 21:10:33,540 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:10:33,601 | INFO | Update id=88209194 is handled. Duration 64 ms by bot id=7553405091
+2026-01-28 21:10:34,581 | INFO | Update id=88209195 is handled. Duration 65 ms by bot id=7553405091
+2026-01-28 21:10:41,929 | INFO | Update id=88209196 is handled. Duration 98 ms by bot id=7553405091
+2026-01-28 21:10:46,139 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:10:46,232 | INFO | Update id=88209197 is handled. Duration 96 ms by bot id=7553405091
+2026-01-28 21:10:51,933 | INFO | User 496420361 | Delayed action executed: Shutdown
+2026-01-28 21:22:38,378 | INFO | Start polling
+2026-01-28 21:22:38,529 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:22:40,899 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:22:41,091 | INFO | Update id=88209198 is handled. Duration 194 ms by bot id=7553405091
+2026-01-28 21:22:44,089 | INFO | User 496420361 | Невідома команда: Файлова система | Показано головне меню
+2026-01-28 21:22:44,155 | INFO | Update id=88209199 is handled. Duration 69 ms by bot id=7553405091
+2026-01-28 21:22:50,063 | INFO | User 496420361 | Невідома команда: Файлова система | Показано головне меню
+2026-01-28 21:22:50,246 | INFO | Update id=88209200 is handled. Duration 186 ms by bot id=7553405091
+2026-01-28 21:23:49,541 | INFO | Polling stopped
+2026-01-28 21:23:49,543 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:23:49,543 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:23:49,803 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:26:13,821 | INFO | Start polling
+2026-01-28 21:26:13,964 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:26:15,146 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:26:15,278 | INFO | Update id=88209201 is handled. Duration 135 ms by bot id=7553405091
+2026-01-28 21:26:17,104 | INFO | User 496420361 | Невідома команда: Файлова система | Показано головне меню
+2026-01-28 21:26:17,175 | INFO | Update id=88209202 is handled. Duration 74 ms by bot id=7553405091
+2026-01-28 21:26:18,444 | INFO | User 496420361 | Невідома команда: Файлова система | Показано головне меню
+2026-01-28 21:26:18,517 | INFO | Update id=88209203 is handled. Duration 78 ms by bot id=7553405091
+2026-01-28 21:28:13,746 | INFO | Polling stopped
+2026-01-28 21:28:13,747 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:28:13,748 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:28:14,003 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:28:26,608 | INFO | Start polling
+2026-01-28 21:28:26,727 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:28:27,953 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:28:28,111 | INFO | Update id=88209204 is handled. Duration 160 ms by bot id=7553405091
+2026-01-28 21:28:29,412 | INFO | Update id=88209205 is handled. Duration 58 ms by bot id=7553405091
+2026-01-28 21:28:31,967 | INFO | Update id=88209206 is not handled. Duration 58 ms by bot id=7553405091
+2026-01-28 21:28:31,967 | ERROR | Cause exception while process update id=88209206 by bot id=7553405091
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 1237
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\filesystem.py", line 67, in view_directory
+    await call.message.edit_text(msg_text, parse_mode="Markdown")
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 1237
+2026-01-28 21:28:37,426 | INFO | User 496420361 | Завантажено файл: C:\Users\matis\_netrc
+2026-01-28 21:28:37,470 | INFO | Update id=88209207 is handled. Duration 122 ms by bot id=7553405091
+2026-01-28 21:28:45,547 | INFO | Update id=88209208 is handled. Duration 228 ms by bot id=7553405091
+2026-01-28 21:28:51,478 | INFO | User 496420361 | Файл видалено: C:\Users\matis\.bash_history
+2026-01-28 21:28:51,571 | INFO | Update id=88209209 is handled. Duration 100 ms by bot id=7553405091
+2026-01-28 21:28:56,053 | INFO | Update id=88209210 is handled. Duration 187 ms by bot id=7553405091
+2026-01-28 21:29:10,131 | INFO | Update id=88209211 is handled. Duration 75 ms by bot id=7553405091
+2026-01-28 21:29:12,443 | INFO | Update id=88209212 is handled. Duration 105 ms by bot id=7553405091
+2026-01-28 21:29:15,658 | INFO | Update id=88209213 is handled. Duration 64 ms by bot id=7553405091
+2026-01-28 21:29:17,296 | INFO | Update id=88209214 is handled. Duration 115 ms by bot id=7553405091
+2026-01-28 21:29:22,027 | INFO | Update id=88209215 is handled. Duration 67 ms by bot id=7553405091
+2026-01-28 21:30:43,777 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-01-28 21:30:43,777 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:30:43,938 | INFO | User 496420361 | Пошук файлів виконано
+2026-01-28 21:30:43,995 | INFO | Update id=88209216 is not handled. Duration 80759 ms by bot id=7553405091
+2026-01-28 21:30:43,995 | ERROR | Cause exception while process update id=88209216 by bot id=7553405091
+TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\filesystem.py", line 129, in search_files
+    await call.answer()
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2026-01-28 21:30:54,846 | INFO | Connection established (tryings = 1, bot id = 7553405091)
+2026-01-28 21:30:55,817 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:30:55,939 | INFO | Update id=88209217 is handled. Duration 125 ms by bot id=7553405091
+2026-01-28 21:31:01,528 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 21:31:01,600 | INFO | Update id=88209218 is handled. Duration 72 ms by bot id=7553405091
+2026-01-28 21:31:59,197 | INFO | Polling stopped
+2026-01-28 21:31:59,198 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:31:59,199 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:31:59,450 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:40:14,199 | INFO | Start polling
+2026-01-28 21:40:14,329 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:40:17,172 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:40:17,336 | INFO | Update id=88209219 is handled. Duration 165 ms by bot id=7553405091
+2026-01-28 21:40:28,521 | INFO | User 496420361 | Невідома команда: 🎛 Система | Показано головне меню
+2026-01-28 21:40:28,611 | INFO | Update id=88209220 is handled. Duration 94 ms by bot id=7553405091
+2026-01-28 21:40:38,936 | INFO | Polling stopped
+2026-01-28 21:40:38,938 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:40:38,938 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:40:39,194 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:41:23,581 | INFO | Start polling
+2026-01-28 21:41:23,704 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:41:25,105 | INFO | User 496420361 | Невідома команда: 🚀 Старт | Показано головне меню
+2026-01-28 21:41:25,237 | INFO | Update id=88209221 is handled. Duration 137 ms by bot id=7553405091
+2026-01-28 21:41:26,837 | INFO | User 496420361 | Невідома команда: 🔊 Медіа | Показано головне меню
+2026-01-28 21:41:26,917 | INFO | Update id=88209222 is handled. Duration 84 ms by bot id=7553405091
+2026-01-28 21:41:27,900 | INFO | User 496420361 | Невідома команда: 📸 Скриншот | Показано головне меню
+2026-01-28 21:41:27,976 | INFO | Update id=88209223 is handled. Duration 81 ms by bot id=7553405091
+2026-01-28 21:41:28,805 | INFO | User 496420361 | Невідома команда: 🖥 Статус ПК | Показано головне меню
+2026-01-28 21:41:28,868 | INFO | Update id=88209224 is handled. Duration 68 ms by bot id=7553405091
+2026-01-28 21:41:29,316 | INFO | User 496420361 | Невідома команда: 🎛 Система | Показано головне меню
+2026-01-28 21:41:29,378 | INFO | Update id=88209225 is handled. Duration 66 ms by bot id=7553405091
+2026-01-28 21:42:46,616 | INFO | Polling stopped
+2026-01-28 21:42:46,618 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:42:46,618 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:42:46,874 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:42:52,178 | INFO | Start polling
+2026-01-28 21:42:52,306 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:42:54,500 | INFO | User 496420361 | Невідома команда: 🚀 Старт | Показано головне меню
+2026-01-28 21:42:54,640 | INFO | Update id=88209226 is handled. Duration 143 ms by bot id=7553405091
+2026-01-28 21:42:56,465 | INFO | User 496420361 | Невідома команда: 🚀 Старт | Показано головне меню
+2026-01-28 21:42:56,524 | INFO | Update id=88209227 is handled. Duration 63 ms by bot id=7553405091
+2026-01-28 21:42:57,581 | INFO | User 496420361 | Невідома команда: 🖥 Статус ПК | Показано головне меню
+2026-01-28 21:42:57,662 | INFO | Update id=88209228 is handled. Duration 85 ms by bot id=7553405091
+2026-01-28 21:42:58,426 | INFO | User 496420361 | Невідома команда: 📸 Скриншот | Показано головне меню
+2026-01-28 21:42:58,507 | INFO | Update id=88209229 is handled. Duration 86 ms by bot id=7553405091
+2026-01-28 21:42:58,969 | INFO | User 496420361 | Невідома команда: 🔊 Медіа | Показано головне меню
+2026-01-28 21:42:59,033 | INFO | Update id=88209230 is handled. Duration 67 ms by bot id=7553405091
+2026-01-28 21:42:59,438 | INFO | User 496420361 | Невідома команда: 🎛 Система | Показано головне меню
+2026-01-28 21:42:59,500 | INFO | Update id=88209231 is handled. Duration 66 ms by bot id=7553405091
+2026-01-28 21:42:59,967 | INFO | User 496420361 | Невідома команда: 🧠 Процеси | Показано головне меню
+2026-01-28 21:43:00,025 | INFO | Update id=88209232 is handled. Duration 62 ms by bot id=7553405091
+2026-01-28 21:43:01,041 | INFO | User 496420361 | Сесія завершена
+2026-01-28 21:43:01,094 | INFO | Update id=88209233 is handled. Duration 56 ms by bot id=7553405091
+2026-01-28 21:43:03,136 | INFO | User 496420361 | Невідома команда: 🚀 Старт | Показано головне меню
+2026-01-28 21:43:03,191 | INFO | Update id=88209234 is handled. Duration 58 ms by bot id=7553405091
+2026-01-28 21:43:04,765 | INFO | User 496420361 | Невідома команда: 🖥 Статус ПК | Показано головне меню
+2026-01-28 21:43:04,873 | INFO | Update id=88209235 is handled. Duration 112 ms by bot id=7553405091
+2026-01-28 21:44:29,935 | INFO | Polling stopped
+2026-01-28 21:44:29,937 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:44:29,937 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:44:30,194 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:44:35,651 | INFO | Start polling
+2026-01-28 21:44:35,816 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:44:37,188 | INFO | User 496420361 | Невідома команда: 🚀 Старт | Показано головне меню
+2026-01-28 21:44:37,309 | INFO | Update id=88209236 is handled. Duration 125 ms by bot id=7553405091
+2026-01-28 21:44:40,768 | INFO | Update id=88209237 is handled. Duration 145 ms by bot id=7553405091
+2026-01-28 21:44:42,796 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769629482.png
+2026-01-28 21:44:43,248 | INFO | Update id=88209238 is handled. Duration 596 ms by bot id=7553405091
+2026-01-28 21:45:42,596 | INFO | Polling stopped
+2026-01-28 21:45:42,597 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:45:42,597 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:45:42,849 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:45:48,324 | INFO | Start polling
+2026-01-28 21:45:48,455 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:45:50,367 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:45:50,523 | INFO | Update id=88209239 is handled. Duration 157 ms by bot id=7553405091
+2026-01-28 21:45:51,997 | INFO | User 496420361 | Відкрито файлову систему
+2026-01-28 21:45:52,057 | INFO | Update id=88209240 is handled. Duration 64 ms by bot id=7553405091
+2026-01-28 21:45:55,647 | INFO | Update id=88209241 is handled. Duration 169 ms by bot id=7553405091
+2026-01-28 21:46:18,089 | INFO | User 496420361 | Відкрито файлову систему
+2026-01-28 21:46:18,147 | INFO | Update id=88209242 is handled. Duration 61 ms by bot id=7553405091
+2026-01-28 21:46:20,460 | INFO | Update id=88209243 is handled. Duration 45 ms by bot id=7553405091
+2026-01-28 21:46:24,401 | INFO | Update id=88209244 is handled. Duration 104 ms by bot id=7553405091
+2026-01-28 21:46:27,896 | INFO | Update id=88209245 is handled. Duration 109 ms by bot id=7553405091
+2026-01-28 21:46:30,159 | INFO | Update id=88209246 is handled. Duration 112 ms by bot id=7553405091
+2026-01-28 21:56:56,043 | INFO | Polling stopped
+2026-01-28 21:56:56,044 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:56:56,045 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:56:56,304 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:57:02,287 | INFO | Start polling
+2026-01-28 21:57:02,416 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 21:57:04,839 | INFO | User 496420361 | Сесія запущена
+2026-01-28 21:57:05,012 | INFO | Update id=88209247 is handled. Duration 175 ms by bot id=7553405091
+2026-01-28 21:57:06,565 | INFO | Update id=88209248 is not handled. Duration 5 ms by bot id=7553405091
+2026-01-28 21:57:06,565 | ERROR | Cause exception while process update id=88209248 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\filesystem.py", line 44, in fs_menu
+    await message.answer("🎛 Меню файлової системи:", reply_markup=filesystem_menu_kb())
+                                                                  ~~~~~~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\filesystem.py", line 23, in filesystem_menu_kb
+    [InlineKeyboardButton("📁 Переглянути директорії", callback_data="fs_list")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 21:59:55,452 | INFO | Polling stopped
+2026-01-28 21:59:55,454 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 21:59:55,454 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 21:59:55,712 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:00:01,566 | INFO | Start polling
+2026-01-28 22:00:01,697 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:00:03,042 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:00:03,193 | INFO | Update id=88209249 is handled. Duration 154 ms by bot id=7553405091
+2026-01-28 22:00:05,206 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:00:05,206 | INFO | Update id=88209250 is handled. Duration 65 ms by bot id=7553405091
+2026-01-28 22:00:07,374 | INFO | User 496420361 | Файлова система: list виконано
+2026-01-28 22:00:07,427 | INFO | Update id=88209251 is handled. Duration 122 ms by bot id=7553405091
+2026-01-28 22:00:13,812 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:00:13,812 | INFO | Update id=88209252 is handled. Duration 60 ms by bot id=7553405091
+2026-01-28 22:00:15,142 | INFO | User 496420361 | Файлова система: archive виконано
+2026-01-28 22:00:15,194 | INFO | Update id=88209253 is handled. Duration 118 ms by bot id=7553405091
+2026-01-28 22:01:00,562 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:01:00,562 | INFO | Update id=88209254 is handled. Duration 156 ms by bot id=7553405091
+2026-01-28 22:01:03,127 | INFO | User 496420361 | Файлова система: backup виконано
+2026-01-28 22:01:03,173 | INFO | Update id=88209255 is handled. Duration 152 ms by bot id=7553405091
+2026-01-28 22:01:49,729 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:01:49,886 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:01:49,887 | INFO | Update id=88209256 is handled. Duration 196 ms by bot id=7553405091
+2026-01-28 22:01:49,907 | INFO | Update id=88209257 is handled. Duration 181 ms by bot id=7553405091
+2026-01-28 22:01:52,311 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:01:52,311 | INFO | Update id=88209258 is handled. Duration 147 ms by bot id=7553405091
+2026-01-28 22:01:53,885 | INFO | User 496420361 | Файлова система: search виконано
+2026-01-28 22:01:53,941 | INFO | Update id=88209259 is handled. Duration 111 ms by bot id=7553405091
+2026-01-28 22:01:59,568 | INFO | User 496420361 | Невідома команда: ище | Показано головне меню
+2026-01-28 22:01:59,651 | INFO | Update id=88209260 is handled. Duration 85 ms by bot id=7553405091
+2026-01-28 22:02:02,349 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:02:02,436 | INFO | Update id=88209261 is handled. Duration 89 ms by bot id=7553405091
+2026-01-28 22:02:12,345 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:02:12,345 | INFO | Update id=88209262 is handled. Duration 67 ms by bot id=7553405091
+2026-01-28 22:02:13,506 | INFO | User 496420361 | Файлова система: delete виконано
+2026-01-28 22:02:13,578 | INFO | Update id=88209263 is handled. Duration 130 ms by bot id=7553405091
+2026-01-28 22:02:15,550 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:02:15,551 | INFO | Update id=88209264 is handled. Duration 64 ms by bot id=7553405091
+2026-01-28 22:02:34,481 | INFO | User 496420361 | Файлова система: upload виконано
+2026-01-28 22:02:34,525 | INFO | Update id=88209265 is handled. Duration 97 ms by bot id=7553405091
+2026-01-28 22:03:24,910 | INFO | User 496420361 | Невідома команда: None | Показано головне меню
+2026-01-28 22:03:24,971 | INFO | Update id=88209266 is handled. Duration 64 ms by bot id=7553405091
+2026-01-28 22:03:58,367 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-28 22:03:58,368 | INFO | Update id=88209267 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 22:04:29,510 | INFO | User 496420361 | Відкрито Медіа меню
+2026-01-28 22:04:29,631 | INFO | Update id=88209268 is handled. Duration 122 ms by bot id=7553405091
+2026-01-28 22:07:57,194 | INFO | Polling stopped
+2026-01-28 22:07:57,195 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:07:57,196 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:07:57,447 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:08:03,454 | INFO | Start polling
+2026-01-28 22:08:03,588 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:08:07,550 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:08:07,685 | INFO | Update id=88209269 is handled. Duration 139 ms by bot id=7553405091
+2026-01-28 22:08:09,154 | INFO | Update id=88209270 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:08:09,154 | ERROR | Cause exception while process update id=88209270 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 43, in media_menu
+    await message.answer("🎛 Меню Медіа:", reply_markup=media_menu_kb())
+                                                       ~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 26, in media_menu_kb
+    [InlineKeyboardButton("🖥 Запис екрану", callback_data="media_screen")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:08:12,467 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769630892.png
+2026-01-28 22:08:13,038 | INFO | Update id=88209271 is handled. Duration 721 ms by bot id=7553405091
+2026-01-28 22:08:14,242 | INFO | Update id=88209272 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:08:14,243 | ERROR | Cause exception while process update id=88209272 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 43, in media_menu
+    await message.answer("🎛 Меню Медіа:", reply_markup=media_menu_kb())
+                                                       ~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 26, in media_menu_kb
+    [InlineKeyboardButton("🖥 Запис екрану", callback_data="media_screen")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:09:21,736 | INFO | Update id=88209273 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:09:21,736 | ERROR | Cause exception while process update id=88209273 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 43, in media_menu
+    await message.answer("🎛 Меню Медіа:", reply_markup=media_menu_kb())
+                                                       ~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 26, in media_menu_kb
+    [InlineKeyboardButton("🖥 Запис екрану", callback_data="media_screen")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:09:53,463 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:09:53,522 | INFO | Update id=88209274 is handled. Duration 62 ms by bot id=7553405091
+2026-01-28 22:09:54,932 | INFO | Update id=88209275 is not handled. Duration 2 ms by bot id=7553405091
+2026-01-28 22:09:54,932 | ERROR | Cause exception while process update id=88209275 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 43, in media_menu
+    await message.answer("🎛 Меню Медіа:", reply_markup=media_menu_kb())
+                                                       ~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 26, in media_menu_kb
+    [InlineKeyboardButton("🖥 Запис екрану", callback_data="media_screen")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:13:43,802 | INFO | Polling stopped
+2026-01-28 22:13:43,803 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:13:43,804 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:13:44,066 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:13:49,864 | INFO | Start polling
+2026-01-28 22:13:50,023 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:13:51,578 | INFO | Update id=88209276 is handled. Duration 164 ms by bot id=7553405091
+2026-01-28 22:13:53,214 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:13:53,282 | INFO | Update id=88209277 is handled. Duration 71 ms by bot id=7553405091
+2026-01-28 22:13:54,034 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-28 22:13:54,034 | INFO | Update id=88209278 is handled. Duration 62 ms by bot id=7553405091
+2026-01-28 22:13:55,866 | INFO | Update id=88209279 is handled. Duration 125 ms by bot id=7553405091
+2026-01-28 22:14:02,468 | INFO | User 496420361 | Запис екрану 10s
+2026-01-28 22:14:02,469 | INFO | Update id=88209280 is handled. Duration 124 ms by bot id=7553405091
+2026-01-28 22:14:25,806 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-28 22:14:25,806 | INFO | Update id=88209281 is handled. Duration 65 ms by bot id=7553405091
+2026-01-28 22:14:27,392 | INFO | Update id=88209282 is handled. Duration 102 ms by bot id=7553405091
+2026-01-28 22:14:30,481 | INFO | User 496420361 | Запис з камери 5s
+2026-01-28 22:14:30,481 | INFO | Update id=88209283 is handled. Duration 82 ms by bot id=7553405091
+2026-01-28 22:14:36,646 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:14:36,709 | INFO | Update id=88209284 is handled. Duration 65 ms by bot id=7553405091
+2026-01-28 22:31:27,418 | INFO | Start polling
+2026-01-28 22:31:27,562 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:31:28,877 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:31:29,079 | INFO | Update id=88209285 is handled. Duration 204 ms by bot id=7553405091
+2026-01-28 22:31:30,068 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-28 22:31:30,068 | INFO | Update id=88209286 is handled. Duration 58 ms by bot id=7553405091
+2026-01-28 22:31:31,845 | INFO | Update id=88209287 is handled. Duration 127 ms by bot id=7553405091
+2026-01-28 22:31:34,486 | INFO | User 496420361 | Запис екрану 2s
+2026-01-28 22:31:34,486 | INFO | Update id=88209288 is handled. Duration 63 ms by bot id=7553405091
+2026-01-28 22:31:49,156 | INFO | Polling stopped
+2026-01-28 22:31:49,158 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:31:49,158 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:31:49,415 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:32:16,601 | INFO | Start polling
+2026-01-28 22:32:16,818 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:32:17,597 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:32:17,812 | INFO | Update id=88209289 is handled. Duration 222 ms by bot id=7553405091
+2026-01-28 22:32:19,059 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-28 22:32:19,060 | INFO | Update id=88209290 is handled. Duration 77 ms by bot id=7553405091
+2026-01-28 22:32:20,369 | INFO | Update id=88209291 is handled. Duration 126 ms by bot id=7553405091
+2026-01-28 22:32:22,536 | INFO | User 496420361 | Запис екрану 2s
+2026-01-28 22:32:22,536 | INFO | Update id=88209292 is handled. Duration 99 ms by bot id=7553405091
+2026-01-28 22:32:39,891 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 22:32:39,965 | INFO | Update id=88209293 is handled. Duration 75 ms by bot id=7553405091
+2026-01-28 22:38:47,630 | INFO | Polling stopped
+2026-01-28 22:38:47,632 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:38:47,632 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:38:47,893 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:38:54,681 | INFO | Start polling
+2026-01-28 22:38:54,842 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:38:56,368 | INFO | Update id=88209294 is handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:39:01,708 | INFO | Update id=88209295 is handled. Duration 2 ms by bot id=7553405091
+2026-01-28 22:39:17,968 | INFO | Update id=88209296 is handled. Duration 151 ms by bot id=7553405091
+2026-01-28 22:39:18,981 | INFO | Update id=88209297 is handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:39:53,951 | INFO | Polling stopped
+2026-01-28 22:39:53,953 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:39:53,953 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:39:54,206 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:39:59,839 | INFO | Start polling
+2026-01-28 22:39:59,994 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:40:00,854 | INFO | Update id=88209298 is handled. Duration 2 ms by bot id=7553405091
+2026-01-28 22:40:02,473 | INFO | Update id=88209299 is handled. Duration 122 ms by bot id=7553405091
+2026-01-28 22:40:03,510 | INFO | Update id=88209300 is handled. Duration 63 ms by bot id=7553405091
+2026-01-28 22:40:03,969 | INFO | Update id=88209301 is handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:40:06,078 | INFO | Update id=88209302 is handled. Duration 2 ms by bot id=7553405091
+2026-01-28 22:40:06,944 | INFO | Update id=88209303 is handled. Duration 73 ms by bot id=7553405091
+2026-01-28 22:40:07,531 | INFO | Update id=88209304 is handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:41:16,576 | INFO | Polling stopped
+2026-01-28 22:41:16,578 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:41:16,578 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:41:16,842 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:43:48,491 | INFO | Start polling
+2026-01-28 22:43:48,622 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:43:50,263 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:43:50,411 | INFO | Update id=88209305 is handled. Duration 151 ms by bot id=7553405091
+2026-01-28 22:43:52,666 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-28 22:43:52,666 | INFO | Update id=88209306 is handled. Duration 96 ms by bot id=7553405091
+2026-01-28 22:43:53,801 | INFO | Update id=88209307 is handled. Duration 118 ms by bot id=7553405091
+2026-01-28 22:43:56,699 | INFO | User 496420361 | Запис екрану 1s
+2026-01-28 22:43:56,699 | INFO | Update id=88209308 is handled. Duration 64 ms by bot id=7553405091
+2026-01-28 22:46:44,692 | INFO | Polling stopped
+2026-01-28 22:46:44,694 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:46:44,694 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:46:44,949 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:47:52,697 | INFO | Start polling
+2026-01-28 22:47:52,829 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:47:55,264 | INFO | Update id=88209309 is handled. Duration 2 ms by bot id=7553405091
+2026-01-28 22:47:59,643 | INFO | Update id=88209310 is handled. Duration 155 ms by bot id=7553405091
+2026-01-28 22:48:00,739 | INFO | Update id=88209311 is handled. Duration 2 ms by bot id=7553405091
+2026-01-28 22:49:25,711 | INFO | Polling stopped
+2026-01-28 22:49:25,713 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:49:25,713 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:49:25,972 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:49:31,113 | INFO | Start polling
+2026-01-28 22:49:31,252 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:49:32,476 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:49:32,602 | INFO | Update id=88209312 is handled. Duration 129 ms by bot id=7553405091
+2026-01-28 22:49:34,165 | INFO | Update id=88209313 is not handled. Duration 3 ms by bot id=7553405091
+2026-01-28 22:49:34,165 | ERROR | Cause exception while process update id=88209313 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 37, in media_menu
+    await message.answer("🎛 Меню Медіа:", reply_markup=media_menu_kb())
+                                                       ~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 18, in media_menu_kb
+    [InlineKeyboardButton("🖥 Запис екрану", callback_data="media_screen")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:49:36,377 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769633376.png
+2026-01-28 22:49:36,795 | INFO | Update id=88209314 is handled. Duration 562 ms by bot id=7553405091
+2026-01-28 22:49:38,621 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 22:49:38,694 | INFO | Update id=88209315 is handled. Duration 72 ms by bot id=7553405091
+2026-01-28 22:49:39,790 | INFO | Update id=88209316 is not handled. Duration 2 ms by bot id=7553405091
+2026-01-28 22:49:39,790 | ERROR | Cause exception while process update id=88209316 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 37, in media_menu
+    await message.answer("🎛 Меню Медіа:", reply_markup=media_menu_kb())
+                                                       ~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 18, in media_menu_kb
+    [InlineKeyboardButton("🖥 Запис екрану", callback_data="media_screen")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:52:16,136 | INFO | Polling stopped
+2026-01-28 22:52:16,138 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:52:16,138 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:52:16,398 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:52:22,312 | INFO | Start polling
+2026-01-28 22:52:22,461 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:52:23,906 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:52:24,279 | INFO | Update id=88209317 is handled. Duration 378 ms by bot id=7553405091
+2026-01-28 22:52:26,298 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-28 22:52:26,454 | INFO | Update id=88209318 is handled. Duration 156 ms by bot id=7553405091
+2026-01-28 22:52:26,948 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:52:27,016 | INFO | Update id=88209319 is handled. Duration 70 ms by bot id=7553405091
+2026-01-28 22:52:27,917 | INFO | Update id=88209320 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:52:27,917 | ERROR | Cause exception while process update id=88209320 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 45, in media_menu
+    await message.answer("🎛 Меню Медіа:", reply_markup=media_menu_kb())
+                                                       ~~~~~~~~~~~~~^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 21, in media_menu_kb
+    [InlineKeyboardButton("🖥 Запис екрану", callback_data="media_screen")],
+     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:52:48,236 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:52:48,300 | INFO | Update id=88209321 is handled. Duration 66 ms by bot id=7553405091
+2026-01-28 22:52:49,447 | INFO | Update id=88209322 is not handled. Duration 1 ms by bot id=7553405091
+2026-01-28 22:52:49,447 | ERROR | Cause exception while process update id=88209322 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 45, in media_menu
+    log_action(user_id, "Відкрито меню мультимедіа")
+                                               ^^^^^
+  File "E:\Python\NewPcBot\bot\handlers\media.py", line 21, in media_menu_kb
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-28 22:52:51,920 | INFO | Polling stopped
+2026-01-28 22:52:51,922 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:52:51,922 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:52:52,185 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:52:57,556 | INFO | Start polling
+2026-01-28 22:52:57,716 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-28 22:52:59,633 | INFO | User 496420361 | Сесія запущена
+2026-01-28 22:52:59,767 | INFO | Update id=88209323 is handled. Duration 142 ms by bot id=7553405091
+2026-01-28 22:53:00,764 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-28 22:53:00,765 | INFO | Update id=88209324 is handled. Duration 71 ms by bot id=7553405091
+2026-01-28 22:57:48,151 | INFO | Polling stopped
+2026-01-28 22:57:48,153 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 22:57:48,153 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-28 22:57:48,413 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
