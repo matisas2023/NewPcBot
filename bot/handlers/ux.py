@@ -8,6 +8,7 @@ from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKe
 
 from bot.logger import log_action
 from bot.security import is_allowed, is_session_active
+from bot.utils import is_command
 
 router = Router()
 
@@ -61,7 +62,7 @@ def faq_keyboard() -> InlineKeyboardMarkup:
     ])
 
 
-@router.message(F.text == "FAQ")
+@router.message(lambda message: is_command(message.text, "FAQ"))
 async def faq_menu(message: Message) -> None:
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -91,7 +92,7 @@ async def faq_answer(call: CallbackQuery) -> None:
     await call.answer()
 
 
-@router.message(F.text == "Історія")
+@router.message(lambda message: is_command(message.text, "Історія"))
 async def history_menu(message: Message) -> None:
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -117,7 +118,7 @@ async def history_menu(message: Message) -> None:
     log_action(user_id, "Перегляд історії дій/скриншотів")
 
 
-@router.message(F.text == "Тема")
+@router.message(lambda message: is_command(message.text, "Тема"))
 async def toggle_theme(message: Message) -> None:
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -132,7 +133,7 @@ async def toggle_theme(message: Message) -> None:
     log_action(user_id, "Зміна теми", new_theme)
 
 
-@router.message(F.text == "Голос")
+@router.message(lambda message: is_command(message.text, "Голос"))
 async def speech_prompt(message: Message) -> None:
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -182,7 +183,7 @@ async def speech_message(message: Message) -> None:
         await message.answer("❌ Не вдалося відтворити TTS на ПК")
 
 
-@router.message(F.text == "Досягнення")
+@router.message(lambda message: is_command(message.text, "Досягнення"))
 async def achievements(message: Message) -> None:
     user_id = message.from_user.id
     if not is_allowed(user_id):

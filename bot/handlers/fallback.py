@@ -1,20 +1,19 @@
-from aiogram import Router, F
+from aiogram import Router
 from aiogram.types import Message
 from bot.security import start_session, is_allowed
 from bot.keyboards import main_menu
 from bot.logger import log_action
+from bot.utils import is_allowed_command
 
 router = Router()
 
-@router.message(~F.text.in_([
+_ALLOWED_COMMANDS = {
     "Старт",
-    "🚀 Старт",
     "Статус ПК",
     "Скриншот",
     "Система",
     "Медіа",
     "Процеси",
-    "🧠 Процеси",
     "Медіаплеєр",
     "Файлова система",
     "Введення",
@@ -25,8 +24,10 @@ router = Router()
     "Голос",
     "Досягнення",
     "Вихід",
-    "⛔ Вихід"
-]))
+}
+
+
+@router.message(lambda message: not is_allowed_command(message.text, _ALLOWED_COMMANDS))
 async def fallback_handler(message: Message):
     if not is_allowed(message.from_user.id):
         log_action(message.from_user.id, f"Спроба доступу до невідомої команди: {message.text}", "Заборонено")

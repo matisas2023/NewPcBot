@@ -7,6 +7,7 @@ import os
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
 import imageio_ffmpeg as ffmpeg
+from bot.utils import is_command
 
 
 router = Router()
@@ -33,7 +34,7 @@ def media_menu_kb():
 # =========================
 # Відкриття меню мультимедіа
 # =========================
-@router.message(F.text == "Медіа")
+@router.message(lambda message: is_command(message.text, "Медіа"))
 async def media_menu(message: Message):
     user_id = message.from_user.id
     if not is_allowed(user_id):

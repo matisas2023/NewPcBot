@@ -1,12 +1,13 @@
-from aiogram import Router, F
+from aiogram import Router
 from aiogram.types import Message
 import psutil
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 
-@router.message(F.text.in_(["Процеси", "🧠 Процеси"]))
+@router.message(lambda message: is_command(message.text, "Процеси"))
 async def list_processes(message: Message):
     if not is_allowed(message.from_user.id):
         log_action(message.from_user.id, "Спроба доступу до Процеси", "Заборонено")

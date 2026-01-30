@@ -6,6 +6,7 @@ import asyncio
 
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 
@@ -18,7 +19,7 @@ scheduled_tasks: dict[int, asyncio.Task] = {}
 # =========================
 # Меню "Система"
 # =========================
-@router.message(F.text == "Система")
+@router.message(lambda message: is_command(message.text, "Система"))
 async def system_menu(message: Message):
     user_id = message.from_user.id
 
