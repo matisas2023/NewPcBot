@@ -6,7 +6,6 @@ import subprocess
 import os
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
-import imageio_ffmpeg as ffmpeg
 from bot.utils import is_command
 
 

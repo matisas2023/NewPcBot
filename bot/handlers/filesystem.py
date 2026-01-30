@@ -30,6 +30,17 @@ def filesystem_menu_kb():
         ]
     )
 
+
+def filesystem_delete_confirm_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(text="✅ Підтвердити", callback_data="fs_delete_confirm"),
+                InlineKeyboardButton(text="❌ Скасувати", callback_data="fs_delete_cancel"),
+            ]
+        ]
+    )
+
 # =========================
 # Відкриття меню
 # =========================
@@ -136,17 +147,9 @@ async def fs_text_input(message: Message):
             return
 
         pending_delete_path[user_id] = file_path
-        confirm_kb = InlineKeyboardMarkup(
-            inline_keyboard=[
-                [
-                    InlineKeyboardButton(text="✅ Підтвердити", callback_data="fs_delete_confirm"),
-                    InlineKeyboardButton(text="❌ Скасувати", callback_data="fs_delete_cancel"),
-                ]
-            ]
-        )
         await message.answer(
             f"⚠️ Видалити файл: {file_path}?",
-            reply_markup=confirm_kb,
+            reply_markup=filesystem_delete_confirm_kb(),
         )
         return
 

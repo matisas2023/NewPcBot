@@ -3,3 +3,5 @@ python-dotenv
 psutil
 pyautogui
 pillow
+pytest
+pytest-asyncio

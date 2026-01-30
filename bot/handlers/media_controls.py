@@ -1,7 +1,8 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-import comtypes.client
-import pyautogui
+import importlib.util
+import os
+import sys
 
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
@@ -15,14 +16,14 @@ router = Router()
 def media_controls_kb():
     kb = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton("⏯ Play/Pause", callback_data="mediaplayer_playpause"),
-            InlineKeyboardButton("⏭ Next", callback_data="mediaplayer_next"),
-            InlineKeyboardButton("⏮ Prev", callback_data="mediaplayer_prev")
+            InlineKeyboardButton(text="⏯ Play/Pause", callback_data="mediaplayer_playpause"),
+            InlineKeyboardButton(text="⏭ Next", callback_data="mediaplayer_next"),
+            InlineKeyboardButton(text="⏮ Prev", callback_data="mediaplayer_prev")
         ],
         [
-            InlineKeyboardButton("🔊 Volume Up", callback_data="mediaplayer_volup"),
-            InlineKeyboardButton("🔉 Volume Down", callback_data="mediaplayer_voldown"),
-            InlineKeyboardButton("🔇 Mute", callback_data="mediaplayer_mute")
+            InlineKeyboardButton(text="🔊 Volume Up", callback_data="mediaplayer_volup"),
+            InlineKeyboardButton(text="🔉 Volume Down", callback_data="mediaplayer_voldown"),
+            InlineKeyboardButton(text="🔇 Mute", callback_data="mediaplayer_mute")
         ]
     ])
     return kb
@@ -31,18 +32,18 @@ def media_controls_kb():
 def input_controls_kb():
     kb = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton("⎋ ESC", callback_data="input_esc"),
-            InlineKeyboardButton("↵ ENTER", callback_data="input_enter"),
-            InlineKeyboardButton("ALT+TAB", callback_data="input_alttab"),
+            InlineKeyboardButton(text="⎋ ESC", callback_data="input_esc"),
+            InlineKeyboardButton(text="↵ ENTER", callback_data="input_enter"),
+            InlineKeyboardButton(text="ALT+TAB", callback_data="input_alttab"),
         ],
         [
-            InlineKeyboardButton("🖱 Click", callback_data="input_click"),
+            InlineKeyboardButton(text="🖱 Click", callback_data="input_click"),
         ],
         [
-            InlineKeyboardButton("⬆️", callback_data="input_move_up"),
-            InlineKeyboardButton("⬇️", callback_data="input_move_down"),
-            InlineKeyboardButton("⬅️", callback_data="input_move_left"),
-            InlineKeyboardButton("➡️", callback_data="input_move_right"),
+            InlineKeyboardButton(text="⬆️", callback_data="input_move_up"),
+            InlineKeyboardButton(text="⬇️", callback_data="input_move_down"),
+            InlineKeyboardButton(text="⬅️", callback_data="input_move_left"),
+            InlineKeyboardButton(text="➡️", callback_data="input_move_right"),
         ],
     ])
     return kb
@@ -79,12 +80,29 @@ async def input_controls_menu(message: Message):
 # Ініціалізація COM для Windows Media Player
 # =========================
 def get_wmp():
+    if importlib.util.find_spec("comtypes.client") is None:
+        print("❌ Бібліотека comtypes не встановлена")
+        return None
+
+    import comtypes.client
+
     try:
         wmp = comtypes.client.CreateObject("WMPlayer.OCX")
         return wmp
     except Exception as e:
         print("❌ Помилка COM:", e)
         return None
+
+
+def get_pyautogui():
+    if sys.platform != "win32" and not os.environ.get("DISPLAY"):
+        return None
+    if importlib.util.find_spec("pyautogui") is None:
+        return None
+
+    import pyautogui
+
+    return pyautogui
 
 # =========================
 # Обробка inline кнопок
@@ -141,6 +159,10 @@ async def input_controls_action(call: CallbackQuery):
         return await call.answer("🔒 Сесія завершена", show_alert=True)
 
     action = call.data.replace("input_", "")
+    pyautogui = get_pyautogui()
+    if pyautogui is None:
+        await call.answer("❌ Недоступно в цьому середовищі", show_alert=True)
+        return
 
     try:
         if action == "esc":
