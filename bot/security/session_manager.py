@@ -2,7 +2,7 @@
 
 import time
 
-SESSION_TIMEOUT = 10 * 60  # 10 хвилин
+from bot.config import SESSION_TIMEOUT
 
 active_sessions = {}
 

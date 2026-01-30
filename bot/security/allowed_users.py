@@ -1,10 +1,6 @@
 # bot/security/allowed_users.py
 
-# Білий список Telegram ID
-ALLOWED_USERS = [
-    496420361,  # твій Telegram ID
-    # додати інших, якщо потрібно
-]
+from bot.config import ALLOWED_USERS
 
 def is_allowed(user_id: int) -> bool:
     """Перевірка, чи користувач у білому списку"""
