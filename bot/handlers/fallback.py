@@ -7,10 +7,13 @@ from bot.logger import log_action
 router = Router()
 
 @router.message(~F.text.in_([
+    "Старт",
     "Статус ПК",
     "Скриншот",
     "Система",
     "Медіа",
+    "Процеси",
+    "Медіаплеєр",
     "Вихід"
 ]))
 async def fallback_handler(message: Message):

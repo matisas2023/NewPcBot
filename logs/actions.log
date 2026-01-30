@@ -3728,3 +3728,450 @@ TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
 2026-01-28 22:57:48,153 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
 2026-01-28 22:57:48,153 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
 2026-01-28 22:57:48,413 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 12:49:40,075 | INFO | Start polling
+2026-01-30 12:49:43,299 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 12:50:51,156 | INFO | User 496420361 | Сесія запущена
+2026-01-30 12:50:54,355 | INFO | Update id=88209325 is handled. Duration 3202 ms by bot id=7553405091
+2026-01-30 12:50:58,933 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769770258.png
+2026-01-30 12:50:59,247 | INFO | Update id=88209326 is handled. Duration 405 ms by bot id=7553405091
+2026-01-30 12:51:01,591 | INFO | Update id=88209327 is handled. Duration 78 ms by bot id=7553405091
+2026-01-30 12:51:07,245 | INFO | Update id=88209328 is handled. Duration 140 ms by bot id=7553405091
+2026-01-30 12:51:09,102 | INFO | Update id=88209329 is handled. Duration 125 ms by bot id=7553405091
+2026-01-30 12:51:10,452 | INFO | Update id=88209330 is not handled. Duration 77 ms by bot id=7553405091
+2026-01-30 12:51:10,453 | ERROR | Cause exception while process update id=88209330 by bot id=7553405091
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot2\bot\handlers\system.py", line 89, in system_select
+    await call.message.edit_text(f"⚠️ Ви впевнені, що хочете виконати **{action}**?", reply_markup=confirm_kb)
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\client\bot.py", line 484, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-01-30 12:51:19,155 | INFO | User 496420361 | Сесія запущена
+2026-01-30 12:51:19,231 | INFO | Update id=88209331 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 12:51:21,487 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-30 12:51:21,487 | INFO | Update id=88209332 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 12:51:24,880 | INFO | Update id=88209333 is handled. Duration 140 ms by bot id=7553405091
+2026-01-30 12:51:29,471 | INFO | User 496420361 | Запис з камери 3s
+2026-01-30 12:51:29,471 | INFO | Update id=88209334 is handled. Duration 171 ms by bot id=7553405091
+2026-01-30 12:51:41,874 | INFO | User 496420361 | Сесія запущена
+2026-01-30 12:51:41,938 | INFO | Update id=88209335 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 12:51:43,598 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-30 12:51:43,598 | INFO | Update id=88209336 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 12:51:46,149 | INFO | User 496420361 | Файлова система: list виконано
+2026-01-30 12:51:46,200 | INFO | Update id=88209337 is handled. Duration 108 ms by bot id=7553405091
+2026-01-30 12:51:49,573 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-30 12:51:49,573 | INFO | Update id=88209338 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 12:51:51,472 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-30 12:51:51,473 | INFO | Update id=88209339 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 12:51:56,141 | INFO | User 496420361 | Файлова система: backup виконано
+2026-01-30 12:51:56,196 | INFO | Update id=88209340 is handled. Duration 125 ms by bot id=7553405091
+2026-01-30 12:52:02,709 | INFO | User 496420361 | Сесія запущена
+2026-01-30 12:52:02,857 | INFO | Update id=88209341 is handled. Duration 139 ms by bot id=7553405091
+2026-01-30 12:55:05,487 | INFO | Polling stopped
+2026-01-30 12:55:05,489 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 12:55:05,489 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 12:55:05,741 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:07:09,902 | INFO | Start polling
+2026-01-30 13:07:13,134 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:07:13,183 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:07:13,322 | INFO | Update id=88209342 is handled. Duration 141 ms by bot id=7553405091
+2026-01-30 13:07:21,957 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-30 13:07:21,958 | INFO | Update id=88209343 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:07:23,672 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:07:23,741 | INFO | Update id=88209344 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:07:25,933 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769771245.png
+2026-01-30 13:07:26,626 | INFO | Update id=88209345 is handled. Duration 811 ms by bot id=7553405091
+2026-01-30 13:07:27,658 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:07:27,717 | INFO | Update id=88209346 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:07:29,821 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-30 13:07:29,822 | INFO | Update id=88209347 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 13:07:32,305 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:07:32,369 | INFO | Update id=88209348 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 13:08:35,002 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:08:35,078 | INFO | Update id=88209349 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:08:37,929 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-30 13:08:37,991 | INFO | Update id=88209350 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 13:08:40,200 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-30 13:08:40,884 | INFO | Update id=88209351 is handled. Duration 686 ms by bot id=7553405091
+2026-01-30 13:08:43,275 | INFO | User 496420361 | Завершено сесію
+2026-01-30 13:08:43,347 | INFO | Update id=88209352 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:08:44,357 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:08:44,421 | INFO | Update id=88209353 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:08:46,643 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-30 13:08:46,643 | INFO | Update id=88209354 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 13:08:47,901 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:08:47,966 | INFO | Update id=88209355 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:08:54,019 | INFO | Polling stopped
+2026-01-30 13:08:54,020 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:08:54,020 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:08:54,273 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:09:23,395 | INFO | Start polling
+2026-01-30 13:09:26,538 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:09:26,581 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:09:26,736 | INFO | Update id=88209356 is handled. Duration 156 ms by bot id=7553405091
+2026-01-30 13:09:37,689 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:09:37,764 | INFO | Update id=88209357 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:09:39,342 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-30 13:09:39,343 | INFO | Update id=88209358 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:09:40,332 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:09:40,498 | INFO | Update id=88209359 is handled. Duration 172 ms by bot id=7553405091
+2026-01-30 13:09:52,040 | INFO | Polling stopped
+2026-01-30 13:09:52,041 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:09:52,041 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:09:52,295 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:11:33,101 | INFO | Start polling
+2026-01-30 13:11:36,275 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:11:36,315 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:11:36,516 | INFO | Update id=88209360 is handled. Duration 202 ms by bot id=7553405091
+2026-01-30 13:11:59,909 | INFO | Polling stopped
+2026-01-30 13:11:59,910 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:11:59,910 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:12:00,161 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:12:04,908 | INFO | Start polling
+2026-01-30 13:12:05,032 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:12:15,448 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:12:15,638 | INFO | Update id=88209361 is handled. Duration 188 ms by bot id=7553405091
+2026-01-30 13:12:21,580 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:12:21,639 | INFO | Update id=88209362 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 13:13:41,851 | INFO | Polling stopped
+2026-01-30 13:13:41,852 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:13:41,852 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:13:42,104 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:13:47,522 | INFO | Start polling
+2026-01-30 13:13:50,693 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:13:50,735 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:13:50,934 | INFO | Update id=88209363 is handled. Duration 203 ms by bot id=7553405091
+2026-01-30 13:13:54,311 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:13:54,374 | INFO | Update id=88209364 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:14:00,570 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-30 13:14:00,570 | INFO | Update id=88209365 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:14:01,790 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:14:01,858 | INFO | Update id=88209366 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 13:18:18,762 | INFO | Polling stopped
+2026-01-30 13:18:18,763 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:18:18,763 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:18:19,013 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:18:23,599 | INFO | Start polling
+2026-01-30 13:18:26,807 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:18:26,859 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:18:27,029 | INFO | Update id=88209367 is handled. Duration 172 ms by bot id=7553405091
+2026-01-30 13:18:29,045 | INFO | User 496420361 | Відкрито меню файлової системи
+2026-01-30 13:18:29,045 | INFO | Update id=88209368 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:18:30,402 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-30 13:18:30,402 | INFO | Update id=88209369 is handled. Duration 78 ms by bot id=7553405091
+2026-01-30 13:18:31,302 | INFO | User 496420361 | Скриншот надісланий | Файл: screenshot_1769771911.png
+2026-01-30 13:18:31,769 | INFO | Update id=88209370 is handled. Duration 547 ms by bot id=7553405091
+2026-01-30 13:18:32,449 | INFO | User 496420361 | Перегляд списку процесів
+2026-01-30 13:18:33,158 | INFO | Update id=88209371 is handled. Duration 703 ms by bot id=7553405091
+2026-01-30 13:18:34,442 | INFO | Update id=88209372 is handled. Duration 63 ms by bot id=7553405091
+2026-01-30 13:18:36,340 | INFO | User 496420361 | Статус ПК запитаний
+2026-01-30 13:18:36,448 | INFO | Update id=88209373 is handled. Duration 109 ms by bot id=7553405091
+2026-01-30 13:18:37,347 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:18:37,438 | INFO | Update id=88209374 is handled. Duration 94 ms by bot id=7553405091
+2026-01-30 13:20:16,446 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:20:16,538 | INFO | Update id=88209375 is handled. Duration 93 ms by bot id=7553405091
+2026-01-30 13:27:12,768 | INFO | Polling stopped
+2026-01-30 13:27:12,770 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:27:12,770 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:27:13,036 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:27:18,433 | INFO | Start polling
+2026-01-30 13:27:21,655 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:27:21,706 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:27:21,851 | INFO | Update id=88209376 is handled. Duration 156 ms by bot id=7553405091
+2026-01-30 13:27:24,033 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:27:24,033 | INFO | Update id=88209377 is handled. Duration 93 ms by bot id=7553405091
+2026-01-30 13:27:26,275 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:27:26,328 | INFO | Update id=88209378 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:27:30,865 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:27:30,925 | INFO | Update id=88209379 is handled. Duration 94 ms by bot id=7553405091
+2026-01-30 13:27:33,275 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:27:33,373 | INFO | Update id=88209380 is handled. Duration 125 ms by bot id=7553405091
+2026-01-30 13:27:35,078 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:27:35,216 | INFO | Update id=88209381 is handled. Duration 155 ms by bot id=7553405091
+2026-01-30 13:27:36,798 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:27:36,868 | INFO | Update id=88209382 is handled. Duration 93 ms by bot id=7553405091
+2026-01-30 13:35:20,360 | INFO | Polling stopped
+2026-01-30 13:35:20,362 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:35:20,362 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:35:20,618 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:35:27,284 | INFO | Start polling
+2026-01-30 13:35:30,505 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:35:34,462 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:35:34,817 | INFO | Update id=88209383 is handled. Duration 359 ms by bot id=7553405091
+2026-01-30 13:35:36,914 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:35:36,916 | INFO | Update id=88209384 is handled. Duration 94 ms by bot id=7553405091
+2026-01-30 13:35:38,696 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:35:38,752 | INFO | Update id=88209385 is handled. Duration 94 ms by bot id=7553405091
+2026-01-30 13:35:40,621 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:35:40,745 | INFO | Update id=88209386 is handled. Duration 156 ms by bot id=7553405091
+2026-01-30 13:35:42,409 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:35:42,551 | INFO | Update id=88209387 is handled. Duration 156 ms by bot id=7553405091
+2026-01-30 13:35:45,079 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:35:45,139 | INFO | Update id=88209388 is handled. Duration 93 ms by bot id=7553405091
+2026-01-30 13:35:46,972 | INFO | User 496420361 | Media control error | 'AudioDevice' object has no attribute 'Activate'
+2026-01-30 13:35:47,027 | INFO | Update id=88209389 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:39:07,043 | INFO | Polling stopped
+2026-01-30 13:39:07,046 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:39:07,046 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:39:07,311 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:39:13,638 | INFO | Start polling
+2026-01-30 13:39:16,826 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:39:16,873 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:39:17,003 | INFO | Update id=88209390 is handled. Duration 125 ms by bot id=7553405091
+2026-01-30 13:39:19,258 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:39:19,258 | INFO | Update id=88209391 is handled. Duration 78 ms by bot id=7553405091
+2026-01-30 13:39:21,517 | INFO | Update id=88209392 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:39:24,858 | INFO | Update id=88209393 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:40:12,571 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:40:12,571 | INFO | Update id=88209394 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:40:14,120 | INFO | Update id=88209395 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:41:41,359 | INFO | Polling stopped
+2026-01-30 13:41:41,360 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:41:41,360 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:41:41,610 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:41:46,981 | INFO | Start polling
+2026-01-30 13:41:50,183 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:41:50,246 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:41:50,438 | INFO | Update id=88209396 is handled. Duration 202 ms by bot id=7553405091
+2026-01-30 13:42:17,413 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:42:17,413 | INFO | Update id=88209397 is handled. Duration 78 ms by bot id=7553405091
+2026-01-30 13:42:18,923 | INFO | Update id=88209398 is not handled. Duration 14 ms by bot id=7553405091
+2026-01-30 13:42:21,823 | INFO | Update id=88209399 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:42:35,847 | INFO | Update id=88209400 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:42:36,530 | INFO | Update id=88209401 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:42:37,080 | INFO | Update id=88209402 is not handled. Duration 15 ms by bot id=7553405091
+2026-01-30 13:42:38,105 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:42:38,281 | INFO | Update id=88209403 is handled. Duration 171 ms by bot id=7553405091
+2026-01-30 13:43:10,721 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:43:10,721 | INFO | Update id=88209404 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:43:12,356 | INFO | Update id=88209405 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:45:40,962 | INFO | Polling stopped
+2026-01-30 13:45:40,963 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:45:40,963 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:45:41,226 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:45:46,753 | INFO | Start polling
+2026-01-30 13:45:49,929 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:45:51,495 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:45:51,658 | INFO | Update id=88209406 is handled. Duration 172 ms by bot id=7553405091
+2026-01-30 13:45:53,265 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:45:53,265 | INFO | Update id=88209407 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:45:54,832 | INFO | Update id=88209408 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:46:07,208 | INFO | Update id=88209409 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:46:08,342 | INFO | Update id=88209410 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:46:09,095 | INFO | Update id=88209411 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:46:09,437 | INFO | Update id=88209412 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:46:09,670 | INFO | Update id=88209413 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:46:12,540 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:46:12,608 | INFO | Update id=88209414 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:46:13,700 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:46:13,700 | INFO | Update id=88209415 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 13:46:14,999 | INFO | Update id=88209416 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:48:09,638 | INFO | Polling stopped
+2026-01-30 13:48:09,639 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 13:48:09,639 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 13:48:09,903 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:49:56,314 | INFO | Start polling
+2026-01-30 13:49:59,491 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 13:49:59,536 | INFO | User 496420361 | Сесія запущена
+2026-01-30 13:49:59,731 | INFO | Update id=88209417 is handled. Duration 202 ms by bot id=7553405091
+2026-01-30 13:50:01,802 | INFO | User 496420361 | Відкрив меню медіаплеєра
+2026-01-30 13:50:01,803 | INFO | Update id=88209418 is handled. Duration 61 ms by bot id=7553405091
+2026-01-30 13:50:03,402 | INFO | Update id=88209419 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 13:50:14,369 | INFO | Update id=88209420 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 14:00:04,406 | INFO | Polling stopped
+2026-01-30 14:00:04,430 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 14:00:04,431 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 14:00:04,701 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 14:06:14,378 | INFO | Could not import comtypes.gen, trying to create it.
+2026-01-30 14:06:14,380 | INFO | Created comtypes.gen directory: 'C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2026-01-30 14:06:14,380 | INFO | Writing __init__.py file: 'C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen\__init__.py'
+2026-01-30 14:06:14,383 | INFO | Using writeable comtypes cache directory: 'C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2026-01-30 14:06:14,803 | INFO | Start polling
+2026-01-30 14:06:18,018 | INFO | Run polling for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'
+2026-01-30 14:06:18,072 | INFO | User 496420361 | Сесія запущена
+2026-01-30 14:06:18,245 | INFO | Update id=88209421 is handled. Duration 172 ms by bot id=7553405091
+2026-01-30 14:06:19,738 | INFO | Update id=88209422 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 14:06:19,738 | ERROR | Cause exception while process update id=88209422 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot2\bot\handlers\media_controls.py", line 41, in media_controls_menu
+    await message.answer("🎛 Управління медіаплеєром:", reply_markup=media_controls_kb())
+                                                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot2\bot\handlers\media_controls.py", line 17, in media_controls_kb
+    InlineKeyboardButton("⏯ Play/Pause", callback_data="media_playpause"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-30 14:06:54,845 | INFO | Update id=88209423 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 14:06:57,039 | INFO | User 496420361 | Відкрито меню мультимедіа
+2026-01-30 14:06:57,039 | INFO | Update id=88209424 is handled. Duration 77 ms by bot id=7553405091
+2026-01-30 14:06:58,507 | INFO | Update id=88209425 is not handled. Duration 0 ms by bot id=7553405091
+2026-01-30 14:06:58,507 | ERROR | Cause exception while process update id=88209425 by bot id=7553405091
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot2\bot\handlers\media_controls.py", line 41, in media_controls_menu
+    await message.answer("🎛 Управління медіаплеєром:", reply_markup=media_controls_kb())
+                                                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\o.matiichuk\PycharmProjects\NewPcBot2\bot\handlers\media_controls.py", line 17, in media_controls_kb
+    InlineKeyboardButton("⏯ Play/Pause", callback_data="media_playpause"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2026-01-30 14:08:36,046 | INFO | Polling stopped
+2026-01-30 14:08:36,048 | ERROR | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-30 14:08:36,048 | WARNING | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7553405091)
+2026-01-30 14:08:36,304 | INFO | Polling stopped for bot @Only_Ukraine_News_Bot id=7553405091 - 'Only News'

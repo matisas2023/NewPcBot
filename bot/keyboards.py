@@ -9,9 +9,10 @@ main_menu = ReplyKeyboardMarkup(
         [KeyboardButton(text="Статус ПК"), KeyboardButton(text="Скриншот")],
         [KeyboardButton(text="Система"), KeyboardButton(text="Медіа")],
         [KeyboardButton(text="Процеси")],
+        [KeyboardButton(text="Медіаплеєр")],
         [KeyboardButton(text="Вихід")],
     ],
-    resize_keyboard=True
+    resize_keyboard=False
 )
 
 # =========================

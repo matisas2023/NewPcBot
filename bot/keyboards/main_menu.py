@@ -5,7 +5,8 @@ main_menu = ReplyKeyboardMarkup(
         [KeyboardButton(text="Старт")],
         [KeyboardButton(text="Статус ПК"), KeyboardButton(text="Скриншот")],
         [KeyboardButton(text="Система"), KeyboardButton(text="Медіа")],
-        [KeyboardButton(text="Процеси"), KeyboardButton(text="Файлова система")],  # <- нова кнопка
+        [KeyboardButton(text="Процеси"), KeyboardButton(text="Файлова система")],
+        [KeyboardButton(text="Медіаплеєр")],
         [KeyboardButton(text="Вихід")],
     ],
     resize_keyboard=True
