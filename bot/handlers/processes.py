@@ -6,7 +6,7 @@ from bot.logger import log_action
 
 router = Router()
 
-@router.message(F.text == "Процеси")
+@router.message(F.text.in_(["Процеси", "🧠 Процеси"]))
 async def list_processes(message: Message):
     if not is_allowed(message.from_user.id):
         log_action(message.from_user.id, "Спроба доступу до Процеси", "Заборонено")
