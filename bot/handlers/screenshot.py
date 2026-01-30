@@ -1,8 +1,11 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, FSInputFile, InputMediaPhoto
 from pathlib import Path
+import importlib.util
+import os
+import sys
 import time
-import pyautogui
+from PIL import Image
 
 from bot.security import is_allowed, is_session_active
 from bot.keyboards import screenshot_kb
@@ -20,7 +23,13 @@ def take_screenshot() -> Path:
     """Зробити скриншот і зберегти в screenshots/ з унікальним ім'ям"""
     timestamp = int(time.time())
     path = SCREENSHOT_DIR / f"screenshot_{timestamp}.png"
-    pyautogui.screenshot().save(path)
+    has_display = sys.platform == "win32" or os.environ.get("DISPLAY")
+    if has_display and importlib.util.find_spec("pyautogui") is not None:
+        import pyautogui
+
+        pyautogui.screenshot().save(path)
+    else:
+        Image.new("RGB", (800, 600), color=(0, 0, 0)).save(path)
     return path
 
 

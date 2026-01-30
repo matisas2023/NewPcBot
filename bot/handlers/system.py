@@ -17,18 +17,10 @@ pending_action: dict[int, str] = {}
 scheduled_tasks: dict[int, asyncio.Task] = {}
 
 # =========================
-# Меню "Система"
+# Клавіатури
 # =========================
-@router.message(lambda message: is_command(message.text, "Система"))
-async def system_menu(message: Message):
-    user_id = message.from_user.id
-
-    if not is_allowed(user_id):
-        return await message.answer("⛔ Доступ заборонено")
-    if not is_session_active(user_id):
-        return await message.answer("🔒 Сесія завершена")
-
-    kb = InlineKeyboardMarkup(inline_keyboard=[
+def system_menu_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
         [
             InlineKeyboardButton(text="⏻ Shutdown", callback_data="sys_Shutdown"),
             InlineKeyboardButton(text="🔄 Restart", callback_data="sys_Restart"),
@@ -47,7 +39,28 @@ async def system_menu(message: Message):
         ]
     ])
 
-    await message.answer("🎛 Керування системою:", reply_markup=kb)
+
+def system_confirm_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="✅ Підтвердити", callback_data="sys_confirm"),
+            InlineKeyboardButton(text="❌ Скасувати", callback_data="sys_cancel"),
+        ]
+    ])
+
+# =========================
+# Меню "Система"
+# =========================
+@router.message(lambda message: is_command(message.text, "Система"))
+async def system_menu(message: Message):
+    user_id = message.from_user.id
+
+    if not is_allowed(user_id):
+        return await message.answer("⛔ Доступ заборонено")
+    if not is_session_active(user_id):
+        return await message.answer("🔒 Сесія завершена")
+
+    await message.answer("🎛 Керування системою:", reply_markup=system_menu_kb())
 
 
 # =========================
@@ -80,14 +93,10 @@ async def system_select(call: CallbackQuery):
         action = data.replace("sys_", "")
         pending_action[user_id] = action
 
-        confirm_kb = InlineKeyboardMarkup(inline_keyboard=[
-            [
-                InlineKeyboardButton(text="✅ Підтвердити", callback_data="sys_confirm"),
-                InlineKeyboardButton(text="❌ Скасувати", callback_data="sys_cancel"),
-            ]
-        ])
-
-        await call.message.edit_text(f"⚠️ Ви впевнені, що хочете виконати **{action}**?", reply_markup=confirm_kb)
+        await call.message.edit_text(
+            f"⚠️ Ви впевнені, що хочете виконати **{action}**?",
+            reply_markup=system_confirm_kb(),
+        )
         await call.answer()
 
 

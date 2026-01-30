@@ -1,17 +1,11 @@
 from aiogram import Router
-from aiogram.types import Message
-from bot.logger import log_action
-from bot.security import end_session, is_allowed
-from bot.utils import is_command
+
+"""
+Deprecated compatibility router.
+
+This module exists to avoid import errors in older entrypoints that still
+reference `bot.handlers.other_buttons`. The "Вихід" handler now lives in
+bot/handlers/start.py.
+"""
 
 router = Router()
-
-@router.message(lambda message: is_command(message.text, "Вихід"))
-async def exit_bot(message: Message):
-    if not is_allowed(message.from_user.id):
-        log_action(message.from_user.id, "Спроба Виходу", "Заборонено")
-        return await message.answer("⛔ Доступ заборонено")
-
-    end_session(message.from_user.id)
-    log_action(message.from_user.id, "Завершено сесію")
-    await message.answer("❌ Сесія завершена")
