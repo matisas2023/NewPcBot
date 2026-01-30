@@ -17,6 +17,11 @@ router = Router()
     "Файлова система",
     "Введення",
     "Автозвіти",
+    "Історія",
+    "FAQ",
+    "Тема",
+    "Голос",
+    "Досягнення",
     "Вихід"
 ]))
 async def fallback_handler(message: Message):
