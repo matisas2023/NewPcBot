@@ -15,7 +15,7 @@ main_menu = ReplyKeyboardMarkup(
         [KeyboardButton(text="Тема"), KeyboardButton(text="Голос"), KeyboardButton(text="Досягнення")],
         [KeyboardButton(text="Вихід")],
     ],
-    resize_keyboard=False
+    resize_keyboard=True
 )
 
 # =========================
@@ -24,12 +24,5 @@ main_menu = ReplyKeyboardMarkup(
 screenshot_kb = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="🔄 Оновити", callback_data="screenshot_refresh")]
-    ]
-)
-
-confirm_system_kb = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [InlineKeyboardButton(text="✅ Підтвердити", callback_data="system_confirm"),
-         InlineKeyboardButton(text="❌ Відмінити", callback_data="system_cancel")]
     ]
 )
