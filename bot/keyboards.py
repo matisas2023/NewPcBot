@@ -10,6 +10,7 @@ main_menu = ReplyKeyboardMarkup(
         [KeyboardButton(text="Система"), KeyboardButton(text="Медіа")],
         [KeyboardButton(text="Процеси"), KeyboardButton(text="Файлова система")],
         [KeyboardButton(text="Медіаплеєр"), KeyboardButton(text="Введення")],
+        [KeyboardButton(text="Автозвіти")],
         [KeyboardButton(text="Вихід")],
     ],
     resize_keyboard=False
