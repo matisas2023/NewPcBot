@@ -14,6 +14,8 @@ router = Router()
     "Медіа",
     "Процеси",
     "Медіаплеєр",
+    "Файлова система",
+    "Введення",
     "Вихід"
 ]))
 async def fallback_handler(message: Message):
