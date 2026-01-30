@@ -7,6 +7,7 @@ import pyautogui
 from bot.security import is_allowed, is_session_active
 from bot.keyboards import screenshot_kb
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 
@@ -26,7 +27,7 @@ def take_screenshot() -> Path:
 # =========================
 # Надіслати скриншот
 # =========================
-@router.message(F.text == "Скриншот")
+@router.message(lambda message: is_command(message.text, "Скриншот"))
 async def screenshot_handler(message: Message):
     if not is_allowed(message.from_user.id):
         return await message.answer("⛔ Доступ заборонено")

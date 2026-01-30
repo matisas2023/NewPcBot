@@ -1,13 +1,14 @@
-from aiogram import Router, F
+from aiogram import Router
 from aiogram.types import Message
 
 from agent.status import get_status
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 
-@router.message(F.text == "Статус ПК")
+@router.message(lambda message: is_command(message.text, "Статус ПК"))
 async def status_pc(message: Message):
     if not is_allowed(message.from_user.id):
         return await message.answer("⛔ Доступ заборонено")

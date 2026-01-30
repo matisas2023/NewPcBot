@@ -4,6 +4,7 @@ import subprocess
 
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 
@@ -31,7 +32,7 @@ def media_player_kb():
 # =========================
 # Меню Медіаплеєра
 # =========================
-@router.message(F.text == "Медіаплеєр")
+@router.message(lambda message: is_command(message.text, "Медіаплеєр"))
 async def media_player_menu(message: Message):
     user_id = message.from_user.id
 

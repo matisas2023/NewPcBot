@@ -15,6 +15,7 @@ from bot.config import (
 )
 from bot.logger import log_action
 from bot.security import is_allowed, is_session_active
+from bot.utils import is_command
 
 router = Router()
 
@@ -101,7 +102,7 @@ async def autoreport_loop(bot, chat_id: int, user_id: int) -> None:
         return
 
 
-@router.message(F.text == "Автозвіти")
+@router.message(lambda message: is_command(message.text, "Автозвіти"))
 async def autoreport_menu(message: Message) -> None:
     user_id = message.from_user.id
     if not is_allowed(user_id):

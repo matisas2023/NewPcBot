@@ -1,13 +1,14 @@
-from aiogram import Router, F
+from aiogram import Router
 from aiogram.types import Message
-from bot.security import start_session, end_session, is_session_active, is_allowed
+from bot.security import start_session, end_session, is_allowed
 from bot.keyboards import main_menu
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 
 
-@router.message(F.text == "Старт")
+@router.message(lambda message: is_command(message.text, "Старт"))
 async def start_handler(message: Message):
     if not is_allowed(message.from_user.id):
         return await message.answer("⛔ Доступ заборонено")
@@ -23,7 +24,7 @@ async def start_handler(message: Message):
     )
 
 
-@router.message(F.text == "⛔ Вихід")
+@router.message(lambda message: is_command(message.text, "Вихід"))
 async def logout_handler(message: Message):
     if not is_allowed(message.from_user.id):
         return await message.answer("⛔ Доступ заборонено")

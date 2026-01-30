@@ -5,6 +5,7 @@ import pyautogui
 
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 
@@ -49,7 +50,7 @@ def input_controls_kb():
 # =========================
 # Меню Медіаплеєра
 # =========================
-@router.message(F.text == "Медіаплеєр")
+@router.message(lambda message: is_command(message.text, "Медіаплеєр"))
 async def media_controls_menu(message: Message):
     user_id = message.from_user.id
 
@@ -62,7 +63,7 @@ async def media_controls_menu(message: Message):
     log_action(user_id, "Відкрив меню Медіаплеєра")
 
 
-@router.message(F.text == "Введення")
+@router.message(lambda message: is_command(message.text, "Введення"))
 async def input_controls_menu(message: Message):
     user_id = message.from_user.id
 

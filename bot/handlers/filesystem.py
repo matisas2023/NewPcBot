@@ -7,6 +7,7 @@ from datetime import datetime
 import re
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
+from bot.utils import is_command
 
 router = Router()
 pending_action: dict[int, str] = {}
@@ -32,7 +33,7 @@ def filesystem_menu_kb():
 # =========================
 # Відкриття меню
 # =========================
-@router.message(F.text == "Файлова система")
+@router.message(lambda message: is_command(message.text, "Файлова система"))
 async def fs_menu(message: Message):
     user_id = message.from_user.id
 
