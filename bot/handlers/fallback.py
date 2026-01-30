@@ -8,11 +8,13 @@ router = Router()
 
 @router.message(~F.text.in_([
     "Старт",
+    "🚀 Старт",
     "Статус ПК",
     "Скриншот",
     "Система",
     "Медіа",
     "Процеси",
+    "🧠 Процеси",
     "Медіаплеєр",
     "Файлова система",
     "Введення",
@@ -22,7 +24,8 @@ router = Router()
     "Тема",
     "Голос",
     "Досягнення",
-    "Вихід"
+    "Вихід",
+    "⛔ Вихід"
 ]))
 async def fallback_handler(message: Message):
     if not is_allowed(message.from_user.id):
