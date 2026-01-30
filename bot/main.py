@@ -7,6 +7,7 @@ from bot.handlers import status, screenshot, system, media, fallback, other_butt
 from bot.handlers import start, processes  # нові router-и
 from bot.handlers import filesystem
 from bot.handlers import media_controls
+from bot.handlers import autoreport
 #from bot.handlers import media_player_
 
 
@@ -24,6 +25,7 @@ async def main():
     dp.include_router(processes.router)
     dp.include_router(filesystem.router)
     dp.include_router(media_controls.router)
+    dp.include_router(autoreport.router)
     #dp.include_router(media_player.router)
     dp.include_router(fallback.router)
 
