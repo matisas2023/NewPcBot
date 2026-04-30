@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import subprocess
-from aiogram import Router
-from aiogram.types import Message
+from aiogram import Router, F
+from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 
 from bot.logger import log_action
 from bot.security import is_allowed, is_session_active
@@ -16,11 +16,16 @@ MUSIC_LIMIT_MB = 30720
 TELEGRAM_LIMIT = 4096
 
 
-def _ensure_access(message: Message) -> bool:
-    user_id = message.from_user.id
-    if not is_allowed(user_id):
-        return False
-    return is_session_active(user_id)
+def music_menu_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="📊 Статус музики", callback_data="music_status")],
+            [InlineKeyboardButton(text="⬇️ Запустити завантаження", callback_data="music_download")],
+            [InlineKeyboardButton(text="📄 Показати лог", callback_data="music_log")],
+            [InlineKeyboardButton(text="🔄 Перезапустити Navidrome", callback_data="music_restart")],
+            [InlineKeyboardButton(text="💽 Місце на диску", callback_data="music_space")],
+        ]
+    )
 
 
 def _fallback_music_stats() -> tuple[int, int, int, str]:
@@ -73,6 +78,23 @@ async def music_status_handler(message: Message):
         await message.answer(f"❌ Помилка отримання статусу музики: {exc}")
 
 
+@router.message(lambda message: is_command(message.text, "Музика"))
+async def music_menu_handler(message: Message):
+    user_id = message.from_user.id
+    if not is_allowed(user_id):
+        return await message.answer("⛔ Доступ заборонено")
+    if not is_session_active(user_id):
+        return await message.answer("🔒 Сесія завершена")
+
+    await message.answer("🎵 Керування музичним сервером Navidrome:", reply_markup=music_menu_kb())
+
+
+@router.callback_query(F.data == "music_status")
+async def music_status_callback(call: CallbackQuery):
+    await music_status_handler(call.message)
+    await call.answer()
+
+
 @router.message(lambda message: is_command(message.text, "music_download"))
 async def music_download_handler(message: Message):
     user_id = message.from_user.id
@@ -92,6 +114,12 @@ async def music_download_handler(message: Message):
     except Exception as exc:
         log_action(user_id, "Помилка /music_download", str(exc))
         await message.answer(f"❌ Не вдалося запустити завантаження: {exc}")
+
+
+@router.callback_query(F.data == "music_download")
+async def music_download_callback(call: CallbackQuery):
+    await music_download_handler(call.message)
+    await call.answer()
 
 
 @router.message(lambda message: is_command(message.text, "music_log"))
@@ -119,6 +147,12 @@ async def music_log_handler(message: Message):
         await message.answer(f"❌ Не вдалося прочитати лог: {exc}")
 
 
+@router.callback_query(F.data == "music_log")
+async def music_log_callback(call: CallbackQuery):
+    await music_log_handler(call.message)
+    await call.answer()
+
+
 @router.message(lambda message: is_command(message.text, "music_restart"))
 async def music_restart_handler(message: Message):
     user_id = message.from_user.id
@@ -137,6 +171,12 @@ async def music_restart_handler(message: Message):
     except Exception as exc:
         log_action(user_id, "Помилка /music_restart", str(exc))
         await message.answer(f"❌ Не вдалося перезапустити Navidrome: {exc}")
+
+
+@router.callback_query(F.data == "music_restart")
+async def music_restart_callback(call: CallbackQuery):
+    await music_restart_handler(call.message)
+    await call.answer()
 
 
 @router.message(lambda message: is_command(message.text, "music_space"))
@@ -161,3 +201,9 @@ async def music_space_handler(message: Message):
     except Exception as exc:
         log_action(user_id, "Помилка /music_space", str(exc))
         await message.answer(f"❌ Не вдалося отримати дані про місце: {exc}")
+
+
+@router.callback_query(F.data == "music_space")
+async def music_space_callback(call: CallbackQuery):
+    await music_space_handler(call.message)
+    await call.answer()
