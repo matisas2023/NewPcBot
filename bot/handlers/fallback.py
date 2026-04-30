@@ -24,6 +24,11 @@ _ALLOWED_COMMANDS = {
     "Голос",
     "Досягнення",
     "Вихід",
+    "music_status",
+    "music_download",
+    "music_log",
+    "music_restart",
+    "music_space",
 }
 
 
