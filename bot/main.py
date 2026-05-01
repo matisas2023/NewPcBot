@@ -16,6 +16,10 @@ async def main():
     bot = Bot(BOT_TOKEN)
     dp = Dispatcher()
 
+    # Якщо раніше був увімкнений webhook, polling не отримає апдейти.
+    # Примусово переходимо на polling-режим.
+    await bot.delete_webhook(drop_pending_updates=True)
+
     # Підключаємо всі router-и
     dp.include_router(status.router)
     dp.include_router(screenshot.router)
