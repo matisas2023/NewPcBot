@@ -88,6 +88,11 @@ async def music_status_handler(message: Message):
         await message.answer(f"❌ Помилка отримання статусу музики: {exc}")
 
 
+@router.message(F.text.regexp(r"^/music_status(?:@[\w_]+)?(?:\s|$)"))
+async def music_status_regex_handler(message: Message):
+    await music_status_handler(message)
+
+
 @router.message(lambda message: is_command(message.text, "Музика"))
 async def music_menu_handler(message: Message):
     user_id = message.from_user.id
@@ -144,6 +149,11 @@ async def music_download_handler(message: Message):
         await message.answer(f"❌ Не вдалося запустити завантаження: {exc}")
 
 
+@router.message(F.text.regexp(r"^/music_download(?:@[\w_]+)?(?:\s|$)"))
+async def music_download_regex_handler(message: Message):
+    await music_download_handler(message)
+
+
 @router.callback_query(F.data == "music_download")
 async def music_download_callback(call: CallbackQuery):
     await music_download_handler(call.message)
@@ -176,6 +186,11 @@ async def music_log_handler(message: Message):
         await message.answer(f"❌ Не вдалося прочитати лог: {exc}")
 
 
+@router.message(F.text.regexp(r"^/music_log(?:@[\w_]+)?(?:\s|$)"))
+async def music_log_regex_handler(message: Message):
+    await music_log_handler(message)
+
+
 @router.callback_query(F.data == "music_log")
 async def music_log_callback(call: CallbackQuery):
     await music_log_handler(call.message)
@@ -201,6 +216,11 @@ async def music_restart_handler(message: Message):
     except Exception as exc:
         log_action(user_id, "Помилка /music_restart", str(exc))
         await message.answer(f"❌ Не вдалося перезапустити Navidrome: {exc}")
+
+
+@router.message(F.text.regexp(r"^/music_restart(?:@[\w_]+)?(?:\s|$)"))
+async def music_restart_regex_handler(message: Message):
+    await music_restart_handler(message)
 
 
 @router.callback_query(F.data == "music_restart")
@@ -232,6 +252,11 @@ async def music_space_handler(message: Message):
     except Exception as exc:
         log_action(user_id, "Помилка /music_space", str(exc))
         await message.answer(f"❌ Не вдалося отримати дані про місце: {exc}")
+
+
+@router.message(F.text.regexp(r"^/music_space(?:@[\w_]+)?(?:\s|$)"))
+async def music_space_regex_handler(message: Message):
+    await music_space_handler(message)
 
 
 @router.callback_query(F.data == "music_space")
