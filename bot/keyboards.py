@@ -11,6 +11,7 @@ main_menu = ReplyKeyboardMarkup(
         [KeyboardButton(text="Процеси"), KeyboardButton(text="Файлова система")],
         [KeyboardButton(text="Медіаплеєр"), KeyboardButton(text="Введення")],
         [KeyboardButton(text="Автозвіти"), KeyboardButton(text="Музика")],
+        [KeyboardButton(text="Сервіси")],
         [KeyboardButton(text="Історія"), KeyboardButton(text="FAQ")],
         [KeyboardButton(text="Тема"), KeyboardButton(text="Голос"), KeyboardButton(text="Досягнення")],
         [KeyboardButton(text="Вихід")],

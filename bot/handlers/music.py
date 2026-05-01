@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import subprocess
 from aiogram import Router, F
+from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 
 from bot.logger import log_action
@@ -24,6 +25,14 @@ def music_menu_kb() -> InlineKeyboardMarkup:
             [InlineKeyboardButton(text="📄 Показати лог", callback_data="music_log")],
             [InlineKeyboardButton(text="🔄 Перезапустити Navidrome", callback_data="music_restart")],
             [InlineKeyboardButton(text="💽 Місце на диску", callback_data="music_space")],
+        ]
+    )
+
+
+def services_menu_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="🎵 Navidrome / Музика", callback_data="services_music_menu")],
         ]
     )
 
@@ -63,6 +72,7 @@ def _render_music_status(file_count: int, used_mb: int, free_limit_mb: int, disk
 
 
 @router.message(lambda message: is_command(message.text, "music_status"))
+@router.message(Command("music_status"))
 async def music_status_handler(message: Message):
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -89,6 +99,23 @@ async def music_menu_handler(message: Message):
     await message.answer("🎵 Керування музичним сервером Navidrome:", reply_markup=music_menu_kb())
 
 
+@router.message(lambda message: is_command(message.text, "Сервіси"))
+async def services_menu_handler(message: Message):
+    user_id = message.from_user.id
+    if not is_allowed(user_id):
+        return await message.answer("⛔ Доступ заборонено")
+    if not is_session_active(user_id):
+        return await message.answer("🔒 Сесія завершена")
+
+    await message.answer("🧰 Меню сервісів:", reply_markup=services_menu_kb())
+
+
+@router.callback_query(F.data == "services_music_menu")
+async def services_music_menu_callback(call: CallbackQuery):
+    await call.message.answer("🎵 Керування музичним сервером Navidrome:", reply_markup=music_menu_kb())
+    await call.answer()
+
+
 @router.callback_query(F.data == "music_status")
 async def music_status_callback(call: CallbackQuery):
     await music_status_handler(call.message)
@@ -96,6 +123,7 @@ async def music_status_callback(call: CallbackQuery):
 
 
 @router.message(lambda message: is_command(message.text, "music_download"))
+@router.message(Command("music_download"))
 async def music_download_handler(message: Message):
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -123,6 +151,7 @@ async def music_download_callback(call: CallbackQuery):
 
 
 @router.message(lambda message: is_command(message.text, "music_log"))
+@router.message(Command("music_log"))
 async def music_log_handler(message: Message):
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -154,6 +183,7 @@ async def music_log_callback(call: CallbackQuery):
 
 
 @router.message(lambda message: is_command(message.text, "music_restart"))
+@router.message(Command("music_restart"))
 async def music_restart_handler(message: Message):
     user_id = message.from_user.id
     if not is_allowed(user_id):
@@ -180,6 +210,7 @@ async def music_restart_callback(call: CallbackQuery):
 
 
 @router.message(lambda message: is_command(message.text, "music_space"))
+@router.message(Command("music_space"))
 async def music_space_handler(message: Message):
     user_id = message.from_user.id
     if not is_allowed(user_id):
