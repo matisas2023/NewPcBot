@@ -9,6 +9,7 @@ from bot.handlers import filesystem
 from bot.handlers import media_controls
 from bot.handlers import autoreport
 from bot.handlers import ux
+from bot.handlers import music
 
 
 async def main():
@@ -26,6 +27,7 @@ async def main():
     dp.include_router(media_controls.router)
     dp.include_router(autoreport.router)
     dp.include_router(ux.router)
+    dp.include_router(music.router)
     dp.include_router(fallback.router)
 
     print("🤖 Бот запущено!")

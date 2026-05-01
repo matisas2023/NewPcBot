@@ -8,7 +8,10 @@ def normalize_command(text: Optional[str]) -> str:
     if not text:
         return ""
     cleaned = text.strip()
+    if cleaned.startswith("/"):
+        cleaned = cleaned.split()[0]
     cleaned = _COMMAND_PREFIX_RE.sub("", cleaned)
+    cleaned = cleaned.split("@", 1)[0]
     return cleaned
 
 
