@@ -18,12 +18,18 @@ _ALLOWED_COMMANDS = {
     "Файлова система",
     "Введення",
     "Автозвіти",
+    "Музика",
     "Історія",
     "FAQ",
     "Тема",
     "Голос",
     "Досягнення",
     "Вихід",
+    "music_status",
+    "music_download",
+    "music_log",
+    "music_restart",
+    "music_space",
 }
 
 
