@@ -15,10 +15,17 @@ def end_session(user_id: int):
 def is_session_active(user_id: int) -> bool:
     last_activity = active_sessions.get(user_id)
     if not last_activity:
-        return False
+        # Для серверного сценарію (Debian) автоматично відкриваємо сесію
+        # при першій команді, щоб бот не "застрягав" у стані
+        # "Сесія завершена" після рестарту процесу.
+        start_session(user_id)
+        return True
+    if SESSION_TIMEOUT <= 0:
+        active_sessions[user_id] = time.time()
+        return True
     if time.time() - last_activity > SESSION_TIMEOUT:
-        end_session(user_id)
-        return False
+        start_session(user_id)
+        return True
     # оновлюємо час останньої активності
     active_sessions[user_id] = time.time()
     return True
