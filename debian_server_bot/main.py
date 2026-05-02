@@ -21,10 +21,16 @@ MUSIC_LIMIT_MB = 30720
 TG_LIMIT = 4096
 
 
-def is_allowed(message: Message) -> bool:
-    user_ok = (not ALLOWED_USERS) or (message.from_user and message.from_user.id in ALLOWED_USERS)
-    chat_ok = (not ALLOWED_CHATS) or (message.chat and message.chat.id in ALLOWED_CHATS)
+def is_allowed_ids(user_id: int | None, chat_id: int | None) -> bool:
+    user_ok = (not ALLOWED_USERS) or (user_id in ALLOWED_USERS)
+    chat_ok = (not ALLOWED_CHATS) or (chat_id in ALLOWED_CHATS)
     return user_ok and chat_ok
+
+
+def is_allowed_message(message: Message) -> bool:
+    uid = message.from_user.id if message.from_user else None
+    cid = message.chat.id if message.chat else None
+    return is_allowed_ids(uid, cid)
 
 
 def run_cmd(args: list[str], timeout: int = 20) -> tuple[bool, str]:
@@ -89,6 +95,18 @@ def music_menu_kb() -> InlineKeyboardMarkup:
     )
 
 
+def system_menu_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="🔄 Reboot", callback_data="sys_reboot"),
+             InlineKeyboardButton(text="⏻ Shutdown", callback_data="sys_shutdown")],
+            [InlineKeyboardButton(text="🔒 Lock", callback_data="sys_lock"),
+             InlineKeyboardButton(text="🎛 Services", callback_data="sys_services")],
+            [InlineKeyboardButton(text="◀️ Назад", callback_data="menu_home")],
+        ]
+    )
+
+
 async def send_text(message: Message, text: str, code: bool = False) -> None:
     body = f"```{text}```" if code else text
     if len(body) <= TG_LIMIT:
@@ -108,7 +126,7 @@ async def main() -> None:
 
     @dp.message(Command("start"))
     async def cmd_start(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         await message.answer(
             "✅ <b>Debian Bot активний</b>\n\n"
@@ -119,7 +137,7 @@ async def main() -> None:
 
     @dp.message(Command("status"))
     async def cmd_status(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         host = subprocess.getoutput("hostname")
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -136,7 +154,7 @@ async def main() -> None:
 
     @dp.message(Command("diag"))
     async def cmd_diag(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         cmds = [
             "uptime",
@@ -153,35 +171,35 @@ async def main() -> None:
 
     @dp.message(Command("disk"))
     async def cmd_disk(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["df", "-h"])
         await send_text(message, out if ok else f"❌ {out}", code=ok)
 
     @dp.message(Command("fs"))
     async def cmd_fs(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["ls", "-lah", "/"])
         await send_text(message, out, code=True)
 
     @dp.message(Command("top"))
     async def cmd_top(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["ps", "aux", "--sort=-%cpu"])
         await send_text(message, out, code=True)
 
     @dp.message(Command("services"))
     async def cmd_services(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["systemctl", "list-units", "--type=service", "--state=running"])
         await send_text(message, out, code=True)
 
     @dp.message(Command("net"))
     async def cmd_net(message: Message):
-        if not is_allowed(message):
+         if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ip = subprocess.getoutput("hostname -I")
         routes = subprocess.getoutput("ip route")
@@ -189,13 +207,13 @@ async def main() -> None:
 
     @dp.message(Command("music_status"))
     async def cmd_music_status(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         await message.answer(render_music_status())
 
     @dp.message(Command("music_download"))
     async def cmd_music_download(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         try:
             log = open("/var/log/music_manual.log", "a", encoding="utf-8")
@@ -206,7 +224,7 @@ async def main() -> None:
 
     @dp.message(Command("music_log"))
     async def cmd_music_log(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["tail", "-n", "40", "/var/log/music_auto_download.log"])
         text = out if ok else f"❌ {out}"
@@ -214,7 +232,7 @@ async def main() -> None:
 
     @dp.message(Command("music_restart"))
     async def cmd_music_restart(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["systemctl", "restart", "navidrome"])
         if not ok:
@@ -223,7 +241,7 @@ async def main() -> None:
 
     @dp.message(Command("music_space"))
     async def cmd_music_space(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["music_status"])
         text = out if ok else render_music_status()
@@ -232,15 +250,43 @@ async def main() -> None:
 
     @dp.message(Command("menu"))
     async def cmd_menu(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         await message.answer("🧭 <b>Головне меню</b>", reply_markup=main_menu_kb(), parse_mode="HTML")
 
     @dp.callback_query(F.data == "menu_home")
     async def cb_menu_home(call: CallbackQuery):
-        if not is_allowed(call.message):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
             return await call.answer("⛔ Доступ заборонено", show_alert=True)
         await call.message.answer("🧭 <b>Головне меню</b>", reply_markup=main_menu_kb(), parse_mode="HTML")
+        await call.answer()
+
+    @dp.callback_query(F.data == "sys_reboot")
+    async def cb_sys_reboot(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await cmd_reboot(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "sys_shutdown")
+    async def cb_sys_shutdown(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await cmd_shutdown(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "sys_lock")
+    async def cb_sys_lock(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await cmd_lock(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "sys_services")
+    async def cb_sys_services(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await cmd_services(call.message)
         await call.answer()
 
     @dp.callback_query(F.data == "menu_diag")
@@ -250,23 +296,29 @@ async def main() -> None:
 
     @dp.callback_query(F.data == "menu_system")
     async def cb_menu_system(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
         await cmd_status(call.message)
-        await call.message.answer("Системні дії: /reboot /shutdown /lock /restart_service <name>")
+        await call.message.answer("⚙️ <b>Системні дії</b>", reply_markup=system_menu_kb(), parse_mode="HTML")
         await call.answer()
 
     @dp.callback_query(F.data == "menu_net")
     async def cb_menu_net(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
         await cmd_net(call.message)
         await call.answer()
 
     @dp.callback_query(F.data == "menu_fs")
     async def cb_menu_fs(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
         await cmd_fs(call.message)
         await call.answer()
 
     @dp.callback_query(F.data == "menu_music")
     async def cb_menu_music(call: CallbackQuery):
-        if not is_allowed(call.message):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
             return await call.answer("⛔ Доступ заборонено", show_alert=True)
         await call.message.answer("🎵 <b>Музичне меню</b>", reply_markup=music_menu_kb(), parse_mode="HTML")
         await call.answer()
@@ -298,28 +350,28 @@ async def main() -> None:
 
     @dp.message(Command("reboot"))
     async def cmd_reboot(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["systemctl", "reboot"])
         await message.answer("🔄 Сервер перезавантажується" if ok else f"❌ {out}")
 
     @dp.message(Command("shutdown"))
     async def cmd_shutdown(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["systemctl", "poweroff"])
         await message.answer("⏻ Сервер вимикається" if ok else f"❌ {out}")
 
     @dp.message(Command("lock"))
     async def cmd_lock(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["loginctl", "lock-session"])
         await message.answer("🔒 Сесію заблоковано" if ok else f"❌ {out}")
 
     @dp.message(Command("restart_service"))
     async def cmd_restart_service(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         parts = (message.text or "").split(maxsplit=1)
         if len(parts) < 2:
@@ -330,7 +382,7 @@ async def main() -> None:
 
     @dp.message(F.text)
     async def fallback(message: Message):
-        if not is_allowed(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         await message.answer("Невідома команда. Напишіть /start")
 
