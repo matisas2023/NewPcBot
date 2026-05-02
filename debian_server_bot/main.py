@@ -145,6 +145,31 @@ async def main() -> None:
     dp = Dispatcher()
     await bot.delete_webhook(drop_pending_updates=True)
 
+    async def render_services_status() -> str:
+        lines = ["🧩 <b>Статус ключових сервісів</b>"]
+        for svc in WATCH_SERVICES:
+            ok, out = run_cmd(["systemctl", "is-active", svc])
+            state = out.strip() if ok else "unknown"
+            icon = "✅" if state == "active" else "❌"
+            lines.append(f"{icon} <code>{svc}</code>: <b>{state}</b>")
+        return "\n".join(lines)
+
+    async def alert_loop(chat_id: int) -> None:
+        while True:
+            cpu = float(subprocess.getoutput("top -bn1 | awk '/Cpu/ {print 100-$8}'") or 0)
+            ram_pct = float(subprocess.getoutput("free | awk 'NR==2 {print ($3/$2)*100}'") or 0)
+            disk_pct = float(subprocess.getoutput("df / | awk 'NR==2 {gsub(\"%\",\"\",$5); print $5}'") or 0)
+            issues = []
+            if cpu > 90:
+                issues.append(f"CPU {cpu:.1f}%")
+            if ram_pct > 90:
+                issues.append(f"RAM {ram_pct:.1f}%")
+            if disk_pct > 90:
+                issues.append(f"Disk {disk_pct:.1f}%")
+            if issues:
+                await bot.send_message(chat_id, "🚨 <b>Пороги перевищено:</b>\n" + "\n".join(f"• {x}" for x in issues), parse_mode="HTML")
+            await asyncio.sleep(120)
+
     @dp.message(Command("start"))
     async def cmd_start(message: Message):
         if not is_allowed_message(message):
@@ -503,27 +528,3 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-    async def render_services_status() -> str:
-        lines = ["🧩 <b>Статус ключових сервісів</b>"]
-        for svc in WATCH_SERVICES:
-            ok, out = run_cmd(["systemctl", "is-active", svc])
-            state = out.strip() if ok else "unknown"
-            icon = "✅" if state == "active" else "❌"
-            lines.append(f"{icon} <code>{svc}</code>: <b>{state}</b>")
-        return "\n".join(lines)
-
-    async def alert_loop(chat_id: int) -> None:
-        while True:
-            cpu = float(subprocess.getoutput("top -bn1 | awk '/Cpu/ {print 100-$8}'") or 0)
-            ram_pct = float(subprocess.getoutput("free | awk 'NR==2 {print ($3/$2)*100}'") or 0)
-            disk_pct = float(subprocess.getoutput("df / | awk 'NR==2 {gsub(\"%\",\"\",$5); print $5}'") or 0)
-            issues = []
-            if cpu > 90:
-                issues.append(f"CPU {cpu:.1f}%")
-            if ram_pct > 90:
-                issues.append(f"RAM {ram_pct:.1f}%")
-            if disk_pct > 90:
-                issues.append(f"Disk {disk_pct:.1f}%")
-            if issues:
-                await bot.send_message(chat_id, "🚨 <b>Пороги перевищено:</b>\n" + "\n".join(f"• {x}" for x in issues), parse_mode="HTML")
-            await asyncio.sleep(120)
