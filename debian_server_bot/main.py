@@ -199,7 +199,7 @@ async def main() -> None:
 
     @dp.message(Command("net"))
     async def cmd_net(message: Message):
-         if not is_allowed_message(message):
+        if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ip = subprocess.getoutput("hostname -I")
         routes = subprocess.getoutput("ip route")
@@ -291,7 +291,14 @@ async def main() -> None:
 
     @dp.callback_query(F.data == "menu_diag")
     async def cb_menu_diag(call: CallbackQuery):
-        await cmd_diag(call.message)
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        cmds = ["uptime", "systemctl is-system-running", "df -h /", "free -h"]
+        out = []
+        for c in cmds:
+            ok, res = run_cmd(shlex.split(c))
+            out.append(f"$ {c}\n{res if ok else 'ERR: ' + res}")
+        await send_text(call.message, "\n\n".join(out), code=True)
         await call.answer()
 
     @dp.callback_query(F.data == "menu_system")
@@ -306,14 +313,17 @@ async def main() -> None:
     async def cb_menu_net(call: CallbackQuery):
         if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
             return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        await cmd_net(call.message)
+        ip = subprocess.getoutput("hostname -I")
+        routes = subprocess.getoutput("ip route")
+        await send_text(call.message, f"🌐 IP: {ip}\n\nМаршрути:\n{routes}", code=True)
         await call.answer()
 
     @dp.callback_query(F.data == "menu_fs")
     async def cb_menu_fs(call: CallbackQuery):
         if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
             return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        await cmd_fs(call.message)
+        _, out = run_cmd(["ls", "-lah", "/"])
+        await send_text(call.message, out, code=True)
         await call.answer()
 
     @dp.callback_query(F.data == "menu_music")
@@ -325,27 +335,49 @@ async def main() -> None:
 
     @dp.callback_query(F.data == "music_status")
     async def cb_music_status(call: CallbackQuery):
-        await cmd_music_status(call.message)
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await call.message.answer(render_music_status())
         await call.answer()
 
     @dp.callback_query(F.data == "music_download")
     async def cb_music_download(call: CallbackQuery):
-        await cmd_music_download(call.message)
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        try:
+            log = open("/var/log/music_manual.log", "a", encoding="utf-8")
+            subprocess.Popen(["/usr/local/bin/music_auto_download.sh"], stdout=log, stderr=subprocess.STDOUT)
+            await call.message.answer("🚀 Завантаження музики запущено")
+        except Exception as exc:
+            await call.message.answer(f"❌ {exc}")
         await call.answer()
 
     @dp.callback_query(F.data == "music_log")
     async def cb_music_log(call: CallbackQuery):
-        await cmd_music_log(call.message)
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        ok, out = run_cmd(["tail", "-n", "40", "/var/log/music_auto_download.log"])
+        await send_text(call.message, out if ok else f"❌ {out}", code=True)
         await call.answer()
 
     @dp.callback_query(F.data == "music_restart")
     async def cb_music_restart(call: CallbackQuery):
-        await cmd_music_restart(call.message)
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        ok, out = run_cmd(["systemctl", "restart", "navidrome"])
+        if not ok:
+            ok, out = run_cmd(["service", "navidrome", "restart"])
+        await call.message.answer("✅ Navidrome перезапущено" if ok else f"❌ {out}")
         await call.answer()
 
     @dp.callback_query(F.data == "music_space")
     async def cb_music_space(call: CallbackQuery):
-        await cmd_music_space(call.message)
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        ok, out = run_cmd(["music_status"])
+        text = out if ok else render_music_status()
+        text = text.replace("[0;34m", "").replace("[1;33m", "").replace("[0;32m", "").replace("[0m", "")
+        await send_text(call.message, text)
         await call.answer()
 
     @dp.message(Command("reboot"))
