@@ -199,7 +199,7 @@ async def main() -> None:
 
     @dp.message(Command("net"))
     async def cmd_net(message: Message):
-        if not is_allowed_message(message):
+         if not is_allowed_message(message):
             return await message.answer("⛔ Доступ заборонено")
         ip = subprocess.getoutput("hostname -I")
         routes = subprocess.getoutput("ip route")
