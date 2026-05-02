@@ -1,4 +1,3 @@
-import asyncio
 import os
 import shlex
 import subprocess
@@ -19,6 +18,9 @@ MUSIC_DIR = "/mnt/storage/music"
 STORAGE_DIR = "/mnt/storage"
 MUSIC_LIMIT_MB = 30720
 TG_LIMIT = 4096
+WATCH_SERVICES = ["navidrome", "docker", "ssh", "nginx"]
+pending_confirm: dict[int, str] = {}
+alert_tasks: dict[int, asyncio.Task] = {}
 
 
 def is_allowed_ids(user_id: int | None, chat_id: int | None) -> bool:
@@ -77,6 +79,8 @@ def main_menu_kb() -> InlineKeyboardMarkup:
              InlineKeyboardButton(text="🖥️ Система", callback_data="menu_system")],
             [InlineKeyboardButton(text="🌐 Мережа", callback_data="menu_net"),
              InlineKeyboardButton(text="📁 Файли", callback_data="menu_fs")],
+            [InlineKeyboardButton(text="🧩 Сервіси", callback_data="menu_services"),
+             InlineKeyboardButton(text="🚨 Алерти", callback_data="menu_alerts")],
             [InlineKeyboardButton(text="🎵 Музика/Navidrome", callback_data="menu_music")],
         ]
     )
@@ -105,6 +109,23 @@ def system_menu_kb() -> InlineKeyboardMarkup:
             [InlineKeyboardButton(text="◀️ Назад", callback_data="menu_home")],
         ]
     )
+
+
+def confirm_kb(action: str) -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="✅ Підтвердити", callback_data=f"confirm_{action}"),
+             InlineKeyboardButton(text="❌ Скасувати", callback_data="confirm_cancel")]
+        ]
+    )
+
+
+def services_kb() -> InlineKeyboardMarkup:
+    rows = [[InlineKeyboardButton(text=f"🔄 Restart {svc}", callback_data=f"svc_restart_{svc}")]
+            for svc in WATCH_SERVICES]
+    rows.append([InlineKeyboardButton(text="📋 Оновити статус", callback_data="svc_status_refresh")])
+    rows.append([InlineKeyboardButton(text="◀️ Назад", callback_data="menu_home")])
+    return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
 async def send_text(message: Message, text: str, code: bool = False) -> None:
@@ -265,14 +286,35 @@ async def main() -> None:
     async def cb_sys_reboot(call: CallbackQuery):
         if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
             return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        await cmd_reboot(call.message)
+        pending_confirm[call.from_user.id] = "reboot"
+        await call.message.answer("⚠️ Підтвердити перезавантаження?", reply_markup=confirm_kb("reboot"))
         await call.answer()
 
     @dp.callback_query(F.data == "sys_shutdown")
     async def cb_sys_shutdown(call: CallbackQuery):
         if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
             return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        await cmd_shutdown(call.message)
+        pending_confirm[call.from_user.id] = "shutdown"
+        await call.message.answer("⚠️ Підтвердити вимкнення сервера?", reply_markup=confirm_kb("shutdown"))
+        await call.answer()
+
+    @dp.callback_query(F.data.startswith("confirm_"))
+    async def cb_confirm(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        if call.data == "confirm_cancel":
+            pending_confirm.pop(call.from_user.id, None)
+            await call.message.answer("❎ Дію скасовано")
+            return await call.answer()
+        action = call.data.replace("confirm_", "")
+        expected = pending_confirm.get(call.from_user.id)
+        if expected != action:
+            return await call.answer("Дія протермінована", show_alert=True)
+        pending_confirm.pop(call.from_user.id, None)
+        if action == "reboot":
+            await cmd_reboot(call.message)
+        elif action == "shutdown":
+            await cmd_shutdown(call.message)
         await call.answer()
 
     @dp.callback_query(F.data == "sys_lock")
@@ -331,6 +373,43 @@ async def main() -> None:
         if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
             return await call.answer("⛔ Доступ заборонено", show_alert=True)
         await call.message.answer("🎵 <b>Музичне меню</b>", reply_markup=music_menu_kb(), parse_mode="HTML")
+        await call.answer()
+
+    @dp.callback_query(F.data == "menu_services")
+    async def cb_menu_services(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await call.message.answer(await render_services_status(), reply_markup=services_kb(), parse_mode="HTML")
+        await call.answer()
+
+    @dp.callback_query(F.data == "svc_status_refresh")
+    async def cb_svc_refresh(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await call.message.answer(await render_services_status(), reply_markup=services_kb(), parse_mode="HTML")
+        await call.answer()
+
+    @dp.callback_query(F.data.startswith("svc_restart_"))
+    async def cb_svc_restart(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        svc = call.data.replace("svc_restart_", "")
+        ok, out = run_cmd(["systemctl", "restart", svc])
+        await call.message.answer(f"✅ {svc} перезапущено" if ok else f"❌ {out}")
+        await call.answer()
+
+    @dp.callback_query(F.data == "menu_alerts")
+    async def cb_menu_alerts(call: CallbackQuery):
+        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        chat_id = call.message.chat.id
+        if chat_id in alert_tasks and not alert_tasks[chat_id].done():
+            alert_tasks[chat_id].cancel()
+            alert_tasks.pop(chat_id, None)
+            await call.message.answer("🔕 Алерти вимкнено")
+        else:
+            alert_tasks[chat_id] = asyncio.create_task(alert_loop(chat_id))
+            await call.message.answer("🔔 Алерти увімкнено (кожні 2 хв)")
         await call.answer()
 
     @dp.callback_query(F.data == "music_status")
@@ -424,3 +503,27 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+    async def render_services_status() -> str:
+        lines = ["🧩 <b>Статус ключових сервісів</b>"]
+        for svc in WATCH_SERVICES:
+            ok, out = run_cmd(["systemctl", "is-active", svc])
+            state = out.strip() if ok else "unknown"
+            icon = "✅" if state == "active" else "❌"
+            lines.append(f"{icon} <code>{svc}</code>: <b>{state}</b>")
+        return "\n".join(lines)
+
+    async def alert_loop(chat_id: int) -> None:
+        while True:
+            cpu = float(subprocess.getoutput("top -bn1 | awk '/Cpu/ {print 100-$8}'") or 0)
+            ram_pct = float(subprocess.getoutput("free | awk 'NR==2 {print ($3/$2)*100}'") or 0)
+            disk_pct = float(subprocess.getoutput("df / | awk 'NR==2 {gsub(\"%\",\"\",$5); print $5}'") or 0)
+            issues = []
+            if cpu > 90:
+                issues.append(f"CPU {cpu:.1f}%")
+            if ram_pct > 90:
+                issues.append(f"RAM {ram_pct:.1f}%")
+            if disk_pct > 90:
+                issues.append(f"Disk {disk_pct:.1f}%")
+            if issues:
+                await bot.send_message(chat_id, "🚨 <b>Пороги перевищено:</b>\n" + "\n".join(f"• {x}" for x in issues), parse_mode="HTML")
+            await asyncio.sleep(120)
