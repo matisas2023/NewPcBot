@@ -9,11 +9,16 @@ from bot.handlers import filesystem
 from bot.handlers import media_controls
 from bot.handlers import autoreport
 from bot.handlers import ux
+from bot.handlers import music
 
 
 async def main():
     bot = Bot(BOT_TOKEN)
     dp = Dispatcher()
+
+    # Якщо раніше був увімкнений webhook, polling не отримає апдейти.
+    # Примусово переходимо на polling-режим.
+    await bot.delete_webhook(drop_pending_updates=True)
 
     # Підключаємо всі router-и
     dp.include_router(status.router)
@@ -26,6 +31,7 @@ async def main():
     dp.include_router(media_controls.router)
     dp.include_router(autoreport.router)
     dp.include_router(ux.router)
+    dp.include_router(music.router)
     dp.include_router(fallback.router)
 
     print("🤖 Бот запущено!")
