@@ -6,7 +6,7 @@ from datetime import datetime
 
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
-from aiogram.types import Message
+from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,6 +18,7 @@ ALLOWED_CHATS = {int(x) for x in os.getenv("DEBIAN_ALLOWED_CHATS", "").split(","
 MUSIC_DIR = "/mnt/storage/music"
 STORAGE_DIR = "/mnt/storage"
 MUSIC_LIMIT_MB = 30720
+TG_LIMIT = 4096
 
 
 def is_allowed(message: Message) -> bool:
@@ -63,6 +64,40 @@ def render_music_status() -> str:
     )
 
 
+def main_menu_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="📊 Діагностика", callback_data="menu_diag"),
+             InlineKeyboardButton(text="🖥️ Система", callback_data="menu_system")],
+            [InlineKeyboardButton(text="🌐 Мережа", callback_data="menu_net"),
+             InlineKeyboardButton(text="📁 Файли", callback_data="menu_fs")],
+            [InlineKeyboardButton(text="🎵 Музика/Navidrome", callback_data="menu_music")],
+        ]
+    )
+
+
+def music_menu_kb() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="📈 Статус музики", callback_data="music_status")],
+            [InlineKeyboardButton(text="⬇️ Завантажити", callback_data="music_download")],
+            [InlineKeyboardButton(text="📜 Лог завантаження", callback_data="music_log")],
+            [InlineKeyboardButton(text="🔄 Рестарт Navidrome", callback_data="music_restart")],
+            [InlineKeyboardButton(text="💾 Простір", callback_data="music_space")],
+            [InlineKeyboardButton(text="◀️ Назад", callback_data="menu_home")],
+        ]
+    )
+
+
+async def send_text(message: Message, text: str, code: bool = False) -> None:
+    body = f"```{text}```" if code else text
+    if len(body) <= TG_LIMIT:
+        await message.answer(body)
+        return
+    chunk = body[: TG_LIMIT - 20]
+    await message.answer(chunk + "\n…обрізано")
+
+
 async def main() -> None:
     if not BOT_TOKEN:
         raise RuntimeError("DEBIAN_BOT_TOKEN не задано")
@@ -76,9 +111,10 @@ async def main() -> None:
         if not is_allowed(message):
             return await message.answer("⛔ Доступ заборонено")
         await message.answer(
-            "✅ Debian Bot активний.\n"
-            "Команди: /status /diag /disk /fs /top /services /net /reboot /shutdown /lock /restart_service <name>\n"
-            "Музика: /music_status /music_download /music_log /music_restart /music_space"
+            "✅ <b>Debian Bot активний</b>\n\n"
+            "Оберіть розділ через кнопки нижче 👇",
+            reply_markup=main_menu_kb(),
+            parse_mode="HTML",
         )
 
     @dp.message(Command("status"))
@@ -89,7 +125,14 @@ async def main() -> None:
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         cpu = subprocess.getoutput("top -bn1 | awk '/Cpu/ {print 100-$8}'")
         ram = subprocess.getoutput("free -m | awk 'NR==2 {printf \"%s/%s MB\", $3,$2}'")
-        await message.answer(f"🖥 {host}\n🕒 {now}\n⚙ CPU: {cpu}%\n🧠 RAM: {ram}")
+        await message.answer(
+            "🖥️ <b>Статус сервера</b>\n\n"
+            f"Хост: <code>{host}</code>\n"
+            f"Час: <code>{now}</code>\n"
+            f"CPU: <b>{cpu}%</b>\n"
+            f"RAM: <b>{ram}</b>",
+            parse_mode="HTML",
+        )
 
     @dp.message(Command("diag"))
     async def cmd_diag(message: Message):
@@ -106,35 +149,35 @@ async def main() -> None:
             ok, res = run_cmd(shlex.split(c))
             out.append(f"$ {c}\n{res if ok else 'ERR: ' + res}")
         text = "\n\n".join(out)
-        await message.answer((text[:3900] + "\n...обрізано") if len(text) > 4000 else text)
+        await send_text(message, text, code=True)
 
     @dp.message(Command("disk"))
     async def cmd_disk(message: Message):
         if not is_allowed(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["df", "-h"])
-        await message.answer(f"```\n{out[:3800]}\n```" if ok else f"❌ {out}")
+        await send_text(message, out if ok else f"❌ {out}", code=ok)
 
     @dp.message(Command("fs"))
     async def cmd_fs(message: Message):
         if not is_allowed(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["ls", "-lah", "/"])
-        await message.answer((out[:3900] + "\n...обрізано") if len(out) > 4000 else out)
+        await send_text(message, out, code=True)
 
     @dp.message(Command("top"))
     async def cmd_top(message: Message):
         if not is_allowed(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["ps", "aux", "--sort=-%cpu"])
-        await message.answer((out[:3900] + "\n...обрізано") if len(out) > 4000 else out)
+        await send_text(message, out, code=True)
 
     @dp.message(Command("services"))
     async def cmd_services(message: Message):
         if not is_allowed(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["systemctl", "list-units", "--type=service", "--state=running"])
-        await message.answer((out[:3900] + "\n...обрізано") if len(out) > 4000 else out)
+        await send_text(message, out, code=True)
 
     @dp.message(Command("net"))
     async def cmd_net(message: Message):
@@ -142,7 +185,7 @@ async def main() -> None:
             return await message.answer("⛔ Доступ заборонено")
         ip = subprocess.getoutput("hostname -I")
         routes = subprocess.getoutput("ip route")
-        await message.answer(f"🌐 IP: {ip}\n\nМаршрути:\n{routes[:3500]}")
+        await send_text(message, f"🌐 IP: {ip}\n\nМаршрути:\n{routes}", code=True)
 
     @dp.message(Command("music_status"))
     async def cmd_music_status(message: Message):
@@ -167,7 +210,7 @@ async def main() -> None:
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["tail", "-n", "40", "/var/log/music_auto_download.log"])
         text = out if ok else f"❌ {out}"
-        await message.answer((text[:3900] + "\n...обрізано") if len(text) > 4000 else text)
+        await send_text(message, text, code=True)
 
     @dp.message(Command("music_restart"))
     async def cmd_music_restart(message: Message):
@@ -183,7 +226,75 @@ async def main() -> None:
         if not is_allowed(message):
             return await message.answer("⛔ Доступ заборонено")
         ok, out = run_cmd(["music_status"])
-        await message.answer(out if ok else render_music_status())
+        text = out if ok else render_music_status()
+        text = text.replace("[0;34m", "").replace("[1;33m", "").replace("[0;32m", "").replace("[0m", "")
+        await send_text(message, text)
+
+    @dp.message(Command("menu"))
+    async def cmd_menu(message: Message):
+        if not is_allowed(message):
+            return await message.answer("⛔ Доступ заборонено")
+        await message.answer("🧭 <b>Головне меню</b>", reply_markup=main_menu_kb(), parse_mode="HTML")
+
+    @dp.callback_query(F.data == "menu_home")
+    async def cb_menu_home(call: CallbackQuery):
+        if not is_allowed(call.message):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await call.message.answer("🧭 <b>Головне меню</b>", reply_markup=main_menu_kb(), parse_mode="HTML")
+        await call.answer()
+
+    @dp.callback_query(F.data == "menu_diag")
+    async def cb_menu_diag(call: CallbackQuery):
+        await cmd_diag(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "menu_system")
+    async def cb_menu_system(call: CallbackQuery):
+        await cmd_status(call.message)
+        await call.message.answer("Системні дії: /reboot /shutdown /lock /restart_service <name>")
+        await call.answer()
+
+    @dp.callback_query(F.data == "menu_net")
+    async def cb_menu_net(call: CallbackQuery):
+        await cmd_net(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "menu_fs")
+    async def cb_menu_fs(call: CallbackQuery):
+        await cmd_fs(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "menu_music")
+    async def cb_menu_music(call: CallbackQuery):
+        if not is_allowed(call.message):
+            return await call.answer("⛔ Доступ заборонено", show_alert=True)
+        await call.message.answer("🎵 <b>Музичне меню</b>", reply_markup=music_menu_kb(), parse_mode="HTML")
+        await call.answer()
+
+    @dp.callback_query(F.data == "music_status")
+    async def cb_music_status(call: CallbackQuery):
+        await cmd_music_status(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "music_download")
+    async def cb_music_download(call: CallbackQuery):
+        await cmd_music_download(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "music_log")
+    async def cb_music_log(call: CallbackQuery):
+        await cmd_music_log(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "music_restart")
+    async def cb_music_restart(call: CallbackQuery):
+        await cmd_music_restart(call.message)
+        await call.answer()
+
+    @dp.callback_query(F.data == "music_space")
+    async def cb_music_space(call: CallbackQuery):
+        await cmd_music_space(call.message)
+        await call.answer()
 
     @dp.message(Command("reboot"))
     async def cmd_reboot(message: Message):
