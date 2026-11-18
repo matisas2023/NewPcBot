@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+venv/
+.env
+.pc-remote.json
+remote_files/

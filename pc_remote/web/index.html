@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10151c"><meta name="description" content="Особиста панель керування Windows через Tailscale">
+  <title>PC Helper</title><link rel="manifest" href="/manifest.webmanifest"><link rel="icon" href="/icon.svg"><link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="/" aria-label="PC Helper"><img src="/icon.svg" alt="" width="38" height="38"><span>PC <strong>Helper</strong></span></a><span id="connection" class="badge">Не підключено</span></header>
+  <main>
+    <section id="login" class="login card">
+      <span class="eyebrow">ТВІЙ КОМП’ЮТЕР. ПОРУЧ.</span><h1>Керуй ПК<br>звідки завгодно.</h1>
+      <p>Увімкни Tailscale на телефоні та введи ключ, створений агентом на твоєму ПК.</p>
+      <form id="login-form"><label for="access-key">Ключ доступу</label><input id="access-key" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required minlength="32" placeholder="Встав ключ із консолі ПК"><button class="primary" type="submit">Підключити ПК <span aria-hidden="true">↗</span></button></form>
+      <small>Ключ зберігається лише протягом сеансу цієї вкладки. Для встановлення на Android відкрий HTTPS-адресу Tailscale у Chrome.</small>
+    </section>
+    <div id="dashboard" hidden>
+      <div class="intro"><div><span class="eyebrow">ОСОБИСТИЙ ПРОСТІР</span><h1 id="pc-name">Мій комп’ютер</h1><p id="pc-detail">Завантаження стану…</p></div><button class="quiet" id="logout" type="button">Вийти</button></div>
+      <nav aria-label="Розділи"><button data-tab="overview" class="active" aria-selected="true">Огляд</button><button data-tab="control" aria-selected="false">Керування</button><button data-tab="files" aria-selected="false">Файли</button><button data-tab="processes" aria-selected="false">Процеси</button></nav>
+      <section id="overview" class="panel">
+        <div class="section-heading"><h2>Стан системи</h2><button class="quiet" id="refresh-status">Оновити ↻</button></div>
+        <div class="metrics"><article class="card metric"><span>Процесор</span><strong id="cpu">—</strong><progress id="cpu-bar" max="100" value="0" aria-label="Завантаження CPU"></progress></article><article class="card metric"><span>Оперативна пам’ять</span><strong id="ram">—</strong><progress id="ram-bar" max="100" value="0" aria-label="Використання RAM"></progress></article><article class="card metric"><span>Диск системи</span><strong id="disk">—</strong><progress id="disk-bar" max="100" value="0" aria-label="Використання диска"></progress></article></div>
+        <article class="card screen-card"><div class="section-heading"><div><h2>Екран ПК</h2><p id="screen-time">Знімок з’явиться після оновлення</p></div><button id="refresh-screen" class="secondary">Знімок ↻</button></div><div id="screen-placeholder" class="screen-empty"><span aria-hidden="true">▣</span><p>Подивись, що відбувається на ПК</p></div><img id="screenshot" alt="Останній знімок екрана ПК" hidden></article>
+        <p class="hint">Стан оновлюється кожні 10 секунд, поки застосунок відкритий. Скриншот — лише за запитом.</p>
+      </section>
+      <section id="control" class="panel" hidden>
+        <h2>Клавіатура та миша</h2><div class="card"><div class="button-row"><button data-input="esc">Esc</button><button data-input="enter">Enter ↵</button><button data-input="alttab">Alt + Tab</button></div><div class="dpad"><button data-input="move_up" class="up" aria-label="Курсор угору">↑</button><button data-input="move_left" class="left" aria-label="Курсор ліворуч">←</button><button data-input="click" class="center">Клік</button><button data-input="move_right" class="right" aria-label="Курсор праворуч">→</button><button data-input="move_down" class="down" aria-label="Курсор униз">↓</button></div><p class="hint">Одне натискання переміщує курсор на 50 пікселів.</p></div>
+        <h2>Медіа</h2><div class="card"><div class="button-row"><button data-input="prev">⏮ Назад</button><button data-input="playpause">⏯ Пауза</button><button data-input="next">Далі ⏭</button></div><div class="button-row"><button data-input="voldown">Звук −</button><button data-input="mute">Без звуку</button><button data-input="volup">Звук +</button></div></div>
+        <h2>Живлення та сеанс</h2><div class="card system-grid"><button data-system="Lock">Заблокувати</button><button data-system="Sleep">Режим сну</button><button data-system="Hibernate">Гібернація</button><button data-system="Logoff">Вийти із сеансу</button><button data-system="Restart" class="danger">Перезапустити</button><button data-system="Shutdown" class="danger">Вимкнути ПК</button></div><p class="hint">Після сну, виходу або вимкнення віддалений доступ може припинитися.</p>
+      </section>
+      <section id="files" class="panel" hidden><div class="section-heading"><h2>Спільні файли</h2><button class="quiet" id="refresh-files">Оновити ↻</button></div><p class="hint">Лише папка, дозволена в налаштуваннях агента. До 20 МБ на файл.</p><div class="file-toolbar"><button id="parent-folder" class="secondary">↑ Вище</button><span id="folder-path">/</span></div><form id="upload-form" class="card"><label for="upload-file">Надіслати файл на ПК</label><input id="upload-file" type="file" required><button class="secondary" type="submit">Завантажити на ПК</button></form><div id="file-list" class="card list" aria-live="polite"></div></section>
+      <section id="processes" class="panel" hidden><div class="section-heading"><h2>Процеси</h2><button id="refresh-processes" class="quiet">Оновити ↻</button></div><p class="hint">До 100 процесів, від найбільшого використання RAM. Завершення може втратити незбережені дані.</p><div id="process-list" class="card list" aria-live="polite"></div></section>
+    </div>
+    <p id="message" role="status" aria-live="polite" hidden></p>
+  </main>
+  <dialog id="confirm-dialog"><form method="dialog"><span class="eyebrow">ПІДТВЕРДЖЕННЯ</span><h2 id="confirm-title">Виконати дію?</h2><p id="confirm-detail"></p><div class="button-row"><button value="cancel">Скасувати</button><button value="confirm" class="danger">Підтвердити</button></div></form></dialog>
+  <footer>PC Helper <span>Особисте з’єднання · Tailscale</span></footer>
+</body></html>

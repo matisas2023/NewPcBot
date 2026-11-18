@@ -1,9 +1,8 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, FSInputFile, InputMediaPhoto
 from pathlib import Path
-import os
-import sys
 import time
+from agent.control import capture_screen
 
 from bot.security import is_allowed, is_session_active
 from bot.keyboards import screenshot_kb
@@ -21,14 +20,7 @@ def take_screenshot() -> Path:
     """Зробити скриншот і зберегти в screenshots/ з унікальним ім'ям"""
     timestamp = int(time.time())
     path = SCREENSHOT_DIR / f"screenshot_{timestamp}.png"
-    if sys.platform not in ("win32", "darwin") and not os.environ.get("DISPLAY"):
-        raise RuntimeError("Захоплення екрана недоступне без дисплея")
-    try:
-        import pyautogui
-
-        pyautogui.screenshot().save(path)
-    except Exception as exc:
-        raise RuntimeError("Не вдалося захопити екран") from exc
+    path.write_bytes(capture_screen())
     return path
 
 

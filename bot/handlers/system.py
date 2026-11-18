@@ -1,10 +1,7 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-import subprocess
-import ctypes
 import asyncio
-import platform
-import getpass
+from agent.control import execute_system_action
 
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
@@ -135,45 +132,6 @@ async def system_execute(call: CallbackQuery):
 
     pending_action.pop(user_id, None)
     await call.answer()
-
-
-# =========================
-# Функція виконання системної дії
-# =========================
-def execute_system_action(action: str):
-    system_name = platform.system().lower()
-
-    if system_name == "windows":
-        if action == "Shutdown":
-            subprocess.run(["shutdown", "/s", "/t", "0"], check=True)
-        elif action == "Restart":
-            subprocess.run(["shutdown", "/r", "/t", "0"], check=True)
-        elif action == "Logoff":
-            subprocess.run(["shutdown", "/l"], check=True)
-        elif action == "Lock":
-            ctypes.windll.user32.LockWorkStation()
-        elif action == "Sleep":
-            ctypes.windll.powrprof.SetSuspendState(False, True, False)
-        elif action == "Hibernate":
-            ctypes.windll.powrprof.SetSuspendState(True, True, False)
-        return
-
-    if system_name == "linux":
-        if action == "Shutdown":
-            subprocess.run(["systemctl", "poweroff"], check=True)
-        elif action == "Restart":
-            subprocess.run(["systemctl", "reboot"], check=True)
-        elif action == "Logoff":
-            subprocess.run(["loginctl", "terminate-user", getpass.getuser()], check=True)
-        elif action == "Lock":
-            subprocess.run(["loginctl", "lock-session"], check=True)
-        elif action == "Sleep":
-            subprocess.run(["systemctl", "suspend"], check=True)
-        elif action == "Hibernate":
-            subprocess.run(["systemctl", "hibernate"], check=True)
-        return
-
-    raise RuntimeError(f"Непідтримувана ОС для системної дії: {system_name}")
 
 
 # =========================
