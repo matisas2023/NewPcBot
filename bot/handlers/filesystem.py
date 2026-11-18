@@ -125,7 +125,10 @@ async def fs_upload_document(message: Message):
     await message.answer(f"✅ Файл збережено як: {destination}")
 
 
-@router.message(F.text)
+@router.message(
+    F.text,
+    lambda message: pending_action.get(message.from_user.id) in {"delete", "search"},
+)
 async def fs_text_input(message: Message):
     user_id = message.from_user.id
 

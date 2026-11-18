@@ -1,4 +1,5 @@
 from aiogram import Router
+from aiogram.filters import CommandStart
 from aiogram.types import Message
 from bot.security import start_session, end_session, is_allowed
 from bot.keyboards import main_menu
@@ -8,6 +9,7 @@ from bot.utils import is_command
 router = Router()
 
 
+@router.message(CommandStart())
 @router.message(lambda message: is_command(message.text, "Старт"))
 async def start_handler(message: Message):
     if not is_allowed(message.from_user.id):
