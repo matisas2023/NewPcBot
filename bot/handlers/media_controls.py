@@ -80,17 +80,17 @@ async def input_controls_menu(message: Message):
 # Ініціалізація COM для Windows Media Player
 # =========================
 def get_wmp():
-    if importlib.util.find_spec("comtypes.client") is None:
-        print("❌ Бібліотека comtypes не встановлена")
+    try:
+        import comtypes.client
+    except ImportError:
+        print("comtypes is unavailable")
         return None
-
-    import comtypes.client
 
     try:
         wmp = comtypes.client.CreateObject("WMPlayer.OCX")
         return wmp
     except Exception as e:
-        print("❌ Помилка COM:", e)
+        print("COM error:", e)
         return None
 
 
