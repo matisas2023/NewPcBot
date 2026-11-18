@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#10151c"><meta name="description" content="Особиста панель керування Windows через Tailscale">
+  <meta name="theme-color" content="#10151c"><meta name="description" content="Особиста панель керування Windows">
   <title>PC Helper</title><link rel="manifest" href="/manifest.webmanifest"><link rel="icon" href="/icon.svg"><link rel="stylesheet" href="/style.css">
   <script src="/app.js" defer></script>
 </head>
@@ -11,9 +11,9 @@
   <main>
     <section id="login" class="login card">
       <span class="eyebrow">ТВІЙ КОМП’ЮТЕР. ПОРУЧ.</span><h1>Керуй ПК<br>звідки завгодно.</h1>
-      <p>Увімкни Tailscale на телефоні та введи ключ, створений агентом на твоєму ПК.</p>
-      <form id="login-form"><label for="access-key">Ключ доступу</label><input id="access-key" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required minlength="32" placeholder="Встав ключ із консолі ПК"><button class="primary" type="submit">Підключити ПК <span aria-hidden="true">↗</span></button></form>
-      <small>Ключ зберігається лише протягом сеансу цієї вкладки. Для встановлення на Android відкрий HTTPS-адресу Tailscale у Chrome.</small>
+      <p>Введи свій логін і пароль, щоб підключитися до комп’ютера.</p>
+      <form id="login-form"><label for="username">Логін</label><input id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required minlength="3" maxlength="64" placeholder="Твій логін"><label for="password">Пароль</label><input id="password" name="password" type="password" autocomplete="current-password" required minlength="12" maxlength="256" placeholder="Твій пароль"><button class="primary" type="submit">Підключити ПК <span aria-hidden="true">↗</span></button></form>
+      <small>Обліковий запис створюється на твоєму ПК. На власному телефоні вхід зберігається до 12 годин; завершити сеанс можна кнопкою «Вийти».</small>
     </section>
     <div id="dashboard" hidden>
       <div class="intro"><div><span class="eyebrow">ОСОБИСТИЙ ПРОСТІР</span><h1 id="pc-name">Мій комп’ютер</h1><p id="pc-detail">Завантаження стану…</p></div><button class="quiet" id="logout" type="button">Вийти</button></div>
@@ -35,5 +35,5 @@
     <p id="message" role="status" aria-live="polite" hidden></p>
   </main>
   <dialog id="confirm-dialog"><form method="dialog"><span class="eyebrow">ПІДТВЕРДЖЕННЯ</span><h2 id="confirm-title">Виконати дію?</h2><p id="confirm-detail"></p><div class="button-row"><button value="cancel">Скасувати</button><button value="confirm" class="danger">Підтвердити</button></div></form></dialog>
-  <footer>PC Helper <span>Особисте з’єднання · Tailscale</span></footer>
+  <footer>PC Helper <span>Особистий доступ · HTTPS</span></footer>
 </body></html>

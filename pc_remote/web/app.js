@@ -1,6 +1,6 @@
 'use strict';
 const $ = (id) => document.getElementById(id);
-let token = sessionStorage.getItem('pc-helper-key') || '';
+let csrf = '', loggedIn = false;
 let folder = '', screenURL = '', refreshTimer, toastTimer, activeTab = 'overview', epoch = 0;
 const actionNames = {Lock:'Заблокувати ПК',Sleep:'Перевести ПК у сон',Hibernate:'Увімкнути гібернацію',Logoff:'Вийти із сеансу Windows',Restart:'Перезапустити ПК',Shutdown:'Вимкнути ПК'};
 
@@ -13,15 +13,15 @@ async function api(path, options = {}) {
   const generation = epoch;
   let response;
   try {
-    response = await fetch('/api/' + path, {...options, headers: {...options.headers, Authorization: 'Bearer ' + token}, cache:'no-store', signal:AbortSignal.timeout(20000)});
+    response = await fetch('/api/' + path, {...options, headers: {...options.headers, ...(options.method === 'POST' && csrf ? {'X-CSRF-Token':csrf} : {})}, credentials:'same-origin', cache:'no-store', signal:AbortSignal.timeout(20000)});
   } catch (_) {
     connection(false);
-    throw new Error('Немає зв’язку з ПК. Перевірте агент і Tailscale');
+    throw new Error('Немає зв’язку з ПК. Перевірте інтернет і агент на ПК');
   }
   if (generation !== epoch) throw new Error('Сеанс змінено');
   if (!response.ok) {
     const body = await response.json().catch(() => ({}));
-    if (response.status === 401) logout();
+    if (response.status === 401) resetSession();
     throw new Error(body.error || 'Запит не виконано');
   }
   return response;
@@ -30,14 +30,15 @@ async function json(path, data) { return (await api(path, data === undefined ? {
 async function busy(button, task) {
   if (button.disabled) return;
   button.disabled = true;
-  try { await task(); } catch (error) { toast(error.message || 'Перевірте інтернет і Tailscale', true); }
+  try { await task(); } catch (error) { toast(error.message || 'Перевірте інтернет і агент на ПК', true); }
   finally { button.disabled = false; }
 }
-function logout() {
-  epoch++; token = ''; sessionStorage.removeItem('pc-helper-key'); clearInterval(refreshTimer);
+function resetSession() {
+  epoch++; csrf = ''; loggedIn = false; clearInterval(refreshTimer);
+  if ($('confirm-dialog').open) $('confirm-dialog').close('cancel');
   if (screenURL) URL.revokeObjectURL(screenURL); screenURL = ''; $('screenshot').removeAttribute('src'); $('screenshot').hidden = true; $('screen-placeholder').hidden = false;
   $('screen-time').textContent = 'Знімок з’явиться після оновлення'; $('file-list').replaceChildren(); $('process-list').replaceChildren(); folder = '';
-  $('dashboard').hidden = true; $('login').hidden = false; $('access-key').value = ''; connection(false);
+  $('dashboard').hidden = true; $('login').hidden = false; $('password').value = ''; connection(false);
 }
 function uptime(seconds) { const hours = Math.floor(seconds / 3600); return `${Math.floor(hours / 24)} д ${hours % 24} год ${Math.floor(seconds % 3600 / 60)} хв`; }
 async function status() {
@@ -48,15 +49,15 @@ async function status() {
   } catch (error) { connection(false); throw error; }
 }
 async function connect() {
-  await status(); sessionStorage.setItem('pc-helper-key', token); $('access-key').value = '';
+  await status(); $('password').value = '';
   $('login').hidden = true; $('dashboard').hidden = false;
   if (activeTab === 'files') await files();
   if (activeTab === 'processes') await processes();
-  clearInterval(refreshTimer); refreshTimer = setInterval(() => { if (!document.hidden && token) status().catch(() => {}); },10000);
+  clearInterval(refreshTimer); refreshTimer = setInterval(() => { if (!document.hidden && loggedIn) status().catch(() => {}); },10000);
 }
 async function screenshot() {
   const response = await api('screenshot'); const blob = await response.blob();
-  if (!token) return;
+  if (!loggedIn) return;
   if (screenURL) URL.revokeObjectURL(screenURL);
   screenURL = URL.createObjectURL(blob); $('screenshot').src = screenURL; $('screenshot').hidden = false; $('screen-placeholder').hidden = true;
   $('screen-time').textContent = 'Оновлено о ' + new Date().toLocaleTimeString('uk-UA');
@@ -107,8 +108,12 @@ document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click',
   if (activeTab === 'files') busy($('refresh-files'), files);
   if (activeTab === 'processes') busy($('refresh-processes'), processes);
 }));
-$('login-form').addEventListener('submit',e => { e.preventDefault(); token = $('access-key').value.trim(); epoch++; busy(e.submitter,connect); });
-$('logout').addEventListener('click',logout);
+$('login-form').addEventListener('submit',e => { e.preventDefault(); busy(e.submitter,async () => {
+  epoch++;
+  const session = await json('login',{username:$('username').value.trim(),password:$('password').value});
+  csrf = session.csrf; loggedIn = true; await connect();
+}); });
+$('logout').addEventListener('click',() => busy($('logout'),async () => { await json('logout',{}); resetSession(); }));
 for (const [id,task] of [['refresh-status',status],['refresh-screen',screenshot],['refresh-files',files],['refresh-processes',processes]]) $(id).addEventListener('click',() => busy($(id),task));
 $('parent-folder').addEventListener('click',() => busy($('parent-folder'),async () => { folder = folder.split('/').slice(0,-1).join('/'); await files(); }));
 document.querySelectorAll('[data-input]').forEach(b => b.addEventListener('click',() => busy(b,async () => { await json('input',{action:b.dataset.input}); toast('Команду надіслано'); })));
@@ -121,4 +126,4 @@ $('upload-form').addEventListener('submit',e => { e.preventDefault(); busy(e.sub
 }); });
 window.addEventListener('offline',() => { connection(false); toast('Немає інтернету. Команди не надсилатимуться',true); });
 if ('serviceWorker' in navigator && window.isSecureContext) navigator.serviceWorker.register('/sw.js').catch(() => {});
-if (token) busy($('login-form').querySelector('button'), connect);
+json('session').then(async session => { csrf = session.csrf; loggedIn = true; await connect(); }).catch(() => {});

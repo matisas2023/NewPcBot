@@ -1,5 +1,4 @@
-"""Small same-origin API, bound to loopback behind Tailscale Serve."""
-import hashlib
+"""Same-origin API bound to loopback behind an HTTPS tunnel."""
 import hmac
 import json
 import logging
@@ -10,11 +9,15 @@ import secrets
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from http.cookies import SimpleCookie, CookieError
 from urllib.parse import parse_qs, urlsplit
+
+from .auth import Account, LoginError, COOKIE_NAME, SESSION_SECONDS
 
 STATIC = Path(__file__).parent / "web"
 MAX_UPLOAD = 20 * 1024 * 1024
 LOG = logging.getLogger("pc_remote")
+PROXY_HOST = "pc-helper.internal"
 
 
 class APIError(Exception):
@@ -51,10 +54,9 @@ class Backend:
 class RemoteServer(ThreadingHTTPServer):
     daemon_threads = True
 
-    def __init__(self, address, token, files, backend=None):
-        if len(token) < 32:
-            raise ValueError("Access token must contain at least 32 characters")
-        self.token = token
+    def __init__(self, address, credentials, files, backend=None, public_origin=None):
+        self.account = Account(credentials)
+        self.public_origin = public_origin
         self.files = Path(files).resolve()
         self.files.mkdir(parents=True, exist_ok=True)
         self.backend = backend or Backend()
@@ -62,9 +64,17 @@ class RemoteServer(ThreadingHTTPServer):
         self.confirm_lock = threading.Lock()
         self.desktop_lock = threading.Lock()
         self.file_lock = threading.Lock()
-        self.rate_lock = threading.Lock()
-        self.failed_auth = {}
         super().__init__(address, Handler)
+
+    def origin_for_host(self, host, forwarded_proto=None):
+        local_hosts = {f"127.0.0.1:{self.server_port}", f"localhost:{self.server_port}"}
+        if host in local_hosts:
+            return "http://" + host
+        if self.public_origin and host in {PROXY_HOST, urlsplit(self.public_origin).netloc}:
+            if forwarded_proto != "https":
+                raise APIError(403, "Відкрийте HTTPS-адресу застосунку")
+            return self.public_origin
+        raise APIError(403, "Невідома адреса застосунку")
 
     def file_path(self, value):
         if not isinstance(value, str) or len(value) > 2048 or "\x00" in value:
@@ -99,7 +109,7 @@ class RemoteServer(ThreadingHTTPServer):
                     "modified": stat.st_mtime_ns, "inode": stat.st_ino}
         raise APIError(400, "Невідома дія")
 
-    def confirm(self, operation, payload):
+    def confirm(self, operation, payload, owner):
         prepared = self.prepare(operation, payload)
         ticket = secrets.token_urlsafe(32)
         with self.confirm_lock:
@@ -107,15 +117,15 @@ class RemoteServer(ThreadingHTTPServer):
             self.confirmations = {k: v for k, v in self.confirmations.items() if v[0] > now}
             if len(self.confirmations) >= 100:
                 raise APIError(429, "Забагато запитів підтвердження")
-            self.confirmations[ticket] = (now + 60, operation, prepared)
+            self.confirmations[ticket] = (now + 60, operation, prepared, owner)
         return ticket
 
-    def consume(self, operation, payload, ticket):
+    def consume(self, operation, payload, ticket, owner):
         if not isinstance(ticket, str):
             raise APIError(409, "Потрібне підтвердження")
         with self.confirm_lock:
             record = self.confirmations.pop(ticket, None)
-        if not record or record[0] <= time.monotonic() or record[1] != operation:
+        if not record or record[0] <= time.monotonic() or record[1] != operation or record[3] != owner:
             raise APIError(409, "Підтвердження прострочене або вже використане")
         prepared = self.prepare(operation, payload)
         if prepared != record[2]:
@@ -150,23 +160,34 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    def auth(self):
-        # No cookies or query tokens: cross-site requests cannot carry ambient credentials.
+    def check_origin(self, post):
         if self.headers.get("Sec-Fetch-Site") == "cross-site":
             raise APIError(403, "Доступ лише з панелі керування")
-        peer = self.client_address[0]
-        now = time.monotonic()
-        with self.server.rate_lock:
-            attempts = [t for t in self.server.failed_auth.get(peer, []) if now - t < 60]
-            self.server.failed_auth[peer] = attempts
-            if len(attempts) >= 20:
-                raise APIError(429, "Забагато спроб входу. Зачекайте хвилину")
-        supplied = self.headers.get("Authorization", "")
-        expected = "Bearer " + self.server.token
-        if not hmac.compare_digest(hashlib.sha256(supplied.encode()).digest(), hashlib.sha256(expected.encode()).digest()):
-            with self.server.rate_lock:
-                self.server.failed_auth[peer].append(now)
-            raise APIError(401, "Неправильний ключ доступу")
+        self.request_origin = self.server.origin_for_host(self.headers.get("Host", ""), self.headers.get("X-Forwarded-Proto"))
+        if post and self.headers.get("Origin") != self.request_origin:
+            raise APIError(403, "Невірне джерело запиту. Оновіть сторінку")
+
+    def auth(self, post):
+        cookie = SimpleCookie()
+        try:
+            cookie.load(self.headers.get("Cookie", ""))
+        except CookieError:
+            raise APIError(401, "Увійдіть ще раз")
+        token = cookie[COOKIE_NAME].value if COOKIE_NAME in cookie else ""
+        self.session = self.server.account.authenticate(token, self.request_origin)
+        if post and not hmac.compare_digest(self.headers.get("X-CSRF-Token", "").encode(), self.session["csrf"].encode()):
+            raise APIError(403, "Оновіть сторінку перед виконанням дії")
+
+    def session_cookie(self, token, clear=False):
+        cookie = SimpleCookie()
+        cookie[COOKIE_NAME] = token
+        cookie[COOKIE_NAME]["path"] = "/"
+        cookie[COOKIE_NAME]["httponly"] = True
+        cookie[COOKIE_NAME]["samesite"] = "Strict"
+        cookie[COOKIE_NAME]["max-age"] = 0 if clear else SESSION_SECONDS
+        if self.request_origin.startswith("https://"):
+            cookie[COOKIE_NAME]["secure"] = True
+        return cookie.output(header="").strip()
 
     def body(self, limit):
         if self.headers.get("Transfer-Encoding"):
@@ -203,13 +224,18 @@ class Handler(BaseHTTPRequestHandler):
         try:
             url = urlsplit(self.path)
             if url.path.startswith("/api/"):
-                self.auth()
+                self.check_origin(post)
+                if url.path == "/api/login" and post:
+                    data = self.json_body()
+                    token, session = self.server.account.login(data.get("username"), data.get("password"), self.request_origin)
+                    return self.reply(200, {"username": self.server.account.username, "csrf": session["csrf"]}, extra={"Set-Cookie":self.session_cookie(token)})
+                self.auth(post)
                 self.api(url, post)
             elif not post:
                 self.static(url.path)
             else:
                 raise APIError(404, "Сторінку не знайдено")
-        except APIError as exc:
+        except (APIError, LoginError) as exc:
             self.reply(exc.status, {"error": exc.message})
         except (ValueError, FileNotFoundError):
             self.reply(400, {"error": "Дані змінилися або запит некоректний. Оновіть сторінку"})
@@ -237,6 +263,8 @@ class Handler(BaseHTTPRequestHandler):
         query = parse_qs(url.query)
         value = lambda key, default="": query.get(key, [default])[0]
         if not post:
+            if url.path == "/api/session":
+                return self.reply(200, {"username": self.server.account.username, "csrf": self.session["csrf"]})
             if url.path == "/api/status":
                 return self.reply(200, self.server.backend.status())
             if url.path == "/api/screenshot":
@@ -288,6 +316,9 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(201, {"ok": True})
 
         data = self.json_body()
+        if url.path == "/api/logout":
+            self.server.account.logout(self.session)
+            return self.reply(200, {"ok": True}, extra={"Set-Cookie":self.session_cookie("", clear=True)})
         if url.path == "/api/input":
             from agent.control import INPUT_ACTIONS
             if not isinstance(data.get("action"), str) or data["action"] not in INPUT_ACTIONS:
@@ -297,12 +328,12 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(200, {"ok": True})
         if url.path == "/api/confirm":
             with self.server.file_lock:
-                ticket = self.server.confirm(data.get("operation"), data.get("payload"))
+                ticket = self.server.confirm(data.get("operation"), data.get("payload"), self.session["id"])
             return self.reply(200, {"confirmation": ticket, "expires_in": 60})
         if url.path == "/api/execute":
             operation, payload = data.get("operation"), data.get("payload")
             with self.server.file_lock:
-                prepared = self.server.consume(operation, payload, data.get("confirmation"))
+                prepared = self.server.consume(operation, payload, data.get("confirmation"), self.session["id"])
                 if operation == "delete":
                     self.server.file_path(prepared["path"]).unlink()
                 elif operation == "terminate":

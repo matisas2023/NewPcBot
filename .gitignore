@@ -3,4 +3,5 @@ __pycache__/
 venv/
 .env
 .pc-remote.json
+.pc-remote.json.tmp
 remote_files/
