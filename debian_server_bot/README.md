@@ -8,12 +8,6 @@
 - Процеси (`/top`, `/services`)
 - Мережа (`/net`)
 - Системні дії (`/reboot`, `/shutdown`, `/lock`, `/restart_service <name>`)
-- Музичний сервіс/Navidrome:
-  - `/music_status`
-  - `/music_download`
-  - `/music_log`
-  - `/music_restart`
-  - `/music_space`
 
 ## Налаштування
 Створіть `.env` (або задайте env змінні):

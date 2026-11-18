@@ -17,18 +17,7 @@ SCREENSHOT_DIR = Path("screenshots")
 MAX_ACTIONS = 10
 MAX_SCREENSHOTS = 5
 
-theme_preferences: Dict[int, str] = {}
 pending_speech: Dict[int, bool] = {}
-
-
-def get_theme_label(user_id: int) -> str:
-    return theme_preferences.get(user_id, "light")
-
-
-def format_message(user_id: int, text: str) -> str:
-    theme = get_theme_label(user_id)
-    prefix = "🌙" if theme == "dark" else "☀️"
-    return f"{prefix} {text}"
 
 
 def read_last_actions(user_id: int, limit: int = MAX_ACTIONS) -> List[str]:
@@ -107,30 +96,12 @@ async def history_menu(message: Message) -> None:
     screenshots_block = "\n".join(screenshots) if screenshots else "Скріншотів ще немає."
 
     await message.answer(
-        format_message(
-            user_id,
-            "🧾 Останні дії:\n"
-            f"{actions_block}\n\n"
-            "🖼 Останні скриншоти:\n"
-            f"{screenshots_block}"
-        )
+        "🧾 Останні дії:\n"
+        f"{actions_block}\n\n"
+        "🖼 Останні скриншоти:\n"
+        f"{screenshots_block}"
     )
     log_action(user_id, "Перегляд історії дій/скриншотів")
-
-
-@router.message(lambda message: is_command(message.text, "Тема"))
-async def toggle_theme(message: Message) -> None:
-    user_id = message.from_user.id
-    if not is_allowed(user_id):
-        return await message.answer("⛔ Доступ заборонено")
-    if not is_session_active(user_id):
-        return await message.answer("🔒 Сесія завершена")
-
-    current = get_theme_label(user_id)
-    new_theme = "dark" if current == "light" else "light"
-    theme_preferences[user_id] = new_theme
-    await message.answer(format_message(user_id, f"Тему змінено на {new_theme}."))
-    log_action(user_id, "Зміна теми", new_theme)
 
 
 @router.message(lambda message: is_command(message.text, "Голос"))
@@ -202,11 +173,8 @@ async def achievements(message: Message) -> None:
         badge = "🥉 Новачок"
 
     await message.answer(
-        format_message(
-            user_id,
-            f"{badge}\n"
-            f"Дій зафіксовано: {action_count}\n"
-            "Продовжуйте користуватися ботом, щоб отримати нові рівні!"
-        )
+        f"{badge}\n"
+        f"Дій зафіксовано: {action_count}\n"
+        "Продовжуйте користуватися ботом, щоб отримати нові рівні!"
     )
     log_action(user_id, "Перегляд досягнень", f"actions={action_count}")

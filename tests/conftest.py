@@ -264,7 +264,6 @@ def allow_all(monkeypatch: pytest.MonkeyPatch, tmp_path) -> None:
     autoreport.threshold_states.clear()
     autoreport.pending_popup.clear()
     ux.pending_speech.clear()
-    ux.theme_preferences.clear()
 
     yield
 
@@ -276,4 +275,3 @@ def allow_all(monkeypatch: pytest.MonkeyPatch, tmp_path) -> None:
     autoreport.threshold_states.clear()
     autoreport.pending_popup.clear()
     ux.pending_speech.clear()
-    ux.theme_preferences.clear()

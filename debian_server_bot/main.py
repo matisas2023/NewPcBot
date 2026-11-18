@@ -14,11 +14,8 @@ BOT_TOKEN = os.getenv("DEBIAN_BOT_TOKEN", "")
 ALLOWED_USERS = {int(x) for x in os.getenv("DEBIAN_ALLOWED_USERS", "").split(",") if x.strip()}
 ALLOWED_CHATS = {int(x) for x in os.getenv("DEBIAN_ALLOWED_CHATS", "").split(",") if x.strip()}
 
-MUSIC_DIR = "/mnt/storage/music"
-STORAGE_DIR = "/mnt/storage"
-MUSIC_LIMIT_MB = 30720
 TG_LIMIT = 4096
-WATCH_SERVICES = ["navidrome", "docker", "ssh", "nginx"]
+WATCH_SERVICES = ["docker", "ssh", "nginx"]
 pending_confirm: dict[int, str] = {}
 alert_tasks: dict[int, asyncio.Task] = {}
 
@@ -43,35 +40,6 @@ def run_cmd(args: list[str], timeout: int = 20) -> tuple[bool, str]:
         return False, str(exc)
 
 
-def render_music_status() -> str:
-    files_ok, files_out = run_cmd(["find", MUSIC_DIR, "-type", "f"])
-    if not files_ok:
-        return f"❌ Помилка читання {MUSIC_DIR}: {files_out}"
-    files_count = len([x for x in files_out.splitlines() if x.strip()])
-
-    du_ok, du_out = run_cmd(["du", "-sm", MUSIC_DIR])
-    if not du_ok:
-        return f"❌ Помилка du: {du_out}"
-    used_mb = int(du_out.split()[0]) if du_out else 0
-
-    df_ok, df_out = run_cmd(["df", "-h", STORAGE_DIR])
-    disk_free = "N/A"
-    if df_ok:
-        lines = [l for l in df_out.splitlines() if l.strip()]
-        if len(lines) > 1:
-            disk_free = lines[-1].split()[3]
-
-    left = max(MUSIC_LIMIT_MB - used_mb, 0)
-    return (
-        "🎵 Статус музичного сервісу\n\n"
-        f"Файлів: {files_count}\n"
-        f"Зайнято: {used_mb} MB\n"
-        f"Ліміт: {MUSIC_LIMIT_MB} MB\n"
-        f"Залишилось до ліміту: {left} MB\n"
-        f"Вільно на диску: {disk_free}"
-    )
-
-
 def main_menu_kb() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -81,20 +49,6 @@ def main_menu_kb() -> InlineKeyboardMarkup:
              InlineKeyboardButton(text="📁 Файли", callback_data="menu_fs")],
             [InlineKeyboardButton(text="🧩 Сервіси", callback_data="menu_services"),
              InlineKeyboardButton(text="🚨 Алерти", callback_data="menu_alerts")],
-            [InlineKeyboardButton(text="🎵 Музика/Navidrome", callback_data="menu_music")],
-        ]
-    )
-
-
-def music_menu_kb() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup(
-        inline_keyboard=[
-            [InlineKeyboardButton(text="📈 Статус музики", callback_data="music_status")],
-            [InlineKeyboardButton(text="⬇️ Завантажити", callback_data="music_download")],
-            [InlineKeyboardButton(text="📜 Лог завантаження", callback_data="music_log")],
-            [InlineKeyboardButton(text="🔄 Рестарт Navidrome", callback_data="music_restart")],
-            [InlineKeyboardButton(text="💾 Простір", callback_data="music_space")],
-            [InlineKeyboardButton(text="◀️ Назад", callback_data="menu_home")],
         ]
     )
 
@@ -251,48 +205,6 @@ async def main() -> None:
         routes = subprocess.getoutput("ip route")
         await send_text(message, f"🌐 IP: {ip}\n\nМаршрути:\n{routes}", code=True)
 
-    @dp.message(Command("music_status"))
-    async def cmd_music_status(message: Message):
-        if not is_allowed_message(message):
-            return await message.answer("⛔ Доступ заборонено")
-        await message.answer(render_music_status())
-
-    @dp.message(Command("music_download"))
-    async def cmd_music_download(message: Message):
-        if not is_allowed_message(message):
-            return await message.answer("⛔ Доступ заборонено")
-        try:
-            log = open("/var/log/music_manual.log", "a", encoding="utf-8")
-            subprocess.Popen(["/usr/local/bin/music_auto_download.sh"], stdout=log, stderr=subprocess.STDOUT)
-            await message.answer("🚀 Завантаження музики запущено")
-        except Exception as exc:
-            await message.answer(f"❌ {exc}")
-
-    @dp.message(Command("music_log"))
-    async def cmd_music_log(message: Message):
-        if not is_allowed_message(message):
-            return await message.answer("⛔ Доступ заборонено")
-        ok, out = run_cmd(["tail", "-n", "40", "/var/log/music_auto_download.log"])
-        text = out if ok else f"❌ {out}"
-        await send_text(message, text, code=True)
-
-    @dp.message(Command("music_restart"))
-    async def cmd_music_restart(message: Message):
-        if not is_allowed_message(message):
-            return await message.answer("⛔ Доступ заборонено")
-        ok, out = run_cmd(["systemctl", "restart", "navidrome"])
-        if not ok:
-            ok, out = run_cmd(["service", "navidrome", "restart"])
-        await message.answer("✅ Navidrome перезапущено" if ok else f"❌ {out}")
-
-    @dp.message(Command("music_space"))
-    async def cmd_music_space(message: Message):
-        if not is_allowed_message(message):
-            return await message.answer("⛔ Доступ заборонено")
-        ok, out = run_cmd(["music_status"])
-        text = out if ok else render_music_status()
-        text = text.replace("[0;34m", "").replace("[1;33m", "").replace("[0;32m", "").replace("[0m", "")
-        await send_text(message, text)
 
     @dp.message(Command("menu"))
     async def cmd_menu(message: Message):
@@ -393,12 +305,6 @@ async def main() -> None:
         await send_text(call.message, out, code=True)
         await call.answer()
 
-    @dp.callback_query(F.data == "menu_music")
-    async def cb_menu_music(call: CallbackQuery):
-        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
-            return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        await call.message.answer("🎵 <b>Музичне меню</b>", reply_markup=music_menu_kb(), parse_mode="HTML")
-        await call.answer()
 
     @dp.callback_query(F.data == "menu_services")
     async def cb_menu_services(call: CallbackQuery):
@@ -437,52 +343,6 @@ async def main() -> None:
             await call.message.answer("🔔 Алерти увімкнено (кожні 2 хв)")
         await call.answer()
 
-    @dp.callback_query(F.data == "music_status")
-    async def cb_music_status(call: CallbackQuery):
-        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
-            return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        await call.message.answer(render_music_status())
-        await call.answer()
-
-    @dp.callback_query(F.data == "music_download")
-    async def cb_music_download(call: CallbackQuery):
-        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
-            return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        try:
-            log = open("/var/log/music_manual.log", "a", encoding="utf-8")
-            subprocess.Popen(["/usr/local/bin/music_auto_download.sh"], stdout=log, stderr=subprocess.STDOUT)
-            await call.message.answer("🚀 Завантаження музики запущено")
-        except Exception as exc:
-            await call.message.answer(f"❌ {exc}")
-        await call.answer()
-
-    @dp.callback_query(F.data == "music_log")
-    async def cb_music_log(call: CallbackQuery):
-        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
-            return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        ok, out = run_cmd(["tail", "-n", "40", "/var/log/music_auto_download.log"])
-        await send_text(call.message, out if ok else f"❌ {out}", code=True)
-        await call.answer()
-
-    @dp.callback_query(F.data == "music_restart")
-    async def cb_music_restart(call: CallbackQuery):
-        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
-            return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        ok, out = run_cmd(["systemctl", "restart", "navidrome"])
-        if not ok:
-            ok, out = run_cmd(["service", "navidrome", "restart"])
-        await call.message.answer("✅ Navidrome перезапущено" if ok else f"❌ {out}")
-        await call.answer()
-
-    @dp.callback_query(F.data == "music_space")
-    async def cb_music_space(call: CallbackQuery):
-        if not is_allowed_ids(call.from_user.id if call.from_user else None, call.message.chat.id if call.message else None):
-            return await call.answer("⛔ Доступ заборонено", show_alert=True)
-        ok, out = run_cmd(["music_status"])
-        text = out if ok else render_music_status()
-        text = text.replace("[0;34m", "").replace("[1;33m", "").replace("[0;32m", "").replace("[0m", "")
-        await send_text(call.message, text)
-        await call.answer()
 
     @dp.message(Command("reboot"))
     async def cmd_reboot(message: Message):
