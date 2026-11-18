@@ -1,11 +1,9 @@
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, FSInputFile, InputMediaPhoto
 from pathlib import Path
-import importlib.util
 import os
 import sys
 import time
-from PIL import Image
 
 from bot.security import is_allowed, is_session_active
 from bot.keyboards import screenshot_kb
@@ -23,13 +21,14 @@ def take_screenshot() -> Path:
     """Зробити скриншот і зберегти в screenshots/ з унікальним ім'ям"""
     timestamp = int(time.time())
     path = SCREENSHOT_DIR / f"screenshot_{timestamp}.png"
-    has_display = sys.platform == "win32" or os.environ.get("DISPLAY")
-    if has_display and importlib.util.find_spec("pyautogui") is not None:
+    if sys.platform not in ("win32", "darwin") and not os.environ.get("DISPLAY"):
+        raise RuntimeError("Захоплення екрана недоступне без дисплея")
+    try:
         import pyautogui
 
         pyautogui.screenshot().save(path)
-    else:
-        Image.new("RGB", (800, 600), color=(0, 0, 0)).save(path)
+    except Exception as exc:
+        raise RuntimeError("Не вдалося захопити екран") from exc
     return path
 
 
@@ -44,7 +43,11 @@ async def screenshot_handler(message: Message):
     if not is_session_active(message.from_user.id):
         return await message.answer("🔒 Сесія завершена")
 
-    path = take_screenshot()
+    try:
+        path = take_screenshot()
+    except RuntimeError as exc:
+        log_action(message.from_user.id, "Помилка скриншота", str(exc))
+        return await message.answer("❌ Не вдалося зробити скриншот: захоплення екрана недоступне")
     log_action(message.from_user.id, "Скриншот надісланий", f"Файл: {path.name}")
 
     await message.answer_photo(
@@ -65,7 +68,11 @@ async def screenshot_refresh(call: CallbackQuery):
     if not is_session_active(call.from_user.id):
         return await call.answer("🔒 Сесія завершена", show_alert=True)
 
-    path = take_screenshot()
+    try:
+        path = take_screenshot()
+    except RuntimeError as exc:
+        log_action(call.from_user.id, "Помилка скриншота", str(exc))
+        return await call.answer("❌ Захоплення екрана недоступне", show_alert=True)
     log_action(call.from_user.id, "Скриншот оновлений", f"Файл: {path.name}")
 
     media = InputMediaPhoto(
