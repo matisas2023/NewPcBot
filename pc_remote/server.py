@@ -270,6 +270,8 @@ class Handler(BaseHTTPRequestHandler):
     def api(self, url, post):
         query = parse_qs(url.query)
         value = lambda key, default="": query.get(key, [default])[0]
+        if url.path.startswith('/api/media/'):
+            return self.media_api(url,post,value)
         if not post:
             if url.path == '/api/connection':
                 manager = getattr(self.server,'tunnel_manager',None)
@@ -363,3 +365,49 @@ class Handler(BaseHTTPRequestHandler):
             LOG.info("Confirmed operation: %s", operation)
             return self.reply(200, {"ok": True})
         raise APIError(404, "Невідомий запит")
+
+    def media_api(self, url, post, value):
+        from agent.media_capture import service, CaptureError
+        try:
+            if not post:
+                if url.path=='/api/media/devices':return self.reply(200,service.devices())
+                if url.path=='/api/media/jobs':return self.reply(200,{'jobs':service.list_jobs('web')})
+                if url.path=='/api/media/frame':
+                    return self.reply(200,service.snapshot(value('source','screen'),int(value('camera','0'))),'image/jpeg')
+                if url.path=='/api/media/file':
+                    path=service.file(value('id'),'web')
+                    size=path.stat().st_size;start=0;end=size-1;status=200
+                    requested=self.headers.get('Range')
+                    if requested:
+                        import re
+                        match=re.fullmatch(r'bytes=(\d*)-(\d*)',requested)
+                        if not match or not any(match.groups()):raise APIError(416,'Некоректний діапазон')
+                        if match[1]:start=int(match[1]);end=min(int(match[2]) if match[2] else end,end)
+                        else:start=max(0,size-int(match[2]))
+                        if start>end or start>=size:raise APIError(416,'Діапазон поза файлом')
+                        status=206
+                    self.send_response(status)
+                    self.send_header('Content-Type','audio/mpeg' if path.suffix=='.mp3' else 'video/mp4')
+                    self.send_header('Content-Length',str(end-start+1))
+                    self.send_header('Accept-Ranges','bytes');self.send_header('Cache-Control','no-store')
+                    self.send_header('X-Content-Type-Options','nosniff')
+                    self.send_header('Content-Disposition',f'inline; filename="{path.name}"')
+                    if status==206:self.send_header('Content-Range',f'bytes {start}-{end}/{size}')
+                    self.end_headers()
+                    with path.open('rb') as source:
+                        source.seek(start);remaining=end-start+1
+                        while remaining:
+                            chunk=source.read(min(65536,remaining))
+                            if not chunk:break
+                            self.wfile.write(chunk);remaining-=len(chunk)
+                    return
+            else:
+                data=self.json_body()
+                if url.path=='/api/media/start':
+                    return self.reply(202,service.start(data.get('source'),data.get('seconds'),'web',data.get('camera',0),data.get('microphone')))
+                if url.path=='/api/media/stop':return self.reply(200,service.stop(data.get('id'),'web'))
+                if url.path=='/api/media/delete':
+                    service.delete(data.get('id'),'web');return self.reply(200,{'ok':True})
+        except CaptureError as exc:
+            raise APIError(409,str(exc)) from exc
+        raise APIError(404,'Невідомий запит мультимедіа')

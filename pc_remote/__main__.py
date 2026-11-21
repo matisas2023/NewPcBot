@@ -146,6 +146,8 @@ def main():
     except RuntimeError as exc:
         parser.error(str(exc))
     finally:
+        from agent.media_capture import service
+        service.shutdown()
         if tunnel:
             tunnel.stop()
         server.shutdown()

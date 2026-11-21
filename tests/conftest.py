@@ -89,12 +89,20 @@ class DummyCallbackQuery:
 class DummyFSMContext:
     def __init__(self) -> None:
         self.state: str | None = None
+        self.data = {}
+
+    async def get_data(self):
+        return self.data.copy()
+
+    async def update_data(self, **values):
+        self.data.update(values)
 
     async def set_state(self, state: Any) -> None:
         self.state = str(state)
 
     async def clear(self) -> None:
         self.state = None
+        self.data = {}
 
 
 @pytest.fixture()
@@ -154,7 +162,7 @@ def allow_all(monkeypatch: pytest.MonkeyPatch, tmp_path) -> None:
         return DummyTask()
 
     monkeypatch.setattr(system.asyncio, "create_task", fake_create_task)
-    monkeypatch.setattr(media.subprocess, "Popen", lambda *args, **kwargs: None)
+    monkeypatch.setattr(media, 'service', SimpleNamespace(devices=lambda: {'cameras':[{'id':0,'name':'fixture camera'}],'microphones':[]}))
 
     class DummyControls:
         def __init__(self) -> None:

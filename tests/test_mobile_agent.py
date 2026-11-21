@@ -111,6 +111,26 @@ class AgentTests(unittest.TestCase):
     def test_query_token_not_accepted(self):
         self.assertEqual(self.request('/api/status?token=legacy-key', auth=False)[0], 401)
 
+    def test_media_requires_login_and_csrf(self):
+        with patch('agent.media_capture.service') as capture:
+            self.assertEqual(self.request('/api/media/jobs',auth=False)[0],401)
+            self.assertEqual(self.request('/api/media/start',{'source':'screen','seconds':2},headers={'X-CSRF-Token':'wrong'})[0],403)
+            capture.start.assert_not_called()
+            capture.start.return_value={'id':'a'*32,'status':'recording'}
+            self.assertEqual(self.request('/api/media/start',{'source':'screen','seconds':2})[0],202)
+            capture.start.assert_called_once_with('screen',2,'web',0,None)
+
+    def test_media_download_supports_range_and_does_not_cache(self):
+        path=Path(self.temp.name)/'fixture.mp4';path.write_bytes(b'0123456789')
+        with patch('agent.media_capture.service') as capture:
+            capture.file.return_value=path
+            status,body,headers=self.request('/api/media/file?id='+'a'*32,headers={'Range':'bytes=2-5'})
+            self.assertEqual(status,206);self.assertEqual(body,b'2345')
+            self.assertEqual(headers['Content-Range'],'bytes 2-5/10')
+            self.assertEqual(headers['Cache-Control'],'no-store')
+            capture.file.assert_called_with('a'*32,'web')
+            self.assertEqual(self.request('/api/media/file?id='+'a'*32,headers={'Range':'bytes=99-'})[0],416)
+
     def test_remember_cookie_and_logout(self):
         status, body, headers = self.request('/api/login',
             {'username':USERNAME, 'password':PASSWORD, 'remember':True}, auth=False)

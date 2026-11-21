@@ -24,6 +24,8 @@ async def main():
     try:
         await run_bot(bot)
     finally:
+        from agent.media_capture import service
+        await asyncio.to_thread(service.shutdown)
         await bot.session.close()
 
 

@@ -2,6 +2,7 @@
 const $ = (id) => document.getElementById(id);
 let csrf = '', loggedIn = false, online = false;
 let filesRequest = 0;
+let captureTimer=null, captureEpoch=0, captureURL='', captureJobTimer=null, captureRequest=null, captureListSignature='';
 let fileEntries = [], activeUpload = null, pointerPending = {dx:0,dy:0}, pointerBusy = false, pointerTimer;
 let folder = '', screenURL = '', refreshTimer, toastTimer, activeTab = 'overview', epoch = 0;
 const actionNames = {Lock:'Заблокувати ПК',Sleep:'Перевести ПК у сон',Hibernate:'Увімкнути гібернацію',Logoff:'Вийти із сеансу Windows',Restart:'Перезапустити ПК',Shutdown:'Вимкнути ПК'};
@@ -36,6 +37,7 @@ async function busy(button, task) {
   finally { button.disabled = false; }
 }
 function resetSession() {
+  stopCapturePreview(); clearInterval(captureJobTimer); captureListSignature=''; $('capture-jobs').replaceChildren();
   epoch++; csrf = ''; loggedIn = false; clearInterval(refreshTimer); clearTimeout(pointerTimer); pointerPending = {dx:0,dy:0}; if (activeUpload) activeUpload.abort();
   if ($('confirm-dialog').open) $('confirm-dialog').close('cancel');
   if (screenURL) URL.revokeObjectURL(screenURL); screenURL = ''; $('screenshot').removeAttribute('src'); $('screenshot').hidden = true; $('screen-placeholder').hidden = false;
@@ -58,6 +60,7 @@ async function connect() {
   $('login').hidden = true; $('dashboard').hidden = false;
   if (activeTab === 'files') await files();
   if (activeTab === 'processes') await processes();
+  if (activeTab === 'media') enterCapture();
   clearInterval(refreshTimer); refreshTimer = setInterval(() => { if (!document.hidden && loggedIn) status().catch(() => {}); },10000);
 }
 async function screenshot() {
@@ -115,14 +118,16 @@ async function processes() {
   }); $('process-list').replaceChildren(...(rows.length ? rows : [element('p','Процесів немає','empty')]));
 }
 function selectTab(name, push = true) {
-  if (!['overview','control','files','processes'].includes(name)) name = 'overview';
+  if (!['overview','control','media','files','processes'].includes(name)) name = 'overview';
+  if (name !== 'media') { stopCapturePreview(); clearInterval(captureJobTimer); }
   activeTab = name;
   gesture = null; clearTimeout(pointerTimer); pointerTimer = null;
   if (push) history.pushState({tab:name,folder,depth:(history.state?.depth || 0)+1},'', '#'+name);
   document.querySelectorAll('[data-tab]').forEach(n => { const active = n.dataset.tab === name; n.classList.toggle('active',active); n.setAttribute('aria-pressed',String(active)); });
   document.querySelectorAll('.panel').forEach(p => { p.hidden = p.id !== name; });
   pointerPending = {dx:0,dy:0};
-  if (loggedIn && name === 'files') files().catch(error=>toast(error.message,true));
+  if (loggedIn && name === 'media') enterCapture();
+    if (loggedIn && name === 'files') files().catch(error=>toast(error.message,true));
   if (loggedIn && name === 'processes') busy($('refresh-processes'),processes);
 }
 function openFolder(path) { folder = path; $('file-search').value = ''; selectTab('files'); }
@@ -207,3 +212,86 @@ document.querySelectorAll('[data-pointer]').forEach(b => b.addEventListener('cli
 document.querySelectorAll('[data-scroll]').forEach(b => b.addEventListener('click',() => busy(b,() => json('pointer',{scroll:Number(b.dataset.scroll)}))));
 
 $('show-password').addEventListener('click',() => { const visible=$('password').type==='password'; $('password').type=visible?'text':'password'; $('show-password').textContent=visible?'Приховати пароль':'Показати пароль'; $('show-password').setAttribute('aria-pressed',String(visible)); });
+
+function stopCapturePreview() {
+  captureEpoch++; clearTimeout(captureTimer); captureTimer=null;
+  if (captureURL) URL.revokeObjectURL(captureURL); captureURL='';
+  $('capture-preview').hidden=true; $('capture-preview').removeAttribute('src');
+  $('capture-preview-state').textContent='Перегляд вимкнено';
+}
+async function captureDevices() {
+  const devices=await json('media/devices');
+  const previous=$('capture-camera').value;
+  $('capture-camera').replaceChildren(...devices.cameras.map(d=>{const option=element('option',d.name);option.value=String(d.id);return option;}));
+  if (devices.cameras.some(d=>String(d.id)===previous)) $('capture-camera').value=previous;
+  if (!devices.cameras.length) {const option=element('option','Камеру не знайдено');option.value='0';$('capture-camera').append(option);}
+  const silent=element('option','Без звуку');silent.value='';
+  $('capture-mic').replaceChildren(silent,...devices.microphones.map(d=>{const option=element('option',d.name);option.value=String(d.id);return option;}));
+}
+function enterCapture() {
+  captureDevices().catch(error=>toast(error.message,true));
+  captureJobs().catch(error=>toast(error.message,true));
+  clearInterval(captureJobTimer);captureJobTimer=setInterval(()=>{if(loggedIn && activeTab==='media' && !document.hidden)captureJobs().catch(()=>{});},2000);
+}
+async function capturePreview() {
+  stopCapturePreview();
+  const source=$('capture-source').value, camera=$('capture-camera').value || '0';
+  if (source==='audio') return toast('Для мікрофона обери запис',true);
+  const generation=captureEpoch;
+  async function frame() {
+    if(generation!==captureEpoch || !loggedIn || activeTab!=='media' || document.hidden)return;
+    try {
+      const request=api('media/frame?source='+source+'&camera='+encodeURIComponent(camera));captureRequest=request;
+      const response=await request;captureRequest=null;
+      const blob=await response.blob();
+      if(generation!==captureEpoch || !loggedIn)return;
+      if(captureURL)URL.revokeObjectURL(captureURL);
+      captureURL=URL.createObjectURL(blob);$('capture-preview').src=captureURL;$('capture-preview').hidden=false;
+      $('capture-preview-state').textContent='● Перегляд увімкнено · '+new Date().toLocaleTimeString('uk-UA');
+      captureTimer=setTimeout(frame,source==='screen'?500:1000);
+    } catch(error) {if(generation===captureEpoch){stopCapturePreview();toast(error.message,true);}}
+  }
+  await frame();
+}
+async function captureJobs() {
+  const generation=epoch, result=await json('media/jobs');
+  if(generation!==epoch || !loggedIn)return;
+  const root=$('capture-jobs'), signature=JSON.stringify(result.jobs.map(job=>[job.id,job.status,job.size,job.error]));
+  if(signature===captureListSignature)return;
+  // Preserve an actively playing clip while refreshing job statuses.
+  if(root.querySelector('video:not([paused]),audio:not([paused])')) {
+    const playing=[...root.querySelectorAll('video,audio')].some(player=>!player.paused);
+    if(playing)return;
+  }
+  captureListSignature=signature;root.replaceChildren();
+  if(!result.jobs.length){root.append(element('p','Записів ще немає','hint'));return;}
+  for(const job of result.jobs) {
+    const card=element('article',undefined,'card');
+    const names={screen:'Екран',camera:'Камера',audio:'Мікрофон'};
+    card.append(element('h3',(names[job.source]||'Запис')+' · '+new Date(job.created*1000).toLocaleString('uk-UA')));
+    card.append(element('p',job.status==='recording'?'🔴 Запис триває · до '+job.seconds+' с':job.status==='ready'?'Готово · '+size(job.size):(job.error||'Помилка запису')));
+    if(job.status==='recording')card.append(button('⏹ Зупинити та зберегти',async()=>{await json('media/stop',{id:job.id});await captureJobs();}));
+    else {
+      if(job.status==='ready') {
+        const url='/api/media/file?id='+encodeURIComponent(job.id),player=element(job.source==='audio'?'audio':'video');
+        player.controls=true;player.preload='none';player.src=url;card.append(player);
+        const link=element('a','Завантажити');link.href=url;link.download=job.source+'-'+job.id+(job.source==='audio'?'.mp3':'.mp4');card.append(link);
+      }
+      card.append(button('До кошика',async()=>{if(!window.confirm('Перемістити запис до кошика Windows?'))return;await json('media/delete',{id:job.id});await captureJobs();},'quiet'));
+    }
+    root.append(card);
+  }
+}
+$('capture-devices').addEventListener('click',()=>busy($('capture-devices'),captureDevices));
+$('capture-view').addEventListener('click',()=>busy($('capture-view'),capturePreview));
+$('capture-hide').addEventListener('click',stopCapturePreview);
+$('capture-source').addEventListener('change',stopCapturePreview);
+$('capture-camera').addEventListener('change',stopCapturePreview);
+$('capture-refresh').addEventListener('click',()=>busy($('capture-refresh'),captureJobs));
+$('capture-record').addEventListener('click',()=>busy($('capture-record'),async()=>{
+  const request=captureRequest;stopCapturePreview();if(request)await request.catch(()=>{});
+  const job=await json('media/start',{source:$('capture-source').value,seconds:Number($('capture-seconds').value),camera:Number($('capture-camera').value||0),microphone:$('capture-mic').value===''?null:Number($('capture-mic').value)});
+  toast('Запис розпочато. Він з’явиться у списку нижче.');await captureJobs();
+}));
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stopCapturePreview();});
+window.addEventListener('offline',stopCapturePreview);

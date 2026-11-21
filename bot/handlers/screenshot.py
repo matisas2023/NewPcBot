@@ -2,6 +2,8 @@ from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, FSInputFile, InputMediaPhoto
 from pathlib import Path
 import time
+import asyncio
+import uuid
 from agent.control import capture_screen
 
 from bot.security import is_allowed, is_session_active
@@ -19,7 +21,7 @@ SCREENSHOT_DIR.mkdir(exist_ok=True)
 def take_screenshot() -> Path:
     """Зробити скриншот і зберегти в screenshots/ з унікальним ім'ям"""
     timestamp = int(time.time())
-    path = SCREENSHOT_DIR / f"screenshot_{timestamp}.png"
+    path = SCREENSHOT_DIR / f"screenshot_{timestamp}_{uuid.uuid4().hex[:8]}.png"
     path.write_bytes(capture_screen())
     return path
 
@@ -36,8 +38,8 @@ async def screenshot_handler(message: Message):
         return await message.answer("🔒 Сесія завершена")
 
     try:
-        path = take_screenshot()
-    except RuntimeError as exc:
+        path = await asyncio.to_thread(take_screenshot)
+    except (RuntimeError, OSError) as exc:
         log_action(message.from_user.id, "Помилка скриншота", str(exc))
         return await message.answer("❌ Не вдалося зробити скриншот: захоплення екрана недоступне")
     log_action(message.from_user.id, "Скриншот надісланий", f"Файл: {path.name}")
@@ -61,8 +63,8 @@ async def screenshot_refresh(call: CallbackQuery):
         return await call.answer("🔒 Сесія завершена", show_alert=True)
 
     try:
-        path = take_screenshot()
-    except RuntimeError as exc:
+        path = await asyncio.to_thread(take_screenshot)
+    except (RuntimeError, OSError) as exc:
         log_action(call.from_user.id, "Помилка скриншота", str(exc))
         return await call.answer("❌ Захоплення екрана недоступне", show_alert=True)
     log_action(call.from_user.id, "Скриншот оновлений", f"Файл: {path.name}")

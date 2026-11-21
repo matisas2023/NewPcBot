@@ -194,6 +194,8 @@ def test_callback_coverage_matches_handlers() -> None:
         "media_screen",
         "media_camera",
         "media_audio",
+        "media_view_camera",
+        "media_view_screen",
         "mediaplayer_playpause",
         "mediaplayer_next",
         "mediaplayer_prev",

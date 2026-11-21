@@ -41,6 +41,11 @@ module.exports = async function testTouchpad() {
   pad.handlers.pointerdown({pointerId:2,clientX:10,clientY:10,preventDefault(){}});
   pad.handlers.pointercancel();
   assert.equal(vm.runInContext('gesture',context),null);
+  const previousCaptureEpoch=vm.runInContext('captureEpoch',context);
+  node('capture-preview').hidden=false;
+  vm.runInContext("activeTab='media'; selectTab('overview',false);",context);
+  assert.equal(node('capture-preview').hidden,true,'Preview survives leaving media tab');
+  assert.equal(vm.runInContext('captureEpoch',context),previousCaptureEpoch+1);
 };
 
 if (require.main===module) module.exports().then(()=>console.log('Touchpad gesture tests PASS')).catch(error=>{console.error(error);process.exitCode=1;});
