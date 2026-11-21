@@ -88,6 +88,7 @@ def main():
     parser.add_argument("--config", type=Path, default=Path(".pc-remote.json"))
     parser.add_argument("--port", type=int, default=8765)
     access = parser.add_mutually_exclusive_group()
+    access.add_argument('--direct', action='store_true', help='Use configured public IPv4 with a local Caddy HTTPS proxy')
     access.add_argument("--public", action="store_true", help="Start a temporary HTTPS Cloudflare tunnel (no domain/VPN)")
     access.add_argument("--origin", help="Existing HTTPS origin for a separately managed tunnel")
     args = parser.parse_args()
@@ -101,6 +102,14 @@ def main():
         return
     if not args.config.exists():
         parser.error("Run python -m pc_remote --setup first")
+    direct_config = None
+    if args.direct:
+        from .direct import load_settings
+        try:
+            direct_config = load_settings()
+        except ValueError as exc:
+            parser.error(str(exc))
+        args.origin = direct_config['origin']
     if args.origin:
         origin = urlsplit(args.origin)
         if origin.scheme != "https" or not origin.hostname or origin.username or origin.password or origin.path not in ("", "/") or origin.query or origin.fragment:
@@ -116,6 +125,9 @@ def main():
     worker = threading.Thread(target=server.serve_forever, daemon=True)
     worker.start()
     tunnel = TunnelManager(server) if args.public else None
+    if args.direct:
+        from .direct import DirectProxy
+        tunnel = DirectProxy(server, direct_config)
     server.tunnel_manager = tunnel
     try:
         if tunnel:

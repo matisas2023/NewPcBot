@@ -47,7 +47,8 @@ def show_phone():
     current = object()
     def refresh():
         nonlocal current
-        url = public_url(read_state(STATE_DIR/'connection.json'))
+        connection = read_state(STATE_DIR/'connection.json')
+        url = public_url(connection)
         if url != current:
             current = url
             address.set(url or '')
@@ -55,11 +56,11 @@ def show_phone():
                 qr = qrcode.make(url).convert('RGB').resize((300, 300))
                 image.photo = ImageTk.PhotoImage(qr)
                 image.configure(image=image.photo)
-                hint.configure(text='Відкрий адресу та введи свій логін і пароль. Познач «Запам’ятати вхід» на власному телефоні. Тимчасова адреса змінюється після перезапуску тунелю.')
+                hint.configure(text='Відкрий адресу та введи свій логін і пароль. Познач «Запам’ятати вхід» на власному телефоні. '+('Адреса зберігається, поки незмінна біла IP-адреса.' if connection.get('kind')=='direct' else 'Тимчасова адреса змінюється після перезапуску тунелю.'))
             else:
                 image.configure(image='')
                 image.photo = None
-                hint.configure(text='Зовнішнє HTTPS-підключення ще недоступне. Агент повторює спроби; QR-код з’явиться автоматично. Локальна панель на ПК доступна за адресою http://127.0.0.1:8765.')
+                hint.configure(text='Зовнішнє HTTPS-підключення ще недоступне. Перевір стан підключення та налаштування портів; QR-код з’явиться автоматично. Локальна панель на ПК доступна за адресою http://127.0.0.1:8765.')
         root.after(2000, refresh)
     refresh()
     root.mainloop()

@@ -19,11 +19,13 @@ RUN_KEY = r'Software\Microsoft\Windows\CurrentVersion\Run'
 RUN_NAME = 'PC Helper'
 
 
-def startup_command(public=False, origin=None):
+def startup_command(public=False, origin=None, direct=False):
     executable = Path(sys.executable).with_name('pythonw.exe')
     if not executable.is_file():
         executable = Path(sys.executable)
     args = [str(executable), '-X', 'utf8', '-m', 'pc_remote.desktop', '--root', str(ROOT)]
+    if direct:
+        args.append('--direct')
     if public:
         args.append('--public')
     if origin:
@@ -34,13 +36,13 @@ def startup_command(public=False, origin=None):
     return subprocess.list2cmdline(args)
 
 
-def set_startup(enabled, public=False, origin=None):
+def set_startup(enabled, public=False, origin=None, direct=False):
     if os.name != 'nt':
         raise RuntimeError('Automatic startup is available on Windows')
     import winreg
     with winreg.CreateKey(winreg.HKEY_CURRENT_USER, RUN_KEY) as key:
         if enabled:
-            winreg.SetValueEx(key, RUN_NAME, 0, winreg.REG_SZ, startup_command(public, origin))
+            winreg.SetValueEx(key, RUN_NAME, 0, winreg.REG_SZ, startup_command(public, origin, direct))
         else:
             try:
                 winreg.DeleteValue(key, RUN_NAME)
@@ -119,7 +121,7 @@ class Child:
 
 
 class Supervisor:
-    def __init__(self, public=False, origin=None):
+    def __init__(self, public=False, origin=None, direct=False):
         self.public, self.origin = public, origin
         STATE_DIR.mkdir(parents=True, exist_ok=True)
         self.logger = logging.getLogger(f'pc-helper-desktop.{id(self)}')
@@ -128,7 +130,7 @@ class Supervisor:
         handler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
         self.logger.addHandler(handler)
         self.log_handler = handler
-        agent_args = ['pc_remote'] + (['--public'] if public else []) + (['--origin',origin] if origin else [])
+        agent_args = ['pc_remote'] + (['--direct'] if direct else []) + (['--public'] if public else []) + (['--origin',origin] if origin else [])
         self.children = [Child('agent',agent_args,self.logger), Child('telegram',['bot.main'],self.logger)]
         self.enabled = True
         self.lock = threading.RLock()
@@ -208,6 +210,7 @@ def main():
     parser = argparse.ArgumentParser(description='PC Helper Windows tray')
     parser.add_argument('--root',type=Path,default=ROOT)
     connection = parser.add_mutually_exclusive_group()
+    connection.add_argument('--direct',action='store_true')
     connection.add_argument('--public',action='store_true')
     connection.add_argument('--origin')
     actions = parser.add_mutually_exclusive_group()
@@ -218,7 +221,7 @@ def main():
     args = parser.parse_args()
     os.chdir(args.root)
     if args.install_startup or args.remove_startup:
-        set_startup(args.install_startup,args.public,args.origin)
+        set_startup(args.install_startup,args.public,args.origin,args.direct)
         print('Startup enabled' if args.install_startup else 'Startup disabled')
         return
     if args.status:
@@ -236,7 +239,7 @@ def main():
     from PIL import Image
     try:
         with InstanceLock(STATE_DIR/'desktop.lock'):
-            supervisor = Supervisor(args.public,args.origin)
+            supervisor = Supervisor(args.public,args.origin,args.direct)
             def status_window(*_):
                 subprocess.Popen([sys.executable,'-X','utf8','-m','pc_remote.desktop','--status'],cwd=ROOT,
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
@@ -260,7 +263,7 @@ def main():
                 pystray.MenuItem('Перезапустити служби',lambda *_:supervisor.restart()),
                 pystray.MenuItem('Зупинити служби',lambda *_:supervisor.pause()),
                 pystray.MenuItem('Запустити служби',lambda *_:supervisor.resume()),
-                pystray.MenuItem('Автозапуск',lambda *_:set_startup(not startup_enabled(),args.public,args.origin),checked=lambda _:startup_enabled()),
+                pystray.MenuItem('Автозапуск',lambda *_:set_startup(not startup_enabled(),args.public,args.origin,args.direct),checked=lambda _:startup_enabled()),
                 pystray.MenuItem('Вийти',quit_app)))
             supervisor.start()
             try:

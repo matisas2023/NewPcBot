@@ -10,7 +10,7 @@ function toast(text, error = false) {
   clearTimeout(toastTimer); $('message').textContent = text; $('message').classList.toggle('error', error); $('message').hidden = false;
   toastTimer = setTimeout(() => { $('message').hidden = true; }, error ? 10000 : 4000);
 }
-function connection(connected) { online = connected; if (!online) pointerPending = {dx:0,dy:0}; $('connection').textContent = connected ? '● Підключено' : 'Немає з’єднання'; $('connection').classList.toggle('online', connected); }
+function connection(connected, needsLogin=false) { online = connected; if (!online) pointerPending = {dx:0,dy:0}; $('connection').textContent = connected ? '● Підключено' : (needsLogin?'Потрібен вхід':'Немає з’єднання'); $('connection').classList.toggle('online', connected); }
 async function api(path, options = {}) {
   const generation = epoch;
   let response;
@@ -40,7 +40,7 @@ function resetSession() {
   if ($('confirm-dialog').open) $('confirm-dialog').close('cancel');
   if (screenURL) URL.revokeObjectURL(screenURL); screenURL = ''; $('screenshot').removeAttribute('src'); $('screenshot').hidden = true; $('screen-placeholder').hidden = false;
   $('screen-time').textContent = 'Знімок з’явиться після оновлення'; $('file-list').replaceChildren(); $('process-list').replaceChildren(); folder = '';
-  $('dashboard').hidden = true; $('login').hidden = false; $('password').value = ''; $('password').type='password'; $('show-password').textContent='Показати пароль'; $('show-password').setAttribute('aria-pressed','false'); connection(false);
+  $('dashboard').hidden = true; $('login').hidden = false; $('password').value = ''; $('password').type='password'; $('show-password').textContent='Показати пароль'; $('show-password').setAttribute('aria-pressed','false'); connection(false,true);
 }
 function uptime(seconds) { const hours = Math.floor(seconds / 3600); return `${Math.floor(hours / 24)} д ${hours % 24} год ${Math.floor(seconds % 3600 / 60)} хв`; }
 async function status() {
@@ -48,7 +48,7 @@ async function status() {
     const [s, diagnostics] = await Promise.all([json('status'),json('connection')]); connection(true);
     const tunnel = diagnostics.tunnel;
     const labels = {online:'HTTPS-тунель підключено',connecting:'Підключення до HTTPS-тунелю…',retrying:'Тунель недоступний; локальний агент працює. Повторне підключення автоматичне.',local:'Лише локальний доступ. Інтернет-тунель не ввімкнений.',configured:'Використовується налаштована HTTPS-адреса',stopped:'Тунель зупинено'};
-    $('tunnel-status').textContent = labels[tunnel.state] || 'Стан тунелю невідомий';
+    $('tunnel-status').textContent = tunnel.kind==='direct' ? (tunnel.state==='online'?'Прямий HTTPS-доступ налаштовано': 'Підготовка прямого HTTPS-доступу. Перевір порти 80/443 і брандмауер Windows.') : (labels[tunnel.state] || 'Стан тунелю невідомий');
     $('pc-name').textContent = s.pc; $('pc-detail').textContent = `${s.os} · Працює ${uptime(s.uptime)}`;
     for (const key of ['cpu','ram','disk']) { $(key).textContent = `${Math.round(s[key])}%`; $(key+'-bar').value = s[key]; }
   } catch (error) { connection(false); throw error; }
