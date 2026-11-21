@@ -214,6 +214,7 @@ def main():
     actions.add_argument('--install-startup',action='store_true')
     actions.add_argument('--remove-startup',action='store_true')
     actions.add_argument('--status',action='store_true')
+    actions.add_argument('--phone',action='store_true')
     args = parser.parse_args()
     os.chdir(args.root)
     if args.install_startup or args.remove_startup:
@@ -223,6 +224,14 @@ def main():
     if args.status:
         show_status()
         return
+    if args.phone:
+        from .phone import show_phone
+        show_phone()
+        return
+    if not (ROOT/'.pc-remote.json').exists():
+        from .__main__ import setup_gui
+        if not setup_gui(ROOT/'.pc-remote.json'):
+            return
     import pystray
     from PIL import Image
     try:
@@ -233,9 +242,21 @@ def main():
                     creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
             def quit_app(icon,*_):
                 icon.stop()
+            def phone_window(*_):
+                subprocess.Popen([sys.executable,'-X','utf8','-m','pc_remote.desktop','--phone'],cwd=ROOT,
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+            def account_window(*_):
+                def configure():
+                    result = subprocess.run([sys.executable,'-X','utf8','-m','pc_remote','--setup-gui'],cwd=ROOT,
+                        creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+                    if result.returncode == 0:
+                        supervisor.restart()
+                threading.Thread(target=configure,daemon=True).start()
             icon = pystray.Icon('pc-helper',Image.open(ROOT/'pc_remote/web/icon-192.png'),'PC Helper',menu=pystray.Menu(
                 pystray.MenuItem('Стан підключення',status_window,default=True),
                 pystray.MenuItem('Відкрити панель',lambda *_:webbrowser.open('http://127.0.0.1:8765')),
+                pystray.MenuItem('Підключити телефон (QR)',phone_window),
+                pystray.MenuItem('Логін і пароль',account_window),
                 pystray.MenuItem('Перезапустити служби',lambda *_:supervisor.restart()),
                 pystray.MenuItem('Зупинити служби',lambda *_:supervisor.pause()),
                 pystray.MenuItem('Запустити служби',lambda *_:supervisor.resume()),

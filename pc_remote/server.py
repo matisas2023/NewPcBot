@@ -62,8 +62,8 @@ class Backend:
 class RemoteServer(ThreadingHTTPServer):
     daemon_threads = True
 
-    def __init__(self, address, credentials, files, backend=None, public_origin=None):
-        self.account = Account(credentials)
+    def __init__(self, address, credentials, files, backend=None, public_origin=None, session_store=None):
+        self.account = Account(credentials,session_store=session_store)
         self.public_origin = public_origin
         self.files = Path(files).resolve()
         self.files.mkdir(parents=True, exist_ok=True)
@@ -186,13 +186,13 @@ class Handler(BaseHTTPRequestHandler):
         if post and not hmac.compare_digest(self.headers.get("X-CSRF-Token", "").encode(), self.session["csrf"].encode()):
             raise APIError(403, "Оновіть сторінку перед виконанням дії")
 
-    def session_cookie(self, token, clear=False):
+    def session_cookie(self, token, clear=False, duration=SESSION_SECONDS):
         cookie = SimpleCookie()
         cookie[COOKIE_NAME] = token
         cookie[COOKIE_NAME]["path"] = "/"
         cookie[COOKIE_NAME]["httponly"] = True
         cookie[COOKIE_NAME]["samesite"] = "Strict"
-        cookie[COOKIE_NAME]["max-age"] = 0 if clear else SESSION_SECONDS
+        cookie[COOKIE_NAME]["max-age"] = 0 if clear else duration
         if self.request_origin.startswith("https://"):
             cookie[COOKIE_NAME]["secure"] = True
         return cookie.output(header="").strip()
@@ -235,8 +235,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.check_origin(post)
                 if url.path == "/api/login" and post:
                     data = self.json_body()
-                    token, session = self.server.account.login(data.get("username"), data.get("password"), self.request_origin)
-                    return self.reply(200, {"username": self.server.account.username, "csrf": session["csrf"]}, extra={"Set-Cookie":self.session_cookie(token)})
+                    token, session = self.server.account.login(data.get("username"), data.get("password"), self.request_origin,data.get('remember',False))
+                    return self.reply(200, {"username": self.server.account.username, "csrf": session["csrf"], 'remembered':session['remembered']}, extra={"Set-Cookie":self.session_cookie(token,duration=session['ttl'])})
                 self.auth(post)
                 self.api(url, post)
             elif not post:

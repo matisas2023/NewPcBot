@@ -40,7 +40,7 @@ function resetSession() {
   if ($('confirm-dialog').open) $('confirm-dialog').close('cancel');
   if (screenURL) URL.revokeObjectURL(screenURL); screenURL = ''; $('screenshot').removeAttribute('src'); $('screenshot').hidden = true; $('screen-placeholder').hidden = false;
   $('screen-time').textContent = 'Знімок з’явиться після оновлення'; $('file-list').replaceChildren(); $('process-list').replaceChildren(); folder = '';
-  $('dashboard').hidden = true; $('login').hidden = false; $('password').value = ''; connection(false);
+  $('dashboard').hidden = true; $('login').hidden = false; $('password').value = ''; $('password').type='password'; $('show-password').textContent='Показати пароль'; $('show-password').setAttribute('aria-pressed','false'); connection(false);
 }
 function uptime(seconds) { const hours = Math.floor(seconds / 3600); return `${Math.floor(hours / 24)} д ${hours % 24} год ${Math.floor(seconds % 3600 / 60)} хв`; }
 async function status() {
@@ -140,7 +140,7 @@ $('file-search').addEventListener('input',renderFiles);
 $('file-sort').addEventListener('change',renderFiles);
 $('login-form').addEventListener('submit',e => { e.preventDefault(); busy(e.submitter,async () => {
   epoch++;
-  const session = await json('login',{username:$('username').value.trim(),password:$('password').value});
+  const session = await json('login',{username:$('username').value.trim(),password:$('password').value,remember:Boolean($('remember-login').checked)});
   csrf = session.csrf; loggedIn = true; await connect();
 }); });
 $('logout').addEventListener('click',() => busy($('logout'),async () => { await json('logout',{}); resetSession(); }));
@@ -205,3 +205,5 @@ $('touchpad').addEventListener('pointercancel',() => { gesture=null; pointerPend
 document.addEventListener('visibilitychange',() => { if (document.hidden) { gesture=null; pointerPending={dx:0,dy:0}; } });
 document.querySelectorAll('[data-pointer]').forEach(b => b.addEventListener('click',() => busy(b,() => json('pointer',{button:b.dataset.pointer}))));
 document.querySelectorAll('[data-scroll]').forEach(b => b.addEventListener('click',() => busy(b,() => json('pointer',{scroll:Number(b.dataset.scroll)}))));
+
+$('show-password').addEventListener('click',() => { const visible=$('password').type==='password'; $('password').type=visible?'text':'password'; $('show-password').textContent=visible?'Приховати пароль':'Показати пароль'; $('show-password').setAttribute('aria-pressed',String(visible)); });

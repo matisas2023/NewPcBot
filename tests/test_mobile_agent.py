@@ -111,6 +111,19 @@ class AgentTests(unittest.TestCase):
     def test_query_token_not_accepted(self):
         self.assertEqual(self.request('/api/status?token=legacy-key', auth=False)[0], 401)
 
+    def test_remember_cookie_and_logout(self):
+        status, body, headers = self.request('/api/login',
+            {'username':USERNAME, 'password':PASSWORD, 'remember':True}, auth=False)
+        self.assertEqual(status,200)
+        self.assertIn('Max-Age=2592000',headers['Set-Cookie'])
+        self.assertIn('HttpOnly',headers['Set-Cookie'])
+        self.assertIn('SameSite=Strict',headers['Set-Cookie'])
+        self.assertTrue(json.loads(body)['remembered'])
+        self.cookie=headers['Set-Cookie'].split(';',1)[0]
+        self.csrf=json.loads(body)['csrf']
+        self.assertEqual(self.request('/api/logout',{})[0],200)
+        self.assertEqual(self.request('/api/status')[0],401)
+
     def test_cross_site_denied(self):
         self.assertEqual(self.request('/api/status', headers={'Sec-Fetch-Site':'cross-site'})[0], 403)
 

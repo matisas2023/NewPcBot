@@ -9,7 +9,7 @@ module.exports = async function testTouchpad() {
   function node(id) {
     if (!nodes.has(id)) nodes.set(id, {id, value:'', hidden:false, disabled:false, handlers:{},
       classList:{toggle(){}}, addEventListener(name,fn){this.handlers[name]=fn;},
-      setPointerCapture(){}, replaceChildren(){}, removeAttribute(){}, close(){},
+      setAttribute(){}, setPointerCapture(){}, replaceChildren(){}, removeAttribute(){}, close(){},
       querySelector(){return node('submit');}});
     return nodes.get(id);
   }

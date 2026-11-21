@@ -14,12 +14,18 @@ from .runtime import write_state, STATE_DIR, stop_requested
 
 
 def setup(config_path):
-    existing = json.loads(config_path.read_text(encoding="utf-8")) if config_path.exists() else {}
     username = input("Login (3-64 characters): ").strip()
     password = getpass("Password (at least 12 characters): ")
     repeated = getpass("Repeat password: ")
     if password != repeated:
         raise ValueError("Passwords do not match")
+    save_account(config_path, username, password)
+    print("Account saved. Password is not stored as plaintext.")
+    print("Start with: python -m pc_remote --public")
+
+
+def save_account(config_path, username, password):
+    existing = json.loads(config_path.read_text(encoding="utf-8")) if config_path.exists() else {}
     credentials = create_credentials(username, password)
     folder = str(Path(existing.get("files", "remote_files")).resolve())
     config = {"account": credentials, "files": folder}
@@ -33,19 +39,60 @@ def setup(config_path):
     finally:
         temporary.unlink(missing_ok=True)
     Path(folder).mkdir(parents=True, exist_ok=True)
-    print("Account saved. Password is not stored as plaintext.")
-    print("Start with: python -m pc_remote --public")
+
+
+def setup_gui(config_path):
+    import tkinter as tk
+    from tkinter import ttk, messagebox
+    root = tk.Tk()
+    root.title('PC Helper — логін і пароль')
+    root.resizable(False, False)
+    frame = ttk.Frame(root, padding=24)
+    frame.pack()
+    ttk.Label(frame, text='Вхід без ключів', font=('Segoe UI', 16)).pack(anchor='w')
+    ttk.Label(frame, text='Задай логін і пароль для входу з телефона.\nЗбереження замінить поточний пароль.', wraplength=400).pack(pady=12)
+    entries = []
+    for label, hidden in [('Логін', False), ('Пароль: від 12 символів', True), ('Повтори пароль', True)]:
+        ttk.Label(frame, text=label).pack(anchor='w')
+        entry = ttk.Entry(frame, width=40, show='•' if hidden else '')
+        entry.pack(pady=(3,10))
+        entries.append(entry)
+    try:
+        existing = json.loads(config_path.read_text(encoding='utf-8'))
+        entries[0].insert(0, existing.get('account',{}).get('username',''))
+    except (OSError, ValueError):
+        pass
+    saved = False
+    def submit():
+        nonlocal saved
+        try:
+            if entries[1].get() != entries[2].get():
+                raise ValueError('Паролі не збігаються')
+            save_account(config_path, entries[0].get().strip(), entries[1].get())
+        except (ValueError, OSError) as exc:
+            messagebox.showerror('Не вдалося зберегти', str(exc), parent=root)
+            return
+        saved = True
+        messagebox.showinfo('PC Helper', 'Обліковий запис збережено. Старі сеанси будуть завершені.', parent=root)
+        root.destroy()
+    ttk.Button(frame, text='Зберегти', command=submit).pack(fill='x', pady=8)
+    entries[0].focus_set()
+    root.mainloop()
+    return saved
 
 
 def main():
     parser = argparse.ArgumentParser(description="PC Helper: login/password access over HTTPS")
     parser.add_argument("--setup", action="store_true", help="Set or replace local login/password; preserve shared folder")
+    parser.add_argument('--setup-gui', action='store_true', help='Configure login/password in a local window')
     parser.add_argument("--config", type=Path, default=Path(".pc-remote.json"))
     parser.add_argument("--port", type=int, default=8765)
     access = parser.add_mutually_exclusive_group()
     access.add_argument("--public", action="store_true", help="Start a temporary HTTPS Cloudflare tunnel (no domain/VPN)")
     access.add_argument("--origin", help="Existing HTTPS origin for a separately managed tunnel")
     args = parser.parse_args()
+    if args.setup_gui:
+        raise SystemExit(0 if setup_gui(args.config) else 1)
     if args.setup:
         try:
             setup(args.config)
@@ -62,7 +109,8 @@ def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     try:
         server = RemoteServer(("127.0.0.1", args.port), config.get("account"), config["files"],
-                              public_origin=args.origin.rstrip("/") if args.origin else None)
+                              public_origin=args.origin.rstrip("/") if args.origin else None,
+                              session_store=STATE_DIR/'sessions.json')
     except ValueError as exc:
         parser.error(str(exc))
     worker = threading.Thread(target=server.serve_forever, daemon=True)
