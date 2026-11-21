@@ -162,7 +162,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "no-referrer")
-        self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'")
+        self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob:; media-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'")
         for key, value in (extra or {}).items():
             self.send_header(key, value)
         self.end_headers()
@@ -256,6 +256,12 @@ class Handler(BaseHTTPRequestHandler):
             self.reply(503, {"error": "Дія недоступна. Перевірте сеанс Windows і журнал агента"})
 
     def static(self, path):
+        if path=='/vendor/hls.light.min.js':
+            data=(STATIC/'vendor/hls.light.min.js.gz').read_bytes()
+            if 'gzip' in self.headers.get('Accept-Encoding',''):
+                return self.reply(200,data,'text/javascript',extra={'Content-Encoding':'gzip','Vary':'Accept-Encoding'})
+            import gzip
+            return self.reply(200,gzip.decompress(data),'text/javascript',extra={'Vary':'Accept-Encoding'})
         allowed = {"/": "index.html", "/index.html": "index.html", "/app.js": "app.js",
                    "/style.css": "style.css", "/manifest.webmanifest": "manifest.webmanifest",
                    "/sw.js": "sw.js", "/icon.svg": "icon.svg",
@@ -368,8 +374,14 @@ class Handler(BaseHTTPRequestHandler):
 
     def media_api(self, url, post, value):
         from agent.media_capture import service, CaptureError
+        from .live import live
         try:
             if not post:
+                if url.path.startswith('/api/media/live/'):
+                    parts=url.path.split('/')
+                    if len(parts)!=6:raise CaptureError('Невідомий файл трансляції')
+                    path=live.file(parts[4],parts[5],self.session['id'])
+                    return self.reply(200,path.read_bytes(),'application/vnd.apple.mpegurl' if path.suffix=='.m3u8' else 'video/mp2t')
                 if url.path=='/api/media/devices':return self.reply(200,service.devices())
                 if url.path=='/api/media/jobs':return self.reply(200,{'jobs':service.list_jobs('web')})
                 if url.path=='/api/media/frame':
@@ -403,6 +415,12 @@ class Handler(BaseHTTPRequestHandler):
                     return
             else:
                 data=self.json_body()
+                if url.path=='/api/media/live/start':
+                    return self.reply(200,live.start(data.get('source'),data.get('camera',0),self.session['id']))
+                if url.path=='/api/media/live/keepalive':
+                    live.heartbeat(data.get('id'),self.session['id']);return self.reply(200,{'ok':True})
+                if url.path=='/api/media/live/stop':
+                    live.stop(data.get('id'),self.session['id']);return self.reply(200,{'ok':True})
                 if url.path=='/api/media/start':
                     return self.reply(202,service.start(data.get('source'),data.get('seconds'),'web',data.get('camera',0),data.get('microphone')))
                 if url.path=='/api/media/stop':return self.reply(200,service.stop(data.get('id'),'web'))

@@ -2,12 +2,14 @@
 const $ = (id) => document.getElementById(id);
 let csrf = '', loggedIn = false, online = false;
 let filesRequest = 0;
+let liveViewer=null, liveHls=null, liveHeartbeat=null, fullImageURL='', screenBlob=null, liveRecordId=null;
 let captureTimer=null, captureEpoch=0, captureURL='', captureJobTimer=null, captureRequest=null, captureListSignature='';
 let fileEntries = [], activeUpload = null, pointerPending = {dx:0,dy:0}, pointerBusy = false, pointerTimer;
 let folder = '', screenURL = '', refreshTimer, toastTimer, activeTab = 'overview', epoch = 0;
 const actionNames = {Lock:'Заблокувати ПК',Sleep:'Перевести ПК у сон',Hibernate:'Увімкнути гібернацію',Logoff:'Вийти із сеансу Windows',Restart:'Перезапустити ПК',Shutdown:'Вимкнути ПК'};
 
 function toast(text, error = false) {
+  $('live-inline-state').textContent=text;
   clearTimeout(toastTimer); $('message').textContent = text; $('message').classList.toggle('error', error); $('message').hidden = false;
   toastTimer = setTimeout(() => { $('message').hidden = true; }, error ? 10000 : 4000);
 }
@@ -38,6 +40,7 @@ async function busy(button, task) {
 }
 function resetSession() {
   stopCapturePreview(); clearInterval(captureJobTimer); captureListSignature=''; $('capture-jobs').replaceChildren();
+  closeImageViewer(); screenBlob=null;
   epoch++; csrf = ''; loggedIn = false; clearInterval(refreshTimer); clearTimeout(pointerTimer); pointerPending = {dx:0,dy:0}; if (activeUpload) activeUpload.abort();
   if ($('confirm-dialog').open) $('confirm-dialog').close('cancel');
   if (screenURL) URL.revokeObjectURL(screenURL); screenURL = ''; $('screenshot').removeAttribute('src'); $('screenshot').hidden = true; $('screen-placeholder').hidden = false;
@@ -67,7 +70,7 @@ async function screenshot() {
   const response = await api('screenshot'); const blob = await response.blob();
   if (!loggedIn) return;
   if (screenURL) URL.revokeObjectURL(screenURL);
-  screenURL = URL.createObjectURL(blob); $('screenshot').src = screenURL; $('screenshot').hidden = false; $('screen-placeholder').hidden = true;
+  screenBlob=blob; screenURL = URL.createObjectURL(blob); $('screenshot').src = screenURL; $('screenshot').hidden = false; $('screen-placeholder').hidden = true;
   $('screen-time').textContent = 'Оновлено о ' + new Date().toLocaleTimeString('uk-UA');
 }
 function element(tag, text, className) { const node = document.createElement(tag); if (text !== undefined) node.textContent = text; if (className) node.className = className; return node; }
@@ -215,9 +218,15 @@ $('show-password').addEventListener('click',() => { const visible=$('password').
 
 function stopCapturePreview() {
   captureEpoch++; clearTimeout(captureTimer); captureTimer=null;
+  clearInterval(liveHeartbeat); liveHeartbeat=null;
+  if(liveHls){liveHls.destroy();liveHls=null;}
+  const video=$('live-video'); video.pause?.();video.removeAttribute('src');video.load?.();video.hidden=true;
+  if(liveViewer && csrf)fetch('/api/media/live/stop',{method:'POST',credentials:'same-origin',keepalive:true,headers:{'Content-Type':'application/json','X-CSRF-Token':csrf},body:JSON.stringify({id:liveViewer.id})}).catch(()=>{});
+  liveViewer=null;
+  closePlayerFullscreen($('capture-player'));
   if (captureURL) URL.revokeObjectURL(captureURL); captureURL='';
   $('capture-preview').hidden=true; $('capture-preview').removeAttribute('src');
-  $('capture-preview-state').textContent='Перегляд вимкнено';
+  $('capture-preview-state').textContent='Трансляцію вимкнено';
 }
 async function captureDevices() {
   const devices=await json('media/devices');
@@ -235,29 +244,34 @@ function enterCapture() {
 }
 async function capturePreview() {
   stopCapturePreview();
-  const source=$('capture-source').value, camera=$('capture-camera').value || '0';
-  if (source==='audio') return toast('Для мікрофона обери запис',true);
+  const source=$('capture-source').value, camera=Number($('capture-camera').value||0);
+  if(source==='audio')return toast('Для мікрофона обери запис',true);
   const generation=captureEpoch;
-  async function frame() {
-    if(generation!==captureEpoch || !loggedIn || activeTab!=='media' || document.hidden)return;
-    try {
-      const request=api('media/frame?source='+source+'&camera='+encodeURIComponent(camera));captureRequest=request;
-      const response=await request;captureRequest=null;
-      const blob=await response.blob();
-      if(generation!==captureEpoch || !loggedIn)return;
-      if(captureURL)URL.revokeObjectURL(captureURL);
-      captureURL=URL.createObjectURL(blob);$('capture-preview').src=captureURL;$('capture-preview').hidden=false;
-      $('capture-preview-state').textContent='● Перегляд увімкнено · '+new Date().toLocaleTimeString('uk-UA');
-      captureTimer=setTimeout(frame,source==='screen'?500:1000);
-    } catch(error) {if(generation===captureEpoch){stopCapturePreview();toast(error.message,true);}}
-  }
-  await frame();
+  $('capture-preview-state').textContent='Підключення відео…';
+  const viewer=await json('media/live/start',{source,camera});
+  if(generation!==captureEpoch || !loggedIn || activeTab!=='media' || document.hidden){json('media/live/stop',{id:viewer.id}).catch(()=>{});return;}
+  liveViewer=viewer;
+  const video=$('live-video');video.hidden=false;video.muted=true;
+  liveHeartbeat=setInterval(()=>json('media/live/keepalive',{id:viewer.id}).catch(error=>{stopCapturePreview();toast(error.message,true);}),10000);
+  try {
+    const nativeHls=/Apple/.test(navigator.vendor||'') && video.canPlayType('application/vnd.apple.mpegurl');
+    if(window.Hls?.isSupported() && !nativeHls) {
+      liveHls=new window.Hls({enableWorker:false,liveSyncDurationCount:2,liveMaxLatencyDurationCount:6,maxBufferLength:6,backBufferLength:3});
+      liveHls.on(window.Hls.Events.ERROR,(_event,data)=>{if(data.fatal && generation===captureEpoch){stopCapturePreview();toast('Відеозв’язок перервано. Запусти трансляцію знову.',true);}});
+      liveHls.on(window.Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>toast('Натисни ▶ у відеоплеєрі, щоб почати перегляд')));
+      liveHls.loadSource(viewer.url);liveHls.attachMedia(video);
+    } else if(video.canPlayType('application/vnd.apple.mpegurl')){video.src=viewer.url;video.play().catch(()=>toast('Натисни ▶ у відеоплеєрі'));}
+    else throw new Error('Цей браузер не підтримує HLS-відео. Використай оновлений Chrome, Edge, Firefox або Safari.');
+    $('capture-preview-state').textContent='Буферизація відео…';
+  } catch(error){stopCapturePreview();throw error;}
 }
 async function captureJobs() {
   const generation=epoch, result=await json('media/jobs');
   if(generation!==epoch || !loggedIn)return;
+  const current=result.jobs.find(job=>job.status==='recording' && job.source===$('capture-source').value && (job.source!=='camera' || job.camera===Number($('capture-camera').value||0)));
+  liveRecordId=current?.id || null;$('live-record-stop').hidden=!liveRecordId;
   const root=$('capture-jobs'), signature=JSON.stringify(result.jobs.map(job=>[job.id,job.status,job.size,job.error]));
-  if(signature===captureListSignature)return;
+  if(signature===captureListSignature || root.querySelector('.expanded') || (document.fullscreenElement && root.contains?.(document.fullscreenElement)))return;
   // Preserve an actively playing clip while refreshing job statuses.
   if(root.querySelector('video:not([paused]),audio:not([paused])')) {
     const playing=[...root.querySelectorAll('video,audio')].some(player=>!player.paused);
@@ -274,7 +288,10 @@ async function captureJobs() {
     else {
       if(job.status==='ready') {
         const url='/api/media/file?id='+encodeURIComponent(job.id),player=element(job.source==='audio'?'audio':'video');
-        player.controls=true;player.preload='none';player.src=url;card.append(player);
+        player.controls=true;player.preload='none';player.playsInline=true;player.src=url;
+        const frame=element('div',undefined,'fullscreen-player');frame.append(player);
+        if(job.source!=='audio'){const tools=element('div',undefined,'live-toolbar');tools.append(button('⛶ На весь екран',()=>playerFullscreen(frame)));tools.append(button('✕ Згорнути',()=>closePlayerFullscreen(frame),'exit-full'));frame.append(tools);}
+        card.append(frame);
         const link=element('a','Завантажити');link.href=url;link.download=job.source+'-'+job.id+(job.source==='audio'?'.mp3':'.mp4');card.append(link);
       }
       card.append(button('До кошика',async()=>{if(!window.confirm('Перемістити запис до кошика Windows?'))return;await json('media/delete',{id:job.id});await captureJobs();},'quiet'));
@@ -288,10 +305,46 @@ $('capture-hide').addEventListener('click',stopCapturePreview);
 $('capture-source').addEventListener('change',stopCapturePreview);
 $('capture-camera').addEventListener('change',stopCapturePreview);
 $('capture-refresh').addEventListener('click',()=>busy($('capture-refresh'),captureJobs));
-$('capture-record').addEventListener('click',()=>busy($('capture-record'),async()=>{
-  const request=captureRequest;stopCapturePreview();if(request)await request.catch(()=>{});
+async function startCaptureRecording() {
+  if($('capture-source').value!=='audio' && !liveViewer)await capturePreview();
   const job=await json('media/start',{source:$('capture-source').value,seconds:Number($('capture-seconds').value),camera:Number($('capture-camera').value||0),microphone:$('capture-mic').value===''?null:Number($('capture-mic').value)});
-  toast('Запис розпочато. Він з’явиться у списку нижче.');await captureJobs();
-}));
+  liveRecordId=job.id;$('live-record-stop').hidden=false;
+  toast('Запис розпочато. Трансляція продовжується.');await captureJobs();
+}
+$('capture-record').addEventListener('click',()=>busy($('capture-record'),startCaptureRecording));
+$('live-record').addEventListener('click',()=>busy($('live-record'),startCaptureRecording));
+$('live-record-stop').addEventListener('click',()=>busy($('live-record-stop'),async()=>{if(liveRecordId)await json('media/stop',{id:liveRecordId});await captureJobs();}));
+async function closePlayerFullscreen(frame) {
+  frame.classList.toggle('expanded',false);document.body?.classList.toggle('viewer-expanded',false);
+  if(document.fullscreenElement===frame){try{await document.exitFullscreen();}catch(_){}}
+}
+async function playerFullscreen(frame) {
+  if(document.fullscreenElement===frame || frame.classList.contains?.('expanded'))return closePlayerFullscreen(frame);
+  if(frame.requestFullscreen){try{await frame.requestFullscreen();return;}catch(_){}}
+  frame.classList.toggle('expanded',true);document.body?.classList.toggle('viewer-expanded',true);
+}
+function closeImageViewer() {
+  closePlayerFullscreen($('image-full-wrapper'));
+  if($('image-viewer').open)$('image-viewer').close();
+  if(fullImageURL)URL.revokeObjectURL(fullImageURL);fullImageURL='';$('full-image').removeAttribute('src');
+}
+function showImage(blob) {
+  closeImageViewer();fullImageURL=URL.createObjectURL(blob);$('full-image').src=fullImageURL;
+  $('image-download').href=fullImageURL;$('image-download').download='pc-helper-'+Date.now()+(blob.type==='image/png'?'.png':'.jpg');
+  $('image-viewer').showModal();
+}
+$('live-fullscreen').addEventListener('click',()=>playerFullscreen($('capture-player')));
+$('live-close-full').addEventListener('click',()=>closePlayerFullscreen($('capture-player')));
+$('live-snapshot').addEventListener('click',()=>busy($('live-snapshot'),async()=>{const response=await api('media/frame?source='+$('capture-source').value+'&camera='+encodeURIComponent($('capture-camera').value||0));showImage(await response.blob());}));
+$('screen-full').addEventListener('click',()=>busy($('screen-full'),async()=>{if(!screenBlob)await screenshot();showImage(screenBlob);}));
+$('screenshot').addEventListener('click',()=>{if(screenBlob)showImage(screenBlob);});
+$('image-close').addEventListener('click',closeImageViewer);
+$('image-full').addEventListener('click',()=>playerFullscreen($('image-full-wrapper')));
+$('image-viewer').addEventListener('close',()=>{if(fullImageURL)URL.revokeObjectURL(fullImageURL);fullImageURL='';});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelectorAll('.expanded').forEach(closePlayerFullscreen);});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopCapturePreview();});
 window.addEventListener('offline',stopCapturePreview);
+
+$('live-video').addEventListener('playing',()=>{if(liveViewer)$('capture-preview-state').textContent='● LIVE · до 15 кадрів/с · запис доступний під час перегляду';});
+$('live-video').addEventListener('error',()=>{if(liveViewer){stopCapturePreview();toast('Браузер не зміг відтворити відео. Спробуй оновити його або відкрити панель у Chrome / Edge / Safari.',true);}});
+window.addEventListener('pagehide',stopCapturePreview);

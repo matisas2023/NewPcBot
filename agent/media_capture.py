@@ -27,8 +27,9 @@ def executable():
 
 
 class CaptureService:
-    def __init__(self, directory=DIRECTORY):
+    def __init__(self, directory=DIRECTORY, live_directory=None):
         self.directory = Path(directory)
+        self.live_directory = Path(live_directory) if live_directory else (STATE_DIR/'live' if self.directory==DIRECTORY else self.directory/'live')
         self.lock = threading.RLock()
         self.workers = {}
         self.device_cache = None
@@ -73,6 +74,9 @@ class CaptureService:
             result=io.BytesIO();image.convert('RGB').save(result,format='JPEG',quality=65)
             return result.getvalue()
         self.device('cameras',camera)
+        from pc_remote.live import camera_frame
+        frame=camera_frame(camera,self.live_directory)
+        if frame:return frame
         # A recording supplies preview frames without opening the camera a second time.
         for job in self.list_jobs(None):
             frame=self.directory/f'{job["id"]}.jpg'
@@ -139,24 +143,28 @@ class CaptureService:
             raise CaptureError('Сховище записів заповнене (500 МБ). Видали непотрібні записи.')
         camera_name=self.device('cameras',camera) if source=='camera' else None
         microphone_name=self.device('microphones',0 if microphone is None else microphone) if source=='audio' or microphone is not None else None
+        identity=uuid.uuid4().hex
+        from pc_remote.live import recording_input
+        manifest,pin=recording_input(source,camera,identity,seconds,self.live_directory) if source!='audio' else (None,None)
         locks=[]
         try:
-            for kind in sorted({source}|({'audio'} if microphone_name else set())):
+            for kind in sorted({'record-'+source}|(set() if manifest else {source})|({'audio'} if microphone_name else set())):
                 handle=self.source_lock(kind);handle.__enter__();locks.append(handle)
         except RuntimeError as exc:
             for handle in reversed(locks):handle.__exit__(None,None,None)
+            if pin:Path(pin).unlink(missing_ok=True)
             raise CaptureError('Це джерело вже використовується. Зупини попередній запис.') from exc
-        identity=uuid.uuid4().hex
         import psutil
         job={'id':identity,'owner':owner,'source':source,'camera':camera,'seconds':seconds,
              'created':time.time(),'status':'recording','pid':os.getpid(),
-             'process_created':psutil.Process().create_time(),'error':None}
+             'process_created':psutil.Process().create_time(),'error':None,'live_manifest':manifest,'live_pin':pin}
         try:
             write_state(self._path(identity,'.json'),job)
             thread=threading.Thread(target=self._record,args=(job,camera_name,microphone_name,locks),daemon=True)
             with self.lock:self.workers[identity]=thread
             thread.start()
         except Exception:
+            if pin:Path(pin).unlink(missing_ok=True)
             for handle in reversed(locks):handle.__exit__(None,None,None)
             with self.lock:self.workers.pop(identity,None)
             raise
@@ -164,16 +172,18 @@ class CaptureService:
 
     def command(self, job, camera_name, microphone_name):
         args=[executable(),'-hide_banner','-loglevel','error','-y']
-        if job['source']=='screen':args+=['-f','gdigrab','-framerate','15','-i','desktop']
+        if job.get('live_manifest'):args+=['-live_start_index','-1','-protocol_whitelist','file,crypto,data','-i',job['live_manifest']]
+        elif job['source']=='screen':args+=['-f','gdigrab','-framerate','15','-i','desktop']
         if microphone_name:args+=['-f','dshow','-i','audio='+microphone_name]
         if job['source']=='audio':
             return args+['-t',str(job['seconds']),'-c:a','libmp3lame','-b:a','128k',
                 str(self._path(job['id'],'.mp3'))]
         args+=['-map','0:v:0']
         args+=['-map','1:a:0','-c:a','aac','-b:a','96k'] if microphone_name else ['-an']
-        args+=['-t',str(job['seconds']),'-vf',"scale=w='min(1280,iw)':h=-2",'-r','15',
-            '-c:v','libx264','-preset','ultrafast','-crf','28','-maxrate','1800k','-bufsize','3600k',
-            '-pix_fmt','yuv420p','-movflags','+faststart','-fs',str(MAX_FILE-1024*1024),str(self._path(job['id'],'.mp4'))]
+        args+=['-t',str(job['seconds'])]
+        if job.get('live_manifest'):args+=['-c:v','copy']
+        else:args+=['-vf',"scale=w='min(1280,iw)':h=-2",'-r','15','-c:v','libx264','-preset','ultrafast','-crf','28','-maxrate','1800k','-bufsize','3600k','-pix_fmt','yuv420p']
+        args+=['-movflags','+faststart','-fs',str(MAX_FILE-1024*1024),str(self._path(job['id'],'.mp4'))]
         return args
 
     def _camera_record(self, job, microphone_name):
@@ -220,7 +230,7 @@ class CaptureService:
     def _record(self, job, camera_name, microphone_name, locks):
         process=None
         try:
-            if job['source']=='camera':
+            if job['source']=='camera' and not job.get('live_manifest'):
                 self._camera_record(job,microphone_name)
             else:
                 with self._path(job['id'],'.log').open('wb') as log:
@@ -245,6 +255,7 @@ class CaptureService:
             job['status']='error';job['error']=str(exc) if isinstance(exc,CaptureError) else 'Не вдалося запустити запис'
         finally:
             if process and process.poll() is None:process.kill();process.wait(timeout=5)
+            if job.get('live_pin'):Path(job['live_pin']).unlink(missing_ok=True)
             job['finished']=time.time()
             try:
                 write_state(self._path(job['id'],'.json'),job)

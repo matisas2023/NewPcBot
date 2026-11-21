@@ -1,0 +1,7 @@
+{
+  "package": "hls.js",
+  "version": "1.7.4",
+  "source": "https://registry.npmjs.org/hls.js/-/hls.js-1.7.4.tgz",
+  "integrity": "sha512-3GlxGdPvT2YHvQYOt+yOzT/DEior/qJVNIylHA77kgeoBTdQQqi70GwefNEUmHQeNGyjC8U62+bruqW/Tpm+tg==",
+  "javascript_sha256": "482cccb3a224554f64d8c2cf0d335dba4a3819bdb726afbfddfe15de4c277d82"
+}

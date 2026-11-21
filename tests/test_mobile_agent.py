@@ -120,6 +120,24 @@ class AgentTests(unittest.TestCase):
             self.assertEqual(self.request('/api/media/start',{'source':'screen','seconds':2})[0],202)
             capture.start.assert_called_once_with('screen',2,'web',0,None)
 
+    def test_live_control_requires_csrf_and_stream_files_require_login(self):
+        with patch('pc_remote.live.live') as live:
+            self.assertEqual(self.request('/api/media/live/start',{'source':'screen'},headers={'X-CSRF-Token':'wrong'})[0],403)
+            self.assertEqual(self.request('/api/media/live/'+'a'*32+'/index.m3u8',auth=False)[0],401)
+            live.start.assert_not_called()
+            live.start.return_value={'id':'a'*32,'url':'/fixture.m3u8'}
+            self.assertEqual(self.request('/api/media/live/start',{'source':'screen'})[0],200)
+            live.start.assert_called_once()
+            self.assertEqual(live.start.call_args.args[:2],('screen',0))
+
+    def test_vendored_player_has_matching_gzip_and_plain_versions(self):
+        import gzip
+        status,compressed,headers=self.request('/vendor/hls.light.min.js',auth=False,headers={'Accept-Encoding':'gzip'})
+        self.assertEqual(status,200);self.assertEqual(headers['Content-Encoding'],'gzip')
+        status,plain,headers=self.request('/vendor/hls.light.min.js',auth=False)
+        self.assertEqual(status,200);self.assertEqual(gzip.decompress(compressed),plain)
+        self.assertIn("media-src 'self' blob:",headers['Content-Security-Policy'])
+
     def test_media_download_supports_range_and_does_not_cache(self):
         path=Path(self.temp.name)/'fixture.mp4';path.write_bytes(b'0123456789')
         with patch('agent.media_capture.service') as capture:

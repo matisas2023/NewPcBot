@@ -148,6 +148,8 @@ def main():
     finally:
         from agent.media_capture import service
         service.shutdown()
+        from .live import live
+        live.shutdown()
         if tunnel:
             tunnel.stop()
         server.shutdown()

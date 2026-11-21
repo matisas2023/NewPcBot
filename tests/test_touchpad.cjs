@@ -8,15 +8,15 @@ module.exports = async function testTouchpad() {
   const nodes = new Map(), calls = [];
   function node(id) {
     if (!nodes.has(id)) nodes.set(id, {id, value:'', hidden:false, disabled:false, handlers:{},
-      classList:{toggle(){}}, addEventListener(name,fn){this.handlers[name]=fn;},
-      setAttribute(){}, setPointerCapture(){}, replaceChildren(){}, removeAttribute(){}, close(){},
+      classList:{values:new Set(),toggle(name,value){if(value)this.values.add(name);else this.values.delete(name);},contains(name){return this.values.has(name);}}, addEventListener(name,fn){this.handlers[name]=fn;},
+      setAttribute(){}, setPointerCapture(){}, replaceChildren(){}, removeAttribute(){}, close(){this.open=false;}, showModal(){this.open=true;},
       querySelector(){return node('submit');}});
     return nodes.get(id);
   }
   const context = vm.createContext({
     document:{getElementById:node, querySelectorAll:()=>[], addEventListener(){}, hidden:false},
     window:{addEventListener(){},isSecureContext:false}, history:{replaceState(){},pushState(){},state:{}},
-    navigator:{}, URL, AbortSignal, Date, console, setTimeout:()=>1,clearTimeout(){},setInterval:()=>1,clearInterval(){},
+    navigator:{}, URL, Blob, AbortSignal, Date, console, setTimeout:()=>1,clearTimeout(){},setInterval:()=>1,clearInterval(){},
     fetch:async (url,options) => {
       const payload = options.body ? JSON.parse(options.body) : null;
       calls.push({url,payload});
@@ -46,6 +46,15 @@ module.exports = async function testTouchpad() {
   vm.runInContext("activeTab='media'; selectTab('overview',false);",context);
   assert.equal(node('capture-preview').hidden,true,'Preview survives leaving media tab');
   assert.equal(vm.runInContext('captureEpoch',context),previousCaptureEpoch+1);
+  node('capture-player').requestFullscreen=async()=>{throw new Error('Unsupported fullscreen');};
+  await vm.runInContext("playerFullscreen(document.getElementById('capture-player'))",context);
+  assert.equal(node('capture-player').classList.contains('expanded'),true,'Missing full-window fallback');
+  await vm.runInContext("closePlayerFullscreen(document.getElementById('capture-player'))",context);
+  assert.equal(node('capture-player').classList.contains('expanded'),false);
+  vm.runInContext("showImage(new Blob(['fixture'],{type:'image/jpeg'}))",context);
+  assert.equal(node('image-viewer').open,true);
+  vm.runInContext('closeImageViewer()',context);
+  assert.equal(node('image-viewer').open,false);
 };
 
 if (require.main===module) module.exports().then(()=>console.log('Touchpad gesture tests PASS')).catch(error=>{console.error(error);process.exitCode=1;});
