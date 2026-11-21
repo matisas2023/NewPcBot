@@ -9,7 +9,8 @@ from urllib.parse import urlsplit
 
 from .auth import create_credentials
 from .server import RemoteServer
-from .tunnel import QuickTunnel
+from .tunnel import TunnelManager
+from .runtime import write_state, STATE_DIR, stop_requested
 
 
 def setup(config_path):
@@ -66,29 +67,31 @@ def main():
         parser.error(str(exc))
     worker = threading.Thread(target=server.serve_forever, daemon=True)
     worker.start()
-    tunnel = QuickTunnel(server) if args.public else None
+    tunnel = TunnelManager(server) if args.public else None
+    server.tunnel_manager = tunnel
     try:
         if tunnel:
-            print("Starting HTTPS tunnel. This can take up to 60 seconds...", flush=True)
-            print("Open on Android:", tunnel.start(), flush=True)
+            print("Local agent remains available while HTTPS reconnects.", flush=True)
+            tunnel.start()
         elif args.origin:
             print("Open on Android:", args.origin, flush=True)
         else:
             print(f"Local: http://127.0.0.1:{args.port} (for internet access add --public)", flush=True)
-        while worker.is_alive():
+        while worker.is_alive() and not stop_requested():
+            state = tunnel.snapshot() if tunnel else {'state':'configured' if args.origin else 'local', 'url':args.origin, 'retry_in':0}
+            write_state(STATE_DIR/'connection.json', {'pid':os.getpid(), **state})
             worker.join(timeout=1)
-            if tunnel and tunnel.process.poll() is not None:
-                raise RuntimeError("Cloudflare tunnel stopped. Restart the agent with --public")
     except KeyboardInterrupt:
         pass
     except RuntimeError as exc:
         parser.error(str(exc))
     finally:
         if tunnel:
-            tunnel.close()
+            tunnel.stop()
         server.shutdown()
         server.server_close()
         worker.join(timeout=3)
+        write_state(STATE_DIR/'connection.json', {'pid':os.getpid(), 'state':'stopped', 'url':None})
 
 
 if __name__ == "__main__":

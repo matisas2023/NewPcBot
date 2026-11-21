@@ -234,6 +234,7 @@ def allow_all(monkeypatch: pytest.MonkeyPatch, tmp_path) -> None:
 
     monkeypatch.setattr(filesystem.zipfile, "ZipFile", DummyZip)
     monkeypatch.setattr(filesystem.os, "remove", lambda *args, **kwargs: None)
+    monkeypatch.setattr(filesystem, "move_to_trash", lambda *args, **kwargs: None)
 
     monkeypatch.setattr(
         autoreport,

@@ -1,6 +1,8 @@
 'use strict';
 const $ = (id) => document.getElementById(id);
-let csrf = '', loggedIn = false;
+let csrf = '', loggedIn = false, online = false;
+let filesRequest = 0;
+let fileEntries = [], activeUpload = null, pointerPending = {dx:0,dy:0}, pointerBusy = false, pointerTimer;
 let folder = '', screenURL = '', refreshTimer, toastTimer, activeTab = 'overview', epoch = 0;
 const actionNames = {Lock:'Заблокувати ПК',Sleep:'Перевести ПК у сон',Hibernate:'Увімкнути гібернацію',Logoff:'Вийти із сеансу Windows',Restart:'Перезапустити ПК',Shutdown:'Вимкнути ПК'};
 
@@ -8,7 +10,7 @@ function toast(text, error = false) {
   clearTimeout(toastTimer); $('message').textContent = text; $('message').classList.toggle('error', error); $('message').hidden = false;
   toastTimer = setTimeout(() => { $('message').hidden = true; }, error ? 10000 : 4000);
 }
-function connection(online) { $('connection').textContent = online ? '● Підключено' : 'Немає з’єднання'; $('connection').classList.toggle('online', online); }
+function connection(connected) { online = connected; if (!online) pointerPending = {dx:0,dy:0}; $('connection').textContent = connected ? '● Підключено' : 'Немає з’єднання'; $('connection').classList.toggle('online', connected); }
 async function api(path, options = {}) {
   const generation = epoch;
   let response;
@@ -34,7 +36,7 @@ async function busy(button, task) {
   finally { button.disabled = false; }
 }
 function resetSession() {
-  epoch++; csrf = ''; loggedIn = false; clearInterval(refreshTimer);
+  epoch++; csrf = ''; loggedIn = false; clearInterval(refreshTimer); clearTimeout(pointerTimer); pointerPending = {dx:0,dy:0}; if (activeUpload) activeUpload.abort();
   if ($('confirm-dialog').open) $('confirm-dialog').close('cancel');
   if (screenURL) URL.revokeObjectURL(screenURL); screenURL = ''; $('screenshot').removeAttribute('src'); $('screenshot').hidden = true; $('screen-placeholder').hidden = false;
   $('screen-time').textContent = 'Знімок з’явиться після оновлення'; $('file-list').replaceChildren(); $('process-list').replaceChildren(); folder = '';
@@ -43,7 +45,10 @@ function resetSession() {
 function uptime(seconds) { const hours = Math.floor(seconds / 3600); return `${Math.floor(hours / 24)} д ${hours % 24} год ${Math.floor(seconds % 3600 / 60)} хв`; }
 async function status() {
   try {
-    const s = await json('status'); connection(true);
+    const [s, diagnostics] = await Promise.all([json('status'),json('connection')]); connection(true);
+    const tunnel = diagnostics.tunnel;
+    const labels = {online:'HTTPS-тунель підключено',connecting:'Підключення до HTTPS-тунелю…',retrying:'Тунель недоступний; локальний агент працює. Повторне підключення автоматичне.',local:'Лише локальний доступ. Інтернет-тунель не ввімкнений.',configured:'Використовується налаштована HTTPS-адреса',stopped:'Тунель зупинено'};
+    $('tunnel-status').textContent = labels[tunnel.state] || 'Стан тунелю невідомий';
     $('pc-name').textContent = s.pc; $('pc-detail').textContent = `${s.os} · Працює ${uptime(s.uptime)}`;
     for (const key of ['cpu','ram','disk']) { $(key).textContent = `${Math.round(s[key])}%`; $(key+'-bar').value = s[key]; }
   } catch (error) { connection(false); throw error; }
@@ -74,23 +79,31 @@ async function confirmAction(title, detail, operation, payload) {
   await json('execute', {operation,payload,confirmation:ticket.confirmation}); toast('Дію виконано'); return true;
 }
 async function files() {
+  const request = ++filesRequest;
   const result = await json('files?path='+encodeURIComponent(folder));
+  if (request !== filesRequest) return;
   folder = result.path === '.' ? '' : result.path; $('folder-path').textContent = '/' + folder; $('parent-folder').disabled = !folder;
-  const nodes = result.entries.map(entry => {
+  fileEntries = result.entries; renderFiles(); renderBreadcrumbs();
+}
+function renderFiles() {
+  const search = $('file-search').value.trim().toLocaleLowerCase('uk');
+  const entries = fileEntries.filter(entry => entry.name.toLocaleLowerCase('uk').includes(search));
+  entries.sort((a,b) => Number(b.directory)-Number(a.directory) || ($('file-sort').value === 'size' ? b.size-a.size : a.name.localeCompare(b.name,'uk')));
+  const nodes = entries.map(entry => {
     const row = element('div', undefined, 'list-item'); const info = element('div', undefined, 'item-info');
     info.append(element('strong',(entry.directory ? '📁 ' : '📄 ') + entry.name),element('small',entry.directory ? 'Папка' : size(entry.size))); row.append(info);
-    if (entry.directory) row.append(button('Відкрити', async () => { folder = entry.path; await files(); }));
+    if (entry.directory) row.append(button('Відкрити', async () => { openFolder(entry.path); }));
     else {
       const actions = element('div',undefined,'file-actions');
-      actions.append(button('↓',async () => {
+      actions.append(button('Зберегти',async () => {
         const response = await api('download?path='+encodeURIComponent(entry.path)); const url = URL.createObjectURL(await response.blob());
         const link = element('a'); link.href = url; link.download = entry.name; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url),30000);
       })); actions.lastChild.setAttribute('aria-label','Зберегти '+entry.name+' на телефон');
-      actions.append(button('Видалити',async () => { if (await confirmAction('Видалити файл?',entry.name+' буде видалено з ПК без кошика.','delete',{path:entry.path})) await files(); },'danger'));
+      actions.append(button('У кошик',async () => { if (await confirmAction('Перемістити файл у кошик?',entry.name+' можна буде відновити через кошик Windows на ПК.','delete',{path:entry.path})) await files(); },'danger'));
       row.append(actions);
     } return row;
   });
-  $('file-list').replaceChildren(...(nodes.length ? nodes : [element('p','Папка порожня','empty')]));
+  $('file-list').replaceChildren(...(nodes.length ? nodes : [element('p',search ? 'Немає відповідних файлів' : 'Папка порожня','empty')]));
 }
 async function processes() {
   const result = await json('processes');
@@ -101,13 +114,30 @@ async function processes() {
     return row;
   }); $('process-list').replaceChildren(...(rows.length ? rows : [element('p','Процесів немає','empty')]));
 }
-document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => {
-  activeTab = b.dataset.tab;
-  document.querySelectorAll('[data-tab]').forEach(n => { const active = n === b; n.classList.toggle('active', active); n.setAttribute('aria-selected',String(active)); });
-  document.querySelectorAll('.panel').forEach(p => { p.hidden = p.id !== activeTab; });
-  if (activeTab === 'files') busy($('refresh-files'), files);
-  if (activeTab === 'processes') busy($('refresh-processes'), processes);
-}));
+function selectTab(name, push = true) {
+  if (!['overview','control','files','processes'].includes(name)) name = 'overview';
+  activeTab = name;
+  gesture = null; clearTimeout(pointerTimer); pointerTimer = null;
+  if (push) history.pushState({tab:name,folder,depth:(history.state?.depth || 0)+1},'', '#'+name);
+  document.querySelectorAll('[data-tab]').forEach(n => { const active = n.dataset.tab === name; n.classList.toggle('active',active); n.setAttribute('aria-pressed',String(active)); });
+  document.querySelectorAll('.panel').forEach(p => { p.hidden = p.id !== name; });
+  pointerPending = {dx:0,dy:0};
+  if (loggedIn && name === 'files') files().catch(error=>toast(error.message,true));
+  if (loggedIn && name === 'processes') busy($('refresh-processes'),processes);
+}
+function openFolder(path) { folder = path; $('file-search').value = ''; selectTab('files'); }
+function renderBreadcrumbs() {
+  const crumbs = [button('Спільна папка',async () => openFolder(''))];
+  const parts = folder.split('/').filter(Boolean);
+  parts.forEach((part,index) => crumbs.push(button(part,async () => openFolder(parts.slice(0,index+1).join('/')))));
+  $('folder-path').replaceChildren(...crumbs);
+}
+history.replaceState({tab:'overview',folder:'',depth:0},'','#overview');
+window.addEventListener('popstate',() => { folder = history.state?.folder || ''; selectTab(history.state?.tab || 'overview',false); });
+document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click',() => selectTab(b.dataset.tab)));
+$('go-back').addEventListener('click',() => { if (history.state?.depth) history.back(); else selectTab('overview',false); });
+$('file-search').addEventListener('input',renderFiles);
+$('file-sort').addEventListener('change',renderFiles);
 $('login-form').addEventListener('submit',e => { e.preventDefault(); busy(e.submitter,async () => {
   epoch++;
   const session = await json('login',{username:$('username').value.trim(),password:$('password').value});
@@ -115,15 +145,63 @@ $('login-form').addEventListener('submit',e => { e.preventDefault(); busy(e.subm
 }); });
 $('logout').addEventListener('click',() => busy($('logout'),async () => { await json('logout',{}); resetSession(); }));
 for (const [id,task] of [['refresh-status',status],['refresh-screen',screenshot],['refresh-files',files],['refresh-processes',processes]]) $(id).addEventListener('click',() => busy($(id),task));
-$('parent-folder').addEventListener('click',() => busy($('parent-folder'),async () => { folder = folder.split('/').slice(0,-1).join('/'); await files(); }));
+$('parent-folder').addEventListener('click',() => openFolder(folder.split('/').slice(0,-1).join('/')));
 document.querySelectorAll('[data-input]').forEach(b => b.addEventListener('click',() => busy(b,async () => { await json('input',{action:b.dataset.input}); toast('Команду надіслано'); })));
 document.querySelectorAll('[data-system]').forEach(b => b.addEventListener('click',() => busy(b,() => confirmAction(actionNames[b.dataset.system]+'?', 'Збережи відкриті документи перед продовженням.','system',{action:b.dataset.system}))));
 $('upload-form').addEventListener('submit',e => { e.preventDefault(); busy(e.submitter,async () => {
   const file = $('upload-file').files[0]; if (!file) return;
   if (file.size > 20*1024*1024) throw new Error('Максимальний розмір файлу — 20 МБ');
   const path = (folder ? folder+'/' : '')+file.name;
-  await api('upload?path='+encodeURIComponent(path),{method:'POST',body:file}); $('upload-form').reset(); toast('Файл збережено на ПК'); await files();
+  await uploadFile(path,file); $('upload-form').reset(); toast('Файл збережено на ПК'); await files();
 }); });
 window.addEventListener('offline',() => { connection(false); toast('Немає інтернету. Команди не надсилатимуться',true); });
 if ('serviceWorker' in navigator && window.isSecureContext) navigator.serviceWorker.register('/sw.js').catch(() => {});
 json('session').then(async session => { csrf = session.csrf; loggedIn = true; await connect(); }).catch(() => {});
+
+function uploadFile(path, file) {
+  return new Promise((resolve,reject) => {
+    const xhr = new XMLHttpRequest(), generation = epoch;
+    activeUpload = xhr; $('upload-progress').hidden = false; $('upload-progress').value = 0; $('cancel-upload').hidden = false;
+    xhr.open('POST','/api/upload?path='+encodeURIComponent(path)); xhr.setRequestHeader('X-CSRF-Token',csrf); xhr.timeout = 120000;
+    xhr.upload.onprogress = e => { if (e.lengthComputable) $('upload-progress').value = Math.round(e.loaded/e.total*100); };
+    xhr.onload = () => {
+      if (generation !== epoch) return reject(new Error('Сеанс змінено'));
+      if (xhr.status === 401) resetSession();
+      let response = {}; try { response = JSON.parse(xhr.responseText); } catch (_) {}
+      if (xhr.status >= 200 && xhr.status < 300) resolve(); else reject(new Error(response.error || 'Передавання не вдалося'));
+    };
+    xhr.onerror = xhr.ontimeout = () => { connection(false); reject(new Error('Немає зв’язку з ПК. Онови список перед повторною спробою')); };
+    xhr.onabort = () => reject(new Error('Передавання перервано. Онови список файлів'));
+    xhr.onloadend = () => { if (activeUpload === xhr) activeUpload = null; $('upload-progress').hidden = true; $('cancel-upload').hidden = true; };
+    xhr.send(file);
+  });
+}
+$('cancel-upload').addEventListener('click',() => activeUpload?.abort());
+async function flushPointer() {
+  clearTimeout(pointerTimer); pointerTimer=null;
+  if (!loggedIn || !online || activeTab !== 'control' || document.hidden) { pointerPending = {dx:0,dy:0}; return; }
+  if (pointerBusy) { pointerTimer = setTimeout(flushPointer,60); return; }
+  const dx = Math.max(-500,Math.min(500,Math.round(pointerPending.dx))), dy = Math.max(-500,Math.min(500,Math.round(pointerPending.dy)));
+  pointerPending = {dx:0,dy:0}; if (!dx && !dy) return;
+  pointerBusy = true;
+  try { await json('pointer',{dx,dy}); } catch (error) { pointerPending = {dx:0,dy:0}; toast(error.message,true); }
+  finally { pointerBusy = false; }
+}
+let gesture = null;
+$('touchpad').addEventListener('pointerdown',e => { if (!online || gesture) return; e.preventDefault(); gesture = {id:e.pointerId,x:e.clientX,y:e.clientY,travel:0,time:Date.now()}; $('touchpad').setPointerCapture(e.pointerId); });
+$('touchpad').addEventListener('pointermove',e => {
+  if (!gesture || gesture.id !== e.pointerId) return;
+  const dx = e.clientX-gesture.x, dy = e.clientY-gesture.y;
+  gesture.travel += Math.abs(dx)+Math.abs(dy); gesture.x=e.clientX; gesture.y=e.clientY;
+  pointerPending.dx += dx*1.5; pointerPending.dy += dy*1.5;
+  if (!pointerTimer) pointerTimer = setTimeout(() => { pointerTimer=null; flushPointer(); },60);
+});
+$('touchpad').addEventListener('pointerup',e => {
+  if (!gesture || gesture.id !== e.pointerId) return;
+  const tap = gesture.travel < 6 && Date.now()-gesture.time < 350; gesture = null;
+  if (tap) { pointerPending={dx:0,dy:0}; json('pointer',{button:'left'}).catch(error=>toast(error.message,true)); } else flushPointer();
+});
+$('touchpad').addEventListener('pointercancel',() => { gesture=null; pointerPending={dx:0,dy:0}; clearTimeout(pointerTimer); pointerTimer=null; });
+document.addEventListener('visibilitychange',() => { if (document.hidden) { gesture=null; pointerPending={dx:0,dy:0}; } });
+document.querySelectorAll('[data-pointer]').forEach(b => b.addEventListener('click',() => busy(b,() => json('pointer',{button:b.dataset.pointer}))));
+document.querySelectorAll('[data-scroll]').forEach(b => b.addEventListener('click',() => busy(b,() => json('pointer',{scroll:Number(b.dataset.scroll)}))));

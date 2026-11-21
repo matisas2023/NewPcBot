@@ -20,6 +20,13 @@ PASSWORD = "test-only-password-123!"
 
 
 class FakeBackend:
+    def pointer(self, **data):
+        self.calls.append(('pointer',data))
+
+    def trash(self, path):
+        self.calls.append(('trash',str(path)))
+        path.unlink()
+
     def __init__(self):
         self.calls = []
 
@@ -125,6 +132,18 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(self.post('/api/input', {'action':'volup'})[0], 200)
         self.assertEqual(self.post('/api/input', {'action':'run shell'})[0], 400)
         self.assertIn(('input', 'volup'), self.backend.calls)
+
+    def test_connection_diagnostics_require_login(self):
+        self.assertEqual(self.request('/api/connection',auth=False)[0],401)
+        code,body,_=self.request('/api/connection')
+        self.assertEqual(code,200)
+        self.assertEqual(json.loads(body)['tunnel']['state'],'local')
+        self.assertEqual(json.loads(body)['delete_mode'],'recycle_bin')
+
+    def test_pointer_api_and_csrf(self):
+        self.assertEqual(self.post('/api/pointer',{'dx':12,'dy':-3,'button':'right'})[0],200)
+        self.assertEqual(self.post('/api/pointer',{'dx':10000})[0],400)
+        self.assertEqual(self.request('/api/pointer',{'scroll':2},headers={'X-CSRF-Token':''})[0],403)
 
     def test_confirmation_required_and_single_use(self):
         payload = {'action':'Restart'}

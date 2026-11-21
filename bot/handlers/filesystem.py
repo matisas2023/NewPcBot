@@ -8,6 +8,7 @@ import re
 from bot.security import is_allowed, is_session_active
 from bot.logger import log_action
 from bot.utils import is_command
+from agent.files import move_to_trash
 
 router = Router()
 pending_action: dict[int, str] = {}
@@ -59,7 +60,7 @@ async def fs_menu(message: Message):
 # =========================
 # Обробка вибору дії
 # =========================
-@router.callback_query(F.data.startswith("fs_"))
+@router.callback_query(F.data.in_({'fs_list','fs_upload','fs_delete','fs_search','fs_archive','fs_backup'}))
 async def fs_actions(call: CallbackQuery):
     user_id = call.from_user.id
     action = call.data.replace("fs_", "")
@@ -151,7 +152,7 @@ async def fs_text_input(message: Message):
 
         pending_delete_path[user_id] = file_path
         await message.answer(
-            f"⚠️ Видалити файл: {file_path}?",
+            f"⚠️ Перемістити файл у кошик Windows: {file_path}?",
             reply_markup=filesystem_delete_confirm_kb(),
         )
         return
@@ -187,10 +188,10 @@ async def fs_delete_confirm(call: CallbackQuery):
         return await call.answer()
 
     try:
-        os.remove(file_path)
+        move_to_trash(file_path)
         log_action(user_id, f"Файл видалено: {file_path}")
-        await call.message.edit_text(f"✅ Файл видалено: {file_path}")
-    except OSError as exc:
+        await call.message.edit_text(f"✅ Файл переміщено в кошик: {file_path}")
+    except (OSError, RuntimeError) as exc:
         log_action(user_id, f"Помилка видалення: {file_path}", str(exc))
         await call.message.edit_text("❌ Не вдалося видалити файл.")
     finally:

@@ -8,6 +8,8 @@ from bot.utils import is_allowed_command
 router = Router()
 
 _ALLOWED_COMMANDS = {
+    "Назад",
+    "Скасувати",
     "Старт",
     "Статус ПК",
     "Скриншот",

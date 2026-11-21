@@ -65,7 +65,7 @@ async def system_menu(message: Message):
 # =========================
 # Обробка вибору дії
 # =========================
-@router.callback_query(F.data.startswith("sys_"))
+@router.callback_query(F.data.in_({'sys_Shutdown','sys_Restart','sys_Lock','sys_Logoff','sys_Sleep','sys_Hibernate','sys_timer_10','sys_timer_30'}))
 async def system_select(call: CallbackQuery):
     user_id = call.from_user.id
 
@@ -105,6 +105,10 @@ async def system_select(call: CallbackQuery):
 @router.callback_query(F.data.in_({"sys_confirm", "sys_cancel"}))
 async def system_execute(call: CallbackQuery):
     user_id = call.from_user.id
+    if not is_allowed(user_id):
+        return await call.answer('⛔ Доступ заборонено',show_alert=True)
+    if not is_session_active(user_id):
+        return await call.answer('🔒 Сесія завершена',show_alert=True)
     action = pending_action.get(user_id)
 
     if not action:

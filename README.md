@@ -8,3 +8,8 @@ Telegram-бот і мобільна панель для керування вл�
 - Окремий Debian-бот: [debian_server_bot/README.md](debian_server_bot/README.md).
 
 Залежності: `python -m pip install -r requirements.txt`.
+
+Windows: запуск із трею — `pythonw -m pc_remote.desktop --public`.
+Автозапуск після входу — `python -m pc_remote.desktop --install-startup --public`.
+Агент працює локально навіть при недоступному тунелі. Деталі й обмеження —
+у [мобільній інструкції](pc_remote/README.md).

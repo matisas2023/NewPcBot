@@ -13,6 +13,7 @@ main_menu = ReplyKeyboardMarkup(
         [KeyboardButton(text="Автозвіти")],
         [KeyboardButton(text="Історія"), KeyboardButton(text="FAQ")],
         [KeyboardButton(text="Голос"), KeyboardButton(text="Досягнення")],
+        [KeyboardButton(text="Назад"), KeyboardButton(text="Скасувати")],
         [KeyboardButton(text="Вихід")],
     ],
     resize_keyboard=True

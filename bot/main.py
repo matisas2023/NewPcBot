@@ -10,6 +10,8 @@ from bot.handlers import filesystem
 from bot.handlers import media_controls
 from bot.handlers import autoreport
 from bot.handlers import ux
+from bot.handlers import navigation
+from pc_remote.runtime import InstanceLock, STATE_DIR, stop_requested
 
 
 async def main():
@@ -19,13 +21,22 @@ async def main():
     )
 
     bot = Bot(BOT_TOKEN)
+    try:
+        await run_bot(bot)
+    finally:
+        await bot.session.close()
+
+
+async def run_bot(bot):
     dp = Dispatcher()
 
     # Якщо раніше був увімкнений webhook, polling не отримає апдейти.
     # Примусово переходимо на polling-режим.
-    await bot.delete_webhook(drop_pending_updates=True)
+    await bot.delete_webhook(drop_pending_updates=False)
 
     # Підключаємо всі router-и
+    dp.message.outer_middleware(navigation.NavigationMiddleware())
+    dp.include_router(navigation.router)
     dp.include_router(status.router)
     dp.include_router(screenshot.router)
     dp.include_router(system.router)
@@ -39,7 +50,30 @@ async def main():
     dp.include_router(fallback.router)
 
     print("🤖 Бот запущено!")
-    await dp.start_polling(bot)
+    async def watch_stop():
+        while not stop_requested():
+            await asyncio.sleep(0.5)
+
+    import os
+    watcher = None
+    try:
+        if os.environ.get('PC_HELPER_STOP_FILE'):
+            polling = asyncio.create_task(dp.start_polling(bot,handle_signals=False))
+            watcher = asyncio.create_task(watch_stop())
+            done, _ = await asyncio.wait([polling,watcher],return_when=asyncio.FIRST_COMPLETED)
+            if watcher in done and not polling.done():
+                try:
+                    await dp.stop_polling()
+                except RuntimeError:
+                    polling.cancel()
+            await asyncio.gather(polling,return_exceptions=False)
+        else:
+            await dp.start_polling(bot)
+    finally:
+        if watcher:
+            watcher.cancel()
+            await asyncio.gather(watcher,return_exceptions=True)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    with InstanceLock(STATE_DIR/'telegram.lock'):
+        asyncio.run(main())

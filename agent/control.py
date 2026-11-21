@@ -88,6 +88,25 @@ def list_processes():
     return sorted(result, key=lambda p: p["ram"], reverse=True)[:100]
 
 
+def control_pointer(dx=0, dy=0, scroll=0, button=None):
+    if any(type(v) is not int for v in (dx,dy,scroll)) or abs(dx)>500 or abs(dy)>500 or abs(scroll)>10:
+        raise ValueError('Pointer movement outside allowed range')
+    if button not in (None,'left','right','double'):
+        raise ValueError('Unknown mouse button')
+    try:
+        import pyautogui
+        if dx or dy:
+            pyautogui.moveRel(dx,dy)
+        if scroll:
+            pyautogui.scroll(scroll)
+        if button == 'double':
+            pyautogui.doubleClick(interval=0.1)
+        elif button:
+            pyautogui.click(button=button)
+    except Exception as exc:
+        raise RuntimeError('Desktop input unavailable') from exc
+
+
 def terminate_process(pid: int, created: float):
     import psutil
     if pid <= 4 or pid == os.getpid():

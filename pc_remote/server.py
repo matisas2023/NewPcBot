@@ -26,6 +26,14 @@ class APIError(Exception):
 
 
 class Backend:
+    def pointer(self, **data):
+        from agent.control import control_pointer
+        control_pointer(**data)
+
+    def trash(self, path):
+        from agent.files import move_to_trash
+        move_to_trash(path)
+
     def status(self):
         from agent.status import get_status
         return get_status()
@@ -263,6 +271,10 @@ class Handler(BaseHTTPRequestHandler):
         query = parse_qs(url.query)
         value = lambda key, default="": query.get(key, [default])[0]
         if not post:
+            if url.path == '/api/connection':
+                manager = getattr(self.server,'tunnel_manager',None)
+                tunnel = manager.snapshot() if manager else {'state':'configured' if self.server.public_origin else 'local', 'url':self.server.public_origin, 'retry_in':0}
+                return self.reply(200, {'agent':'online', 'tunnel':tunnel, 'delete_mode':'recycle_bin'})
             if url.path == "/api/session":
                 return self.reply(200, {"username": self.server.account.username, "csrf": self.session["csrf"]})
             if url.path == "/api/status":
@@ -316,6 +328,14 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(201, {"ok": True})
 
         data = self.json_body()
+        if url.path == '/api/pointer':
+            pointer = {key:data.get(key,0) for key in ('dx','dy','scroll')}
+            pointer['button'] = data.get('button')
+            if any(type(pointer[k]) is not int for k in ('dx','dy','scroll')) or abs(pointer['dx'])>500 or abs(pointer['dy'])>500 or abs(pointer['scroll'])>10 or pointer['button'] not in (None,'left','right','double'):
+                raise APIError(400,'Некоректна команда миші')
+            with self.server.desktop_lock:
+                self.server.backend.pointer(**pointer)
+            return self.reply(200,{'ok':True})
         if url.path == "/api/logout":
             self.server.account.logout(self.session)
             return self.reply(200, {"ok": True}, extra={"Set-Cookie":self.session_cookie("", clear=True)})
@@ -335,7 +355,7 @@ class Handler(BaseHTTPRequestHandler):
             with self.server.file_lock:
                 prepared = self.server.consume(operation, payload, data.get("confirmation"), self.session["id"])
                 if operation == "delete":
-                    self.server.file_path(prepared["path"]).unlink()
+                    self.server.backend.trash(self.server.file_path(prepared['path']))
                 elif operation == "terminate":
                     self.server.backend.terminate(prepared["pid"], prepared["created"])
                 else:

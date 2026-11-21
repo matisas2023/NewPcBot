@@ -15,6 +15,7 @@ from bot.handlers import (
     status,
     system,
     ux,
+    navigation,
 )
 from bot.keyboards import main_menu, screenshot_kb
 
@@ -40,6 +41,8 @@ def _assert_call_responded(call: DummyCallbackQuery) -> None:
 def test_menu_buttons_have_handlers_and_respond(allow_all) -> None:
     async def run() -> None:
         mapping = {
+            "Назад": navigation.navigation_menu,
+            "Скасувати": navigation.navigation_menu,
             "Старт": start.start_handler,
             "Статус ПК": status.status_pc,
             "Скриншот": screenshot.screenshot_handler,
@@ -228,6 +231,8 @@ def test_callback_coverage_matches_handlers() -> None:
 
 def test_menu_button_coverage_matches_handlers() -> None:
     handler_buttons = {
+        "Назад",
+        "Скасувати",
         "Старт",
         "Статус ПК",
         "Скриншот",

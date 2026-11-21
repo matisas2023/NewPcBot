@@ -5,3 +5,4 @@ venv/
 .pc-remote.json
 .pc-remote.json.tmp
 remote_files/
+.pc-helper-runtime/
